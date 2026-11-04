@@ -1,0 +1,14 @@
+# Local development and deployment state
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.wrangler/
+.env
+.env.*
+.dev.vars
+.dev.vars.*
+*.log
+
+# Generated Direct Upload archive; dist/ is the versioned publishable source.
+/cloudflare-upload.zip

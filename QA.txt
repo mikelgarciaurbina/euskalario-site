@@ -1,0 +1,31 @@
+EUSKALARIO SITE — VERIFICACIÓN LOCAL
+29 de octubre de 2026
+
+7 páginas HTML estáticas. Sin JavaScript, formularios, analítica ni recursos
+remotos. La carpeta dist es independiente de la aplicación Expo.
+
+Revisión visual en navegador: escritorio, móvil de 390 px y soporte/privacidad
+a 320 px. Sin desbordamiento horizontal ni imágenes rotas. Portada ES/EU,
+capturas, navegación entre idiomas y páginas, FAQ nativa desplegable y enlaces
+locales comprobados. El cambio ES/EU conserva soporte/privacidad.
+
+Revisión estática: 98 enlaces y fragmentos válidos, recursos CSS existentes,
+sin IDs duplicados, canonical/hreflang/sitemap coherentes. CSP sin estilos ni
+scripts inline y caché de assets sin cabeceras contradictorias. Las cabeceras
+_headers se aplicarán en Cloudflare Pages; el servidor Python no las aplica.
+
+configure.py se comprobó en copia temporal: siete orígenes inválidos rechazados
+sin modificar archivos; un cambio válido y su reversión recuperan los hashes
+originales. En la estructura original, site/dist se incluía mediante excepción
+a .gitignore. Tras la separación, dist/ se versiona en euskalario-site.
+
+No se ha desplegado ni conectado un dominio. El origen propuesto es
+https://euskalario.overlayon.com. Todavía no hay enlaces a las tiendas:
+se muestra honestamente que la versión 2.0 está en preparación.
+
+REORGANIZACIÓN — 4 de noviembre de 2026
+Web trasladada a Euskalario/site como repositorio independiente. Los 32
+archivos originales conservaban su SHA-256 al moverlos. Las páginas y
+recursos de dist/ permanecen idénticos; solo cambia la documentación.
+Raíz de Cloudflare: raíz del repositorio; carpeta publicada: dist/.
+La app móvil se mantiene en Euskalario/app y euskalario-app.
