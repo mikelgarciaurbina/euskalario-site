@@ -1,5 +1,6 @@
 export type Language = 'es' | 'eu';
-export type Page = 'home' | 'support' | 'privacy' | 'notFound';
+export type Page = 'home' | 'support' | 'privacy' | 'notFound' | 'game';
+export type Translations = { es: string; eu: string };
 
 export const routes = {
   home: { es: '/', eu: '/eu/' },

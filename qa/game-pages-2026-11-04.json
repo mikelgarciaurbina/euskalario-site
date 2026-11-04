@@ -1,0 +1,200 @@
+{
+  "mobile390": [
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/hitza/",
+      "title": "Hitza: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/lauburu/",
+      "title": "Lauburu: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/sarea/",
+      "title": "Sarea: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/pilota/",
+      "title": "Pilota: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/txalaparta/",
+      "title": "Txalaparta: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/azoka/",
+      "title": "Azoka: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/hitzez-hitz/",
+      "title": "Hitzez hitz: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/errota/",
+      "title": "Errota: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/sutegia/",
+      "title": "Sutegia: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/puntua/",
+      "title": "Puntua: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "es",
+      "overflow": false,
+      "path": "/juegos/sokatira/",
+      "title": "Sokatira: historia y cómo jugar · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/hitza/",
+      "title": "Hitza: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/lauburu/",
+      "title": "Lauburu: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/sarea/",
+      "title": "Sarea: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/pilota/",
+      "title": "Pilota: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/txalaparta/",
+      "title": "Txalaparta: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/azoka/",
+      "title": "Azoka: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/hitzez-hitz/",
+      "title": "Hitzez hitz: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/errota/",
+      "title": "Errota: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/sutegia/",
+      "title": "Sutegia: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/puntua/",
+      "title": "Puntua: istorioa eta nola jokatu · Euskalario"
+    },
+    {
+      "brokenImages": [],
+      "clipped": [],
+      "lang": "eu",
+      "overflow": false,
+      "path": "/eu/jokoak/sokatira/",
+      "title": "Sokatira: istorioa eta nola jokatu · Euskalario"
+    }
+  ],
+  "narrow320": [
+    {
+      "clipped": [],
+      "overflow": false,
+      "path": "/eu/jokoak/txalaparta/",
+      "width": 320
+    },
+    {
+      "clipped": [],
+      "overflow": false,
+      "path": "/eu/jokoak/hitzez-hitz/",
+      "width": 320
+    },
+    {
+      "clipped": [],
+      "overflow": false,
+      "path": "/eu/jokoak/sokatira/",
+      "width": 320
+    }
+  ]
+}

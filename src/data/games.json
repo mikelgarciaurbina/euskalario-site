@@ -1,0 +1,1104 @@
+[
+  {
+    "id": "hitza",
+    "slug": "hitza",
+    "name": "Hitza",
+    "daily": true,
+    "related": [
+      "errota",
+      "hitzezhitz"
+    ],
+    "es": {
+      "tagline": "Una palabra. Un pequeño encuentro cada día.",
+      "summary": "La palabra del día en seis intentos.",
+      "intro": "Cinco letras y seis oportunidades para recuperar una palabra que quizá ya estaba en tu memoria.",
+      "facts": [
+        "5 letras",
+        "6 intentos",
+        "Un reto al día"
+      ],
+      "storyTitle": "Todo empieza con una palabra.",
+      "story": [
+        "Hitza significa «la palabra». Un saludo en la calle, una conversación en la cocina, algo que recuerdas de la ikastola: el euskera también vive en esos momentos pequeños.",
+        "En Euskalario convertimos ese encuentro en un ritual diario. El galtzagorri guarda una palabra y te invita a descubrirla, letra a letra."
+      ],
+      "steps": [
+        [
+          "Escribe cinco letras",
+          "Introduce tu propuesta con el teclado y confírmala."
+        ],
+        [
+          "Lee las pistas de color",
+          "Verde: letra en su sitio. Amarillo: está en otra posición. Gris: esa letra no está en la respuesta, o ya has marcado todas sus copias. Ten en cuenta las letras repetidas."
+        ],
+        [
+          "Vuelve a intentarlo",
+          "Usa lo aprendido en la siguiente fila. Tienes seis intentos y una pista del galtzagorri."
+        ]
+      ],
+      "skills": [
+        "Ortografía",
+        "Recuerdo de palabras",
+        "Deducción"
+      ],
+      "lesson": "Te anima a recuperar palabras completas y a fijarte en el orden de sus letras. Después de jugar, relaciona la palabra con su significado.",
+      "tip": "Antes de escribir otra palabra, mira qué sabes ya de cada letra.",
+      "example": {
+        "prompt": [
+          "E · T · X · E · A"
+        ],
+        "answer": "ETXEA · la casa",
+        "explanation": "Una palabra de cinco letras. En una partida real, los colores de cada intento te ayudarían a encontrarla."
+      }
+    },
+    "eu": {
+      "tagline": "Hitz bat. Egunero elkartzeko aitzakia.",
+      "summary": "Eguneko hitza, sei saiakeratan.",
+      "intro": "Bost letra eta sei aukera, agian zure oroimenean zegoen hitz bat berriz aurkitzeko.",
+      "facts": [
+        "5 letra",
+        "6 saiakera",
+        "Erronka bat egunero"
+      ],
+      "storyTitle": "Dena hitz batekin hasten da.",
+      "story": [
+        "Hitza: kaleko agurra, sukaldeko solasaldia edo ikastolako oroitzapena. Une txiki horietan ere bizi da euskara.",
+        "Euskalariok eguneroko ohitura bihurtzen du topaketa hori. Galtzagorriak hitz bat gordetzen du, zuk letraz letra aurki dezazun."
+      ],
+      "steps": [
+        [
+          "Idatzi bost letra",
+          "Sartu zure proposamena teklatuarekin eta baieztatu."
+        ],
+        [
+          "Begiratu koloreei",
+          "Berdea: letra bere tokian dago. Horia: beste toki batean dago. Grisa: letra hori ez da erantzunean sartzen, edo haren kopiak agortu dira. Kontuan hartu errepikatutako letrak."
+        ],
+        [
+          "Saiatu berriro",
+          "Erabili ikasitakoa hurrengo lerroan. Sei saiakera eta galtzagorriaren pista dituzu."
+        ]
+      ],
+      "skills": [
+        "Ortografia",
+        "Hitzak gogoratzea",
+        "Dedukzioa"
+      ],
+      "lesson": "Hitz osoak gogoratzen eta letren ordenari erreparatzen laguntzen dizu. Jolastu ondoren, lotu hitza bere esanahiarekin.",
+      "tip": "Beste hitz bat idatzi aurretik, begiratu letra bakoitzari buruz dakizunari.",
+      "example": {
+        "prompt": [
+          "E · T · X · E · A"
+        ],
+        "answer": "ETXEA",
+        "explanation": "Bost letrako hitza. Benetako partidan, saiakeren koloreek aurkitzen lagunduko lizukete."
+      }
+    },
+    "source": {
+      "name": "Elhuyar · hitz",
+      "url": "https://hiztegiak.elhuyar.eus/eu_es/hitz"
+    }
+  },
+  {
+    "id": "lauburu",
+    "slug": "lauburu",
+    "name": "Lauburu",
+    "daily": true,
+    "related": [
+      "sarea",
+      "sutegia"
+    ],
+    "es": {
+      "tagline": "Cuatro brazos. Cuatro maneras de encontrar una conexión.",
+      "summary": "Dieciséis palabras y cuatro grupos ocultos.",
+      "intro": "Mira más allá de una palabra suelta. La pista está en lo que comparte con las demás.",
+      "facts": [
+        "16 palabras",
+        "4 grupos",
+        "4 errores posibles"
+      ],
+      "storyTitle": "Dar forma a lo que une las palabras.",
+      "story": [
+        "El lauburu que acompaña a Euskalario tiene cuatro brazos. En este juego, ese cuatro se convierte en cuatro grupos de palabras conectadas.",
+        "El galtzagorri las ha mezclado sobre la mesa. A veces comparten un tema; otras, una terminación o una relación menos evidente. Tu trabajo es descubrir el hilo."
+      ],
+      "steps": [
+        [
+          "Observa las dieciséis palabras",
+          "Busca relaciones de significado, familias de palabras o terminaciones."
+        ],
+        [
+          "Elige un grupo de cuatro",
+          "Selecciona las cuatro que creas relacionadas y comprueba tu propuesta."
+        ],
+        [
+          "Completa los cuatro grupos",
+          "Cada acierto despeja el tablero. Al llegar a cuatro errores, la partida termina."
+        ]
+      ],
+      "skills": [
+        "Relaciones de significado",
+        "Familias de palabras",
+        "Atención al detalle"
+      ],
+      "lesson": "Amplía las conexiones entre palabras conocidas. No basta con reconocerlas: hay que pensar qué tienen en común.",
+      "tip": "Una palabra puede parecer de dos grupos. Busca una relación que funcione con las cuatro.",
+      "example": {
+        "prompt": [
+          "gorri · urdin",
+          "berde · hori"
+        ],
+        "answer": "Colores: rojo, azul, verde y amarillo.",
+        "explanation": "Es un grupo ilustrativo. Las palabras y las conexiones del reto diario pueden ser diferentes."
+      }
+    },
+    "eu": {
+      "tagline": "Lau beso. Loturak aurkitzeko lau bide.",
+      "summary": "Hamasei hitz eta ezkutuko lau talde.",
+      "intro": "Hitz bakarretik harago begiratu. Gakoa beste hitzekin partekatzen duenean dago.",
+      "facts": [
+        "16 hitz",
+        "4 talde",
+        "4 huts egiteko aukera"
+      ],
+      "storyTitle": "Hitzak elkartzen dituenari forma ematea.",
+      "story": [
+        "Euskalarioko lauburuak lau beso ditu. Joko honetan, lau hori elkarri lotutako lau hitz-talderen abiapuntua da.",
+        "Galtzagorriak mahai gainean nahastu ditu hitzak. Batzuetan gaia partekatzen dute; besteetan, amaiera edo hain agerikoa ez den lotura. Zuk haria aurkitu behar duzu."
+      ],
+      "steps": [
+        [
+          "Begiratu hamasei hitzei",
+          "Bilatu esanahien, hitz-familien edo amaieren arteko loturak."
+        ],
+        [
+          "Aukeratu lau hitz",
+          "Hautatu elkarri lotuta daudela uste dituzun lauak eta egiaztatu proposamena."
+        ],
+        [
+          "Osatu lau taldeak",
+          "Asmatzean, taula argitzen da. Lau huts egindakoan amaitzen da partida."
+        ]
+      ],
+      "skills": [
+        "Esanahien arteko loturak",
+        "Hitz-familiak",
+        "Xehetasunei erreparatzea"
+      ],
+      "lesson": "Ezagutzen dituzun hitzen arteko loturak zabaltzen dituzu. Ezagutzeaz gain, zer duten komunean pentsatu behar duzu.",
+      "tip": "Hitz batek bi taldetakoa dirudienean, bilatu laurekin balio duen lotura.",
+      "example": {
+        "prompt": [
+          "gorri · urdin",
+          "berde · hori"
+        ],
+        "answer": "Koloreak.",
+        "explanation": "Adibide argigarria da. Eguneko erronkaren hitzak eta loturak bestelakoak izan daitezke."
+      }
+    },
+    "source": null
+  },
+  {
+    "id": "sarea",
+    "slug": "sarea",
+    "name": "Sarea",
+    "daily": true,
+    "related": [
+      "lauburu",
+      "errota"
+    ],
+    "es": {
+      "tagline": "Echa la red. Hay palabras por descubrir.",
+      "summary": "Una red de letras con palabras del mismo tema.",
+      "intro": "Sigue caminos entre letras vecinas y encuentra las palabras que se esconden en el tema del día.",
+      "facts": [
+        "6 × 8 letras",
+        "Caminos con diagonales",
+        "Un tema cada día"
+      ],
+      "storyTitle": "Una red que recoge palabras.",
+      "story": [
+        "Sarea significa «la red». La imagen nos lleva a la costa, a los puertos y a los oficios del mar que también forman parte del patrimonio vasco.",
+        "En nuestra red se pescan palabras. Todas pertenecen al tema del día: el galtzagorri te da una pista para que empieces a tirar del hilo."
+      ],
+      "steps": [
+        [
+          "Lee el tema",
+          "La pista te orienta sobre las palabras que buscas."
+        ],
+        [
+          "Une letras vecinas",
+          "Arrastra o toca letras contiguas, también en diagonal. El camino puede girar, sin repetir una casilla dentro de la misma palabra."
+        ],
+        [
+          "Completa la red",
+          "Encuentra todas las palabras. Empiezas con una pista y consigues otra cada tres palabras encontradas."
+        ]
+      ],
+      "skills": [
+        "Vocabulario por temas",
+        "Reconocimiento visual",
+        "Formas de las palabras"
+      ],
+      "lesson": "Aprendes a reconocer palabras dentro de un contexto común y a relacionarlas con su significado, no solo con una secuencia de letras.",
+      "tip": "Si no ves ninguna, piensa primero en palabras relacionadas con el tema.",
+      "example": {
+        "prompt": [
+          "M → E → N → D → I"
+        ],
+        "answer": "MENDI · monte",
+        "explanation": "Un camino ilustrativo: en el tablero real cada paso debe ir a una casilla vecina."
+      }
+    },
+    "eu": {
+      "tagline": "Bota sarea. Hitzak dituzu zain.",
+      "summary": "Gai bereko hitzak letra-sarean.",
+      "intro": "Lotu alboko letrak eta aurkitu eguneko gaiaren inguruan ezkutatzen diren hitzak.",
+      "facts": [
+        "6 × 8 letra",
+        "Diagonalak ere bai",
+        "Gai bat egunero"
+      ],
+      "storyTitle": "Hitzak biltzen dituen sare bat.",
+      "story": [
+        "Sarea: kostaldea, portuak eta itsasoko lanbideak ekartzen dizkigun irudia. Itsas ondarea ere euskal kulturaren parte da.",
+        "Gure sarean hitzak arrantzatzen dira. Guztiak eguneko gaiari lotuta daude, eta galtzagorriak pista bat ematen dizu hariari tiraka hasteko."
+      ],
+      "steps": [
+        [
+          "Irakurri gaia",
+          "Pistak bilatu beharreko hitzen inguruan jarriko zaitu."
+        ],
+        [
+          "Lotu alboko letrak",
+          "Arrastatu edo ukitu elkarren ondoko letrak, diagonalean ere bai. Bideak bira egin dezake, hitz berean laukitxo bat errepikatu gabe."
+        ],
+        [
+          "Osatu sarea",
+          "Aurkitu hitz guztiak. Pista batekin hasten zara, eta beste bat lortzen duzu aurkitutako hiru hitzeko."
+        ]
+      ],
+      "skills": [
+        "Gaikako hiztegia",
+        "Ikusizko ezagutza",
+        "Hitzen formak"
+      ],
+      "lesson": "Hitzak gai baten barruan ezagutzen eta esanahiekin lotzen dituzu, letra-segida huts gisa ikusi beharrean.",
+      "tip": "Hitzik ikusten ez baduzu, pentsatu lehenik gaiari lotutako hitzetan.",
+      "example": {
+        "prompt": [
+          "M → E → N → D → I"
+        ],
+        "answer": "MENDI",
+        "explanation": "Adibideko bidea da: benetako taulan urrats bakoitzak alboko laukitxo batera joan behar du."
+      }
+    },
+    "source": {
+      "name": "Itsasmuseum · Un día de pesca",
+      "url": "https://www.itsasmuseum.eus/aprende/centros-escolares/educacion-primaria/"
+    }
+  },
+  {
+    "id": "pilota",
+    "slug": "pilota",
+    "name": "Pilota",
+    "daily": false,
+    "related": [
+      "txalaparta",
+      "sokatira"
+    ],
+    "es": {
+      "tagline": "El siguiente tanto se juega con una palabra.",
+      "summary": "Bai ala ez: decide si la traducción es correcta.",
+      "intro": "Entra al frontón del galtzagorri: reconoce la traducción, responde a tiempo y trata de llegar a 22 tantos.",
+      "facts": [
+        "22 tantos",
+        "3 pelotas",
+        "Bai / Ez"
+      ],
+      "storyTitle": "El frontón se llena de euskera.",
+      "story": [
+        "La pelota tiene un lugar propio en la vida de muchas localidades vascas. Frontones como el Beotibar de Tolosa guardan la historia de partidos, escuelas y encuentros.",
+        "Euskalario toma esa energía y la lleva al vocabulario. Aquí el rebote es una pareja de palabras, y cada respuesta correcta devuelve la pelota un poco más deprisa."
+      ],
+      "steps": [
+        [
+          "Mira la pareja",
+          "Aparecen una palabra en euskera y una posible traducción."
+        ],
+        [
+          "Responde Bai o Ez",
+          "Bai si es correcta; Ez si no lo es. Responde antes de que termine el tiempo."
+        ],
+        [
+          "Suma tantos",
+          "Cada acierto acelera el ritmo. Ganas al llegar a 22; los fallos o el tiempo agotado consumen una de tus tres pelotas."
+        ]
+      ],
+      "skills": [
+        "Traducción rápida",
+        "Reconocimiento",
+        "Atención bajo presión"
+      ],
+      "lesson": "Practicas distinguir una traducción correcta de otra que parece plausible. Al fallar, detente a leer la corrección.",
+      "tip": "No pulses por inercia. Una respuesta rápida también necesita una lectura atenta.",
+      "example": {
+        "prompt": [
+          "etxe = casa?"
+        ],
+        "answer": "Bai · Sí",
+        "explanation": "Etxe significa casa. Es una pareja correcta; en la partida también aparecen parejas equivocadas."
+      }
+    },
+    "eu": {
+      "tagline": "Hurrengo tantoa hitz batekin jokatzen da.",
+      "summary": "Bai ala ez: zuzena al da itzulpena?",
+      "intro": "Sartu galtzagorriaren frontoian: ezagutu itzulpena, erantzun garaiz eta saiatu 22 tantora iristen.",
+      "facts": [
+        "22 tanto",
+        "3 pilota",
+        "Bai / Ez"
+      ],
+      "storyTitle": "Frontoia euskaraz betetzen da.",
+      "story": [
+        "Pilotak bere lekua du euskal herri askotako egunerokoan. Tolosako Beotibar bezalako frontoiek partiden, eskolen eta topaketen historia gordetzen dute.",
+        "Euskalariok indar hori hiztegira ekartzen du. Hemen, errebotea hitz-bikote bat da, eta erantzun zuzen bakoitzak pilota bizkortzen du."
+      ],
+      "steps": [
+        [
+          "Begiratu bikoteari",
+          "Euskarazko hitz bat eta balizko itzulpena agertzen dira."
+        ],
+        [
+          "Erantzun Bai edo Ez",
+          "Bai itzulpena zuzena bada; Ez okerra bada. Erantzun denbora agortu aurretik."
+        ],
+        [
+          "Bildu tantoak",
+          "Asmatzeak erritmoa bizkortzen du. 22 tantora iristean irabazten duzu; huts egiteak edo denbora agortzeak hiru pilotetako bat kentzen dizu."
+        ]
+      ],
+      "skills": [
+        "Itzulpen azkarra",
+        "Hitzak ezagutzea",
+        "Arreta presiopean"
+      ],
+      "lesson": "Itzulpen zuzena eta sinesgarria dirudien beste bat bereizten praktikatzen duzu. Huts egitean, irakurri zuzenketa.",
+      "tip": "Ez sakatu inertziaz. Azkar erantzuteko ere arretaz irakurri behar da.",
+      "example": {
+        "prompt": [
+          "etxe = casa?"
+        ],
+        "answer": "Bai",
+        "explanation": "Etxe hitzaren gaztelaniazko ordaina casa da. Partidan bikote okerrak ere agertzen dira."
+      }
+    },
+    "source": {
+      "name": "Turismo Euskadi · Beotibar",
+      "url": "https://tourism.euskadi.eus/en/sport-facilities/beotibar-pelota-court/webtur00-content/en/"
+    }
+  },
+  {
+    "id": "txalaparta",
+    "slug": "txalaparta",
+    "name": "Txalaparta",
+    "daily": false,
+    "related": [
+      "pilota",
+      "hitzezhitz"
+    ],
+    "es": {
+      "tagline": "Una palabra responde a la otra.",
+      "summary": "Une parejas en euskera y castellano durante un minuto.",
+      "intro": "Encuentra las parejas y encadena aciertos. La memoria pone el ritmo.",
+      "facts": [
+        "60 segundos",
+        "6 parejas por tanda",
+        "Aciertos encadenados"
+      ],
+      "storyTitle": "Un diálogo que se hace ritmo.",
+      "story": [
+        "En la txalaparta, dos intérpretes construyen juntos un juego rítmico sobre las tablas. Sus intervenciones se relacionan: uno escucha y el otro responde.",
+        "Ese diálogo inspira nuestro juego de parejas. Una palabra en euskera busca su respuesta en castellano; cuando las unes, el ritmo continúa."
+      ],
+      "steps": [
+        [
+          "Toca una palabra",
+          "Selecciona una palabra en euskera o en castellano."
+        ],
+        [
+          "Encuentra su pareja",
+          "Toca su traducción en la otra columna. Al completar una tanda, llegan nuevas parejas."
+        ],
+        [
+          "Mantén el ritmo",
+          "Dispones de un minuto. Los aciertos consecutivos mejoran la puntuación; un fallo rompe la cadena."
+        ]
+      ],
+      "skills": [
+        "Asociación de significados",
+        "Fluidez",
+        "Atención visual"
+      ],
+      "lesson": "Refuerzas el vínculo entre las palabras de ambas lenguas mediante asociaciones repetidas.",
+      "tip": "Busca la pareja por su significado, no por el lugar que ocupaba antes.",
+      "example": {
+        "prompt": [
+          "ur ↔ agua",
+          "ogi ↔ pan"
+        ],
+        "answer": "Dos parejas correctas.",
+        "explanation": "Las columnas cambian de orden. Reconocer el significado resulta más útil que memorizar una posición."
+      }
+    },
+    "eu": {
+      "tagline": "Hitz batek besteari erantzuten dio.",
+      "summary": "Lotu euskarazko eta gaztelaniazko bikoteak minutu batean.",
+      "intro": "Aurkitu bikoteak eta asmatu segidan. Oroimenak jartzen du erritmoa.",
+      "facts": [
+        "60 segundo",
+        "6 bikote txandako",
+        "Segidako asmatzeak"
+      ],
+      "storyTitle": "Erritmo bihurtzen den elkarrizketa.",
+      "story": [
+        "Txalapartan, bi jotzailek taulekin jolas erritmikoa eraikitzen dute. Haien kolpeak elkarri lotzen zaizkio: batek entzun eta besteak erantzun egiten du.",
+        "Elkarrizketa horretan du inspirazioa gure bikote-jokoak. Euskarazko hitzak gaztelaniazko erantzuna bilatzen du; elkartzean, erritmoak aurrera egiten du."
+      ],
+      "steps": [
+        [
+          "Ukitu hitz bat",
+          "Hautatu euskarazko edo gaztelaniazko hitz bat."
+        ],
+        [
+          "Aurkitu bikotea",
+          "Ukitu haren itzulpena beste zutabean. Txanda osatzean, bikote berriak iritsiko dira."
+        ],
+        [
+          "Eutsi erritmoari",
+          "Minutu bat duzu. Segidan asmatzeak puntuazioa hobetzen du; huts batek katea eteten du."
+        ]
+      ],
+      "skills": [
+        "Esanahiak lotzea",
+        "Arintasuna",
+        "Ikusizko arreta"
+      ],
+      "lesson": "Bi hizkuntzetako hitzen arteko lotura indartzen duzu, behin eta berriz bikoteak eginez.",
+      "tip": "Bilatu bikotea esanahiagatik, ez lehen zegoen tokiagatik.",
+      "example": {
+        "prompt": [
+          "ur ↔ agua",
+          "ogi ↔ pan"
+        ],
+        "answer": "Bi bikote zuzen.",
+        "explanation": "Zutabeen ordena aldatzen da. Esanahia ezagutzea erabilgarriagoa da tokia buruz ikastea baino."
+      }
+    },
+    "source": {
+      "name": "Soinuenea · Txalaparta",
+      "url": "https://www.soinuenea.eus/es/enciclopedia/txalaparta/er-10/"
+    }
+  },
+  {
+    "id": "azoka",
+    "slug": "azoka",
+    "name": "Azoka",
+    "daily": false,
+    "related": [
+      "hitzezhitz",
+      "sokatira"
+    ],
+    "es": {
+      "tagline": "En esta plaza, los números también hablan euskera.",
+      "summary": "Lee el precio en euskera y escríbelo con cifras.",
+      "intro": "El galtzagorri atiende el puesto. Tu reto es entender cuánto cuesta cada producto.",
+      "facts": [
+        "10 precios",
+        "Números escritos",
+        "Del 20 al 40 y más"
+      ],
+      "storyTitle": "El euskera de un día de mercado.",
+      "story": [
+        "Las azokas reúnen productos, personas y conversaciones. Ferias como la de Ordizia forman parte de esa vida de plaza que se transmite entre generaciones.",
+        "Azoka lleva ese encuentro a una situación cotidiana: leer un precio en euskera. Los números dejan de ser una lista para convertirse en algo que puedes usar."
+      ],
+      "steps": [
+        [
+          "Lee el precio",
+          "El vendedor presenta el importe escrito en euskera."
+        ],
+        [
+          "Escríbelo con cifras",
+          "Introduce la cantidad en el teclado numérico y compruébala."
+        ],
+        [
+          "Aprende del desglose",
+          "Revisa cómo se construye el número. La partida recorre diez precios y aumenta la dificultad."
+        ]
+      ],
+      "skills": [
+        "Numeración en euskera",
+        "Comprensión escrita",
+        "Sistema vigesimal"
+      ],
+      "lesson": "Practicas cómo se combinan las unidades, las decenas de base veinte y los números mayores. La actividad es de lectura, sin audio.",
+      "tip": "Divide el número: berrogei son dos veintenas. Luego busca lo que se suma.",
+      "example": {
+        "prompt": [
+          "berrogeita hamazazpi euro"
+        ],
+        "answer": "57 € · 40 + 17",
+        "explanation": "Berrogei aporta 40 y hamazazpi aporta 17. La unión da 57."
+      }
+    },
+    "eu": {
+      "tagline": "Plaza honetan, zenbakiek ere euskaraz egiten dute.",
+      "summary": "Irakurri prezioa euskaraz eta idatzi zifraz.",
+      "intro": "Galtzagorria saltokian dago. Zure erronka produktu bakoitzaren prezioa ulertzea da.",
+      "facts": [
+        "10 prezio",
+        "Zenbaki idatziak",
+        "20tik 40ra eta harago"
+      ],
+      "storyTitle": "Azoka-egun bateko euskara.",
+      "story": [
+        "Azokek produktuak, pertsonak eta elkarrizketak elkartzen dituzte. Ordiziakoa bezalako azokak belaunaldiz belaunaldi transmititzen den plaza-bizitzaren parte dira.",
+        "Azokak eguneroko egoera batera ekartzen du topaketa hori: prezioa euskaraz irakurtzera. Zenbakiak zerrenda hutsa izatetik erabiltzeko tresna izatera pasatzen dira."
+      ],
+      "steps": [
+        [
+          "Irakurri prezioa",
+          "Saltzaileak zenbatekoa euskaraz idatzita erakusten du."
+        ],
+        [
+          "Idatzi zifraz",
+          "Sartu kopurua zenbakizko teklatuan eta egiaztatu."
+        ],
+        [
+          "Ikasi zatiketatik",
+          "Begiratu zenbakia nola osatzen den. Hamar prezio ditu partidak, gero eta zailagoak."
+        ]
+      ],
+      "skills": [
+        "Euskarazko zenbakiak",
+        "Idatzizko ulermena",
+        "Zenbaki-sistema hogeitarra"
+      ],
+      "lesson": "Unitateak, hogeikako hamarrekoak eta zenbaki handiagoak nola elkartzen diren lantzen duzu. Irakurtzeko jarduera da, audiorik gabe.",
+      "tip": "Zatitu zenbakia: berrogei bi hogei dira. Ondoren, bilatu gehitzen zaiona.",
+      "example": {
+        "prompt": [
+          "berrogeita hamazazpi euro"
+        ],
+        "answer": "57 € · 40 + 17",
+        "explanation": "Berrogei: 40. Hamazazpi: 17. Biak elkartuta, 57."
+      }
+    },
+    "source": {
+      "name": "Ordiziako Azoka · Historia",
+      "url": "https://www.ordiziakoazoka.eus/es/ferias-especiales/fiestas-vascas/historia"
+    }
+  },
+  {
+    "id": "hitzezhitz",
+    "slug": "hitzez-hitz",
+    "name": "Hitzez hitz",
+    "daily": false,
+    "related": [
+      "hitza",
+      "sutegia"
+    ],
+    "es": {
+      "tagline": "Las palabras vuelven. Tú las haces tuyas.",
+      "summary": "Recupera y escribe el vocabulario que toca repasar.",
+      "intro": "Palabra a palabra, el repaso sigue tus respuestas y vuelve a traer lo que necesita un poco más de práctica.",
+      "facts": [
+        "Hasta 10 palabras",
+        "Fichas o teclado",
+        "Repaso espaciado"
+      ],
+      "storyTitle": "La constancia también tiene su juego.",
+      "story": [
+        "Hitzez hitz nos lleva a una idea sencilla: construir el euskera palabra a palabra. Recordar algo hoy y encontrarlo de nuevo otro día forma parte de ese camino.",
+        "El galtzagorri te acompaña con un pequeño reto de confianza: Hordago. En Euskalario cambia el progreso de una palabra; no hay dinero ni premios canjeables."
+      ],
+      "steps": [
+        [
+          "Lee el significado",
+          "La app te propone una palabra en castellano que debes recuperar en euskera."
+        ],
+        [
+          "Construye la respuesta",
+          "Usa las fichas de letras o cambia al teclado y comprueba lo que has escrito."
+        ],
+        [
+          "Elige cómo responder",
+          "Puedes comprobar normalmente o usar Hordago: acertar hace subir dos niveles; fallar hace que la palabra vuelva hoy."
+        ]
+      ],
+      "skills": [
+        "Recuerdo activo",
+        "Escritura",
+        "Confianza al responder"
+      ],
+      "lesson": "Practicas recuperar una palabra sin verla antes. El repaso se organiza según tus respuestas y las palabras pendientes.",
+      "tip": "Intenta recordar la palabra antes de mirar las fichas. Ese pequeño esfuerzo forma parte del repaso.",
+      "example": {
+        "prompt": [
+          "comer → ?"
+        ],
+        "answer": "jan",
+        "explanation": "Primero recuperas la palabra; después compruebas la respuesta. El reto consiste en escribir, no solo en reconocer."
+      }
+    },
+    "eu": {
+      "tagline": "Hitzak itzuli egiten dira. Zuk zeure egiten dituzu.",
+      "summary": "Gogoratu eta idatzi errepasatzeko hiztegia.",
+      "intro": "Hitzez hitz, errepasoak zure erantzunak kontuan hartzen ditu, gehiago landu beharrekoa berriz ekartzeko.",
+      "facts": [
+        "Gehienez 10 hitz",
+        "Fitxak edo teklatua",
+        "Errepaso tartekatuak"
+      ],
+      "storyTitle": "Iraunkortasunak ere badu bere jokoa.",
+      "story": [
+        "Hitzez hitz: euskara hitz bakoitzarekin eraikitzeko ideia. Gaur zerbait gogoratzea eta beste egun batean berriz aurkitzea bide horren parte da.",
+        "Galtzagorriak konfiantza-erronka txiki bat eskaintzen dizu: Hordago. Euskalario barruan hitz baten aurrerapena aldatzen du; ez dago dirurik edo trukatzeko saririk."
+      ],
+      "steps": [
+        [
+          "Irakurri esanahia",
+          "Appak euskaraz gogoratu beharreko hitza gaztelaniaz proposatzen dizu."
+        ],
+        [
+          "Osatu erantzuna",
+          "Erabili letra-fitxak edo aldatu teklatura, eta egiaztatu idatzitakoa."
+        ],
+        [
+          "Aukeratu erantzuteko modua",
+          "Ohiko egiaztapena edo Hordago erabil dezakezu: asmatzean bi maila igotzen da hitza; huts egitean, gaur itzultzen da."
+        ]
+      ],
+      "skills": [
+        "Oroimen aktiboa",
+        "Idazketa",
+        "Erantzuteko konfiantza"
+      ],
+      "lesson": "Hitza aurretik ikusi gabe gogoratzen praktikatzen duzu. Errepasoa zure erantzunen eta zain dauden hitzen arabera antolatzen da.",
+      "tip": "Saiatu hitza gogoratzen fitxei begiratu aurretik. Ahalegin txiki hori errepasoaren parte da.",
+      "example": {
+        "prompt": [
+          "comer → ?"
+        ],
+        "answer": "jan",
+        "explanation": "Lehenik hitza gogoratu, eta gero erantzuna egiaztatu. Idaztea da erronka, ez soilik ezagutzea."
+      }
+    },
+    "source": null
+  },
+  {
+    "id": "errota",
+    "slug": "errota",
+    "name": "Errota",
+    "daily": false,
+    "related": [
+      "hitza",
+      "sarea"
+    ],
+    "es": {
+      "tagline": "Haz girar las letras. Encuentra lo que ya sabes.",
+      "summary": "Forma palabras con una rueda de letras y llena el crucigrama.",
+      "intro": "Una misma rueda puede guardar varias palabras. Ve descubriéndolas a tu ritmo.",
+      "facts": [
+        "Rueda de letras",
+        "Un crucigrama",
+        "Palabras extra"
+      ],
+      "storyTitle": "El molino transforma. Tú también.",
+      "story": [
+        "Errota es el molino. En lugares como Igartza, en Beasain, el molino y la ferrería conservan la memoria de oficios ligados al agua y a la transformación.",
+        "Nuestra piedra de molino trabaja con letras. Al cambiar el orden, algo conocido toma otra forma: aparecen palabras que quizá no habías visto juntas."
+      ],
+      "steps": [
+        [
+          "Observa la rueda",
+          "Piensa qué palabras puedes formar con sus letras."
+        ],
+        [
+          "Desliza y une",
+          "Forma una palabra sin usar más veces una letra de las que aparece en la rueda."
+        ],
+        [
+          "Llena el crucigrama",
+          "Las palabras del nivel ocupan sus casillas. Las palabras extra válidas también cuentan y ayudan a conseguir pistas."
+        ]
+      ],
+      "skills": [
+        "Vocabulario activo",
+        "Orden de las letras",
+        "Búsqueda de alternativas"
+      ],
+      "lesson": "Te invita a producir palabras con unas letras concretas y a buscar otras posibilidades después de la primera respuesta.",
+      "tip": "Si te bloqueas, mezcla la rueda: ver las mismas letras de otra manera puede darte una idea.",
+      "example": {
+        "prompt": [
+          "E · T · X · E · A"
+        ],
+        "answer": "ETXEA",
+        "explanation": "La rueda tiene dos E y permite formar ETXEA. Es un ejemplo de construcción, no la solución de todos los niveles."
+      }
+    },
+    "eu": {
+      "tagline": "Biratu letrak. Aurkitu dakizuna.",
+      "summary": "Osatu hitzak letra-gurpilarekin eta bete gurutzegrama.",
+      "intro": "Gurpil berean hainbat hitz ezkuta daitezke. Aurkitu zure erritmoan.",
+      "facts": [
+        "Letra-gurpila",
+        "Gurutzegrama bat",
+        "Hitz gehigarriak"
+      ],
+      "storyTitle": "Errotak eraldatu egiten du. Zuk ere bai.",
+      "story": [
+        "Errota: ura eta eraldaketa lotzen dituen lanbidearen irudia. Beasaingo Igartzan, errotak eta burdinolak lan horien oroimena gordetzen dute.",
+        "Gure errotarriak letrak lantzen ditu. Ordena aldatzean, ezaguna zenak beste forma bat hartzen du: aurretik batera ikusi ez zenituen hitzak agertzen dira."
+      ],
+      "steps": [
+        [
+          "Begiratu gurpilari",
+          "Pentsatu zer hitz osa ditzakezun letrekin."
+        ],
+        [
+          "Irristatu eta lotu",
+          "Osatu hitza, letra bakoitza gurpilean agertzen den aldi kopurua gainditu gabe."
+        ],
+        [
+          "Bete gurutzegrama",
+          "Mailako hitzek beren laukitxoak betetzen dituzte. Baliozko hitz gehigarriek ere kontatzen dute, eta pistak lortzen laguntzen dute."
+        ]
+      ],
+      "skills": [
+        "Hiztegi aktiboa",
+        "Letren ordena",
+        "Beste aukerak bilatzea"
+      ],
+      "lesson": "Letra jakin batzuekin hitzak sortzera eta lehen erantzunaren ondoren beste aukera batzuk bilatzera gonbidatzen zaitu.",
+      "tip": "Trabatzen bazara, nahastu gurpila: letra berak beste era batera ikusteak ideia bat eman diezazuke.",
+      "example": {
+        "prompt": [
+          "E · T · X · E · A"
+        ],
+        "answer": "ETXEA",
+        "explanation": "Gurpilak bi E ditu eta ETXEA osatzeko aukera ematen du. Eraikuntza-adibidea da, ez maila guztien erantzuna."
+      }
+    },
+    "source": {
+      "name": "Turismo Euskadi · Igartza",
+      "url": "https://turismo.euskadi.eus/es/patrimonio-cultural/conjunto-monumental-de-igartza/webtur00-content/es/"
+    }
+  },
+  {
+    "id": "sutegia",
+    "slug": "sutegia",
+    "name": "Sutegia",
+    "daily": false,
+    "related": [
+      "lauburu",
+      "hitzezhitz"
+    ],
+    "es": {
+      "tagline": "Las palabras también se forjan.",
+      "summary": "Combina raíces y sufijos para crear palabras.",
+      "intro": "Elige las piezas adecuadas y descubre cómo cambia el significado al unirlas.",
+      "facts": [
+        "8 objetivos",
+        "Raíces y sufijos",
+        "Descubrimientos extra"
+      ],
+      "storyTitle": "Del taller al significado.",
+      "story": [
+        "La fragua inspira Sutegia. En la ferrería de Mirandaola, en Legazpi, el fuego y el trabajo del hierro permiten acercarse a un oficio que forma parte del patrimonio vasco.",
+        "En Euskalario forjamos palabras. La raíz aporta una base; el sufijo cambia lo que podemos decir con ella. El galtzagorri te propone un significado y tú buscas sus piezas."
+      ],
+      "steps": [
+        [
+          "Lee el objetivo",
+          "Mira el significado de la palabra que debes formar."
+        ],
+        [
+          "Elige raíz y sufijo",
+          "Selecciona una pieza de cada tipo y pulsa el martillo para probar la combinación."
+        ],
+        [
+          "Descubre y continúa",
+          "Si formas el objetivo, avanzas. Otras combinaciones válidas se suman a tus descubrimientos. Completa ocho objetivos."
+        ]
+      ],
+      "skills": [
+        "Formación de palabras",
+        "Raíces y sufijos",
+        "Relación entre forma y sentido"
+      ],
+      "lesson": "Te ayuda a reconocer piezas que se repiten en distintas palabras y a comprender cómo aportan significado.",
+      "tip": "No todas las combinaciones crean una palabra válida. Usa el significado como guía.",
+      "example": {
+        "prompt": [
+          "eder + -tasun"
+        ],
+        "answer": "edertasun · belleza",
+        "explanation": "Eder aporta la idea de bonito; -tasun permite formar el nombre de esa cualidad."
+      }
+    },
+    "eu": {
+      "tagline": "Hitzak ere forjatu egiten dira.",
+      "summary": "Elkartu erroak eta atzizkiak hitzak sortzeko.",
+      "intro": "Aukeratu pieza egokiak eta ikusi esanahia nola aldatzen den elkartzean.",
+      "facts": [
+        "8 helburu",
+        "Erroak eta atzizkiak",
+        "Aurkikuntza gehigarriak"
+      ],
+      "storyTitle": "Lantegitik esanahira.",
+      "story": [
+        "Sutegian du inspirazioa jokoak. Legazpiko Mirandaolako burdinolan, suak eta burdinaren lanak euskal ondareko lanbide batera hurbiltzeko aukera ematen dute.",
+        "Euskalariok hitzak forjatzen ditu. Erroak oinarria ematen du; atzizkiak harekin esan dezakeguna aldatzen du. Galtzagorriak esanahi bat proposatzen du, zuk piezak bila ditzazun."
+      ],
+      "steps": [
+        [
+          "Irakurri helburua",
+          "Begiratu osatu behar duzun hitzaren esanahiari."
+        ],
+        [
+          "Aukeratu erroa eta atzizkia",
+          "Hautatu mota bakoitzeko pieza bat eta sakatu mailua konbinazioa probatzeko."
+        ],
+        [
+          "Aurkitu eta jarraitu",
+          "Helburua osatzean, aurrera egiten duzu. Beste konbinazio zuzenak aurkikuntzetan gordetzen dira. Osatu zortzi helburu."
+        ]
+      ],
+      "skills": [
+        "Hitz-eraketa",
+        "Erroak eta atzizkiak",
+        "Forma eta esanahia lotzea"
+      ],
+      "lesson": "Hainbat hitzetan errepikatzen diren piezak ezagutzen eta esanahia nola ematen duten ulertzen laguntzen dizu.",
+      "tip": "Konbinazio guztiek ez dute baliozko hitzik sortzen. Erabili esanahia gidari.",
+      "example": {
+        "prompt": [
+          "eder + -tasun"
+        ],
+        "answer": "edertasun",
+        "explanation": "Eder oinarriari -tasun erantsita, nolakotasuna adierazten duen izena sortzen da."
+      }
+    },
+    "source": {
+      "name": "Turismo Euskadi · Mirandaola",
+      "url": "https://turismo.euskadi.eus/es/patrimonio-cultural/ferreria-de-mirandaola/webtur00-content/es/"
+    }
+  },
+  {
+    "id": "puntua",
+    "slug": "puntua",
+    "name": "Puntua",
+    "daily": false,
+    "related": [
+      "sutegia",
+      "lauburu"
+    ],
+    "es": {
+      "tagline": "La última palabra tiene mucho que decir.",
+      "summary": "Completa el bertso con rima, medida y sentido.",
+      "intro": "Lee los versos y encuentra la palabra que hace encajar el final. No basta con que suene parecida.",
+      "facts": [
+        "3 bertsos",
+        "Cuatro opciones",
+        "Rima, medida y sentido"
+      ],
+      "storyTitle": "Un pequeño paso hacia el bertso.",
+      "story": [
+        "La bertsolaritza une palabra, rima y medida. En la improvisación, el bertsolari construye su respuesta dentro de una forma que también le ayuda a crear.",
+        "Puntua se inspira en ese equilibrio. Aquí trabajas con bertsos escritos para la app y eliges la palabra final: una manera de acercarte a su estructura leyendo."
+      ],
+      "steps": [
+        [
+          "Lee el bertso",
+          "Fíjate en el tema, la rima y el verso que falta completar."
+        ],
+        [
+          "Compara las opciones",
+          "Busca la palabra que encaje en el sentido, rime y complete la medida. En estos ejercicios el último verso tiene seis sílabas."
+        ],
+        [
+          "Comprueba y sigue",
+          "Los errores se pueden reintentar. Lee la traducción al acertar y completa los tres bertsos de la ronda."
+        ]
+      ],
+      "skills": [
+        "Comprensión en contexto",
+        "Rima y sílabas",
+        "Elección de palabras"
+      ],
+      "lesson": "Practicas elegir una palabra por lo que significa y por cómo encaja en un verso. Es una actividad escrita; no evalúa voz ni pronunciación.",
+      "tip": "Lee el final junto al segundo verso. La rima ayuda, pero el significado decide.",
+      "example": {
+        "prompt": [
+          "gorde bihotzetan,",
+          "…",
+          "egun ______."
+        ],
+        "answer": "guztietan → egun guztietan",
+        "explanation": "La palabra encaja con bihotzetan, completa seis sílabas con egun y da sentido al bertso sobre mantener vivo el euskera."
+      }
+    },
+    "eu": {
+      "tagline": "Azken hitzak badu zer esana.",
+      "summary": "Osatu bertsoa errima, neurria eta zentzua zainduz.",
+      "intro": "Irakurri bertso-lerroak eta aurkitu amaieran egokitzen den hitza. Antzeko soinua izatea ez da nahikoa.",
+      "facts": [
+        "3 bertso",
+        "Lau aukera",
+        "Errima, neurria eta zentzua"
+      ],
+      "storyTitle": "Bertsora hurbiltzeko urrats txiki bat.",
+      "story": [
+        "Bertsolaritzak hitza, errima eta neurria elkartzen ditu. Bat-batean ari den bertsolariak forma baten barruan eraikitzen du erantzuna; forma hori sortzeko laguntza ere bada.",
+        "Oreka horretan du inspirazioa Puntuak. Apparentzat idatzitako bertsoekin aritzen zara eta azken hitza aukeratzen duzu: irakurriz egiturara hurbiltzeko modu bat."
+      ],
+      "steps": [
+        [
+          "Irakurri bertsoa",
+          "Begiratu gaiari, errimari eta osatu beharreko lerroari."
+        ],
+        [
+          "Alderatu aukerak",
+          "Bilatu esanahiarekin bat datorren, errima egiten duen eta neurria osatzen duen hitza. Ariketa hauetan azken lerroak sei silaba ditu."
+        ],
+        [
+          "Egiaztatu eta jarraitu",
+          "Huts eginez gero, berriz saia zaitezke. Asmatzean irakurri itzulpena, eta osatu txandako hiru bertsoak."
+        ]
+      ],
+      "skills": [
+        "Testuingurua ulertzea",
+        "Errima eta silabak",
+        "Hitzak aukeratzea"
+      ],
+      "lesson": "Hitza esanahiagatik eta bertsoan duen lekuagatik aukeratzen praktikatzen duzu. Idatzizko jarduera da; ez du ahotsa edo ahoskera ebaluatzen.",
+      "tip": "Irakurri amaiera bigarren lerroarekin batera. Errimak laguntzen du, baina esanahiak erabakitzen du.",
+      "example": {
+        "prompt": [
+          "gorde bihotzetan,",
+          "…",
+          "egun ______."
+        ],
+        "answer": "guztietan → egun guztietan",
+        "explanation": "Bihotzetan hitzarekin errimatzen du, egun hitzarekin sei silaba osatzen ditu eta euskarari bizirik eusteko bertsoari zentzua ematen dio."
+      }
+    },
+    "source": {
+      "name": "Bertsozale Elkartea · Zer da bertsoa?",
+      "url": "https://www.bertsozale.eus/eu/bertsolaritza/sarrera-zer-da-bertsoa"
+    }
+  },
+  {
+    "id": "sokatira",
+    "slug": "sokatira",
+    "name": "Sokatira",
+    "daily": false,
+    "related": [
+      "pilota",
+      "azoka"
+    ],
+    "es": {
+      "tagline": "Tira de la cuerda con lo que sabes.",
+      "summary": "Un duelo de vocabulario contra el galtzagorri.",
+      "intro": "Tu compañero de plaza cambia de lado por un momento. El galtzagorri también quiere ganar esta prueba.",
+      "facts": [
+        "Hasta 10 preguntas",
+        "4 respuestas",
+        "Un rival de la app"
+      ],
+      "storyTitle": "La fuerza de tirar juntos.",
+      "story": [
+        "La sokatira forma parte de los herri kirolak: dos equipos tiran de una cuerda, cada uno hacia su lado. La fuerza se convierte en un esfuerzo compartido.",
+        "En Euskalario la cuerda se mueve con respuestas. Juegas contra el galtzagorri controlado por la app: su lado de la cuerda convierte el repaso en un pequeño duelo sin conexión."
+      ],
+      "steps": [
+        [
+          "Lee la pregunta",
+          "Una palabra o significado aparece con cuatro posibles respuestas."
+        ],
+        [
+          "Elige antes de que acabe el tiempo",
+          "El galtzagorri también responde. Acertar y hacerlo a tiempo influye en el avance de la cuerda."
+        ],
+        [
+          "Lleva la cuerda a tu lado",
+          "La partida dura como máximo diez preguntas y puede acabar antes si un lado llega al límite. Revisa las respuestas al terminar."
+        ]
+      ],
+      "skills": [
+        "Vocabulario",
+        "Elección entre alternativas",
+        "Rapidez con atención"
+      ],
+      "lesson": "Practicas escoger la traducción adecuada mientras mantienes la atención. El rival pertenece a la app; no necesitas otra persona ni una partida en línea.",
+      "tip": "Mira primero las cuatro opciones. La más familiar no siempre es la traducción que buscas.",
+      "example": {
+        "prompt": [
+          "casa → etxe / mendi / ogi / ur"
+        ],
+        "answer": "etxe",
+        "explanation": "Mendi es monte, ogi es pan y ur es agua. Solo etxe responde a esta pregunta."
+      }
+    },
+    "eu": {
+      "tagline": "Tira sokari dakizunarekin.",
+      "summary": "Hiztegi-lehia galtzagorriaren aurka.",
+      "intro": "Plazako laguna beste aldera pasatu da une batez. Galtzagorriak ere proba hau irabazi nahi du.",
+      "facts": [
+        "Gehienez 10 galdera",
+        "4 erantzun",
+        "Apparen aurkaria"
+      ],
+      "storyTitle": "Elkarrekin tiratzearen indarra.",
+      "story": [
+        "Sokatira herri kiroletako bat da: bi taldek soka bati tira egiten diote, bakoitzak bere aldera. Indarra ahalegin partekatua bihurtzen da.",
+        "Euskalarioko soka erantzunekin mugitzen da. Appak kontrolatutako galtzagorriaren aurka jokatzen duzu: errepasoa konexiorik gabeko lehia txiki bihurtzen da."
+      ],
+      "steps": [
+        [
+          "Irakurri galdera",
+          "Hitz edo esanahi bat agertzen da, lau erantzun aukerarekin."
+        ],
+        [
+          "Aukeratu garaiz",
+          "Galtzagorriak ere erantzuten du. Asmatzeak eta garaiz egiteak sokaren mugimenduan eragiten dute."
+        ],
+        [
+          "Ekarri soka zure aldera",
+          "Gehienez hamar galdera ditu partidak; lehenago amai daiteke alde bat mugara iristen bada. Berrikusi erantzunak amaitzean."
+        ]
+      ],
+      "skills": [
+        "Hiztegia",
+        "Aukeren artean hautatzea",
+        "Arretaz eta azkar erantzutea"
+      ],
+      "lesson": "Itzulpen egokia aukeratzen praktikatzen duzu, arreta mantenduz. Aurkaria apparen parte da; ez duzu beste pertsonarik edo sareko partidarik behar.",
+      "tip": "Begiratu lehenik lau aukerei. Ezagunena ez da beti bilatzen duzun itzulpena.",
+      "example": {
+        "prompt": [
+          "casa → etxe / mendi / ogi / ur"
+        ],
+        "answer": "etxe",
+        "explanation": "Mendi, ogi eta ur beste esanahi batzuk dira. Galdera honetan etxe da erantzun zuzena."
+      }
+    },
+    "source": {
+      "name": "Turismo Euskadi · Herri kirolak",
+      "url": "https://turismo.euskadi.eus/deportevasco/"
+    }
+  }
+]

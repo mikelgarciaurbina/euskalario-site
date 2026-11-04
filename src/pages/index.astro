@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import GameDirectory from "../components/GameDirectory.astro";
 ---
 <BaseLayout lang="es" page="home" title="Euskalario · Tu euskera, cada día." description="Refuerza tu euskera con 11 juegos, retos diarios y repaso de vocabulario. Sin anuncios, compras integradas ni cuenta. Euskara, jolasean.">
 <main id="content">
@@ -27,75 +28,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 <h2>Hamaika jolas.<br>Mucho que aprender.</h2>
 <p>En euskera, hamaika es once. Y también significa muchísimos. Aquí tienes once formas de ponerlo en práctica.</p>
 </div>
-<div class="game-list">
-<article class="game"><span class="game-number">01</span>
-<div>
-<h3>Hitza</h3>
-<p>Una palabra al día, seis intentos para encontrarla.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">02</span>
-<div>
-<h3>Lauburu</h3>
-<p>Dieciséis palabras. Cuatro grupos. Busca qué las une.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">03</span>
-<div>
-<h3>Sarea</h3>
-<p>Encuentra palabras de un mismo tema, letra a letra.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">04</span>
-<div>
-<h3>Pilota</h3>
-<p>¿Es correcta la traducción? Llega a los 22 tantos.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">05</span>
-<div>
-<h3>Txalaparta</h3>
-<p>Une cada palabra con su significado en castellano.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">06</span>
-<div>
-<h3>Azoka</h3>
-<p>Interpreta precios y practica los números en euskera.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">07</span>
-<div>
-<h3>Hitzez hitz</h3>
-<p>Recuerda y escribe las palabras que toca repasar.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">08</span>
-<div>
-<h3>Errota</h3>
-<p>Forma palabras a partir de una rueda de letras.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">09</span>
-<div>
-<h3>Sutegia</h3>
-<p>Combina raíces y sufijos para descubrir palabras.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">10</span>
-<div>
-<h3>Puntua</h3>
-<p>Completa un verso con rima, medida y sentido.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">11</span>
-<div>
-<h3>Sokatira</h3>
-<p>Un duelo de vocabulario contra el galtzagorri de la app.</p>
-</div>
-</article>
-<div class="game-twelve">Zure txanda! →</div>
-</div>
+<GameDirectory lang="es" />
 </section>
 <section class="section showcase">
 <div class="wrap">
@@ -145,7 +78,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 </li>
 </ol>
 </section>
-<section class="coming">
+<section class="coming" id="app">
 <div class="wrap">
 <div>
 <h2>Euskalario 2.0, en camino.</h2>

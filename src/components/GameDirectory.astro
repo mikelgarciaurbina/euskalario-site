@@ -1,0 +1,19 @@
+---
+import { games, gamePath } from '../data/games';
+import type { Language } from '../data/navigation';
+interface Props { lang: Language }
+const { lang } = Astro.props;
+---
+<div class="game-list">
+  {games.map((game, index) => (
+    <a class={`game game-link game-${game.id}`} href={gamePath(game, lang)}>
+      <span class="game-number">{String(index + 1).padStart(2, '0')}</span>
+      <div>
+        <h3>{game.name}</h3>
+        <p>{game[lang].summary}</p>
+        <span class="game-discover">{lang === 'es' ? 'Historia y cómo jugar' : 'Istorioa eta nola jokatu'} <span aria-hidden="true">↗</span></span>
+      </div>
+    </a>
+  ))}
+  <div class="game-twelve">Zure txanda! →</div>
+</div>

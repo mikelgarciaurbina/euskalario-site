@@ -44,3 +44,25 @@ horizontal a 390 y 320 px. Capturas preview-desktop.jpg y preview-mobile.jpg
 actualizadas. El viewport temporal se restableció tras la revisión.
 Cloudflare ahora requiere npm run build, salida dist y dependencias activas;
 se documenta retirar SKIP_DEPENDENCY_INSTALL=1. No hay despliegue ni DNS.
+
+FICHAS DE LOS ONCE JUEGOS — 4 de noviembre de 2026
+22 fichas ES/EU, enlaces desde ambas portadas y navegación entre juegos.
+Cada ficha incluye inspiración cultural, tres pasos contrastados con las
+reglas móviles, ejemplo con respuesta desplegable, habilidades de euskera,
+consejo del galtzagorri y relación con Hamaika proba. Las fuentes culturales
+se enlazan en el propio texto; no se presenta un juego nuevo de la app como
+si fuera una práctica histórica. Puntua y Azoka se describen como lectura.
+
+29 páginas estáticas compiladas; 742 enlaces/recursos locales verificados.
+Canonical, hreflang y sitemap incluyen las 22 fichas. Capturas y SVG reales
+de la app conservan su identidad; los WebP de cada juego pesan 23–46 KB.
+No hay JavaScript nuevo, dependencias nuevas ni imágenes remotas.
+
+Navegador: 22 fichas revisadas a 390 px, sin desbordamiento, textos cortados
+ni imágenes rotas. Txalaparta, Hitzez hitz y Sokatira en EU comprobados a
+320 px. Pilota: ejemplo abierto por clic y teclado, cambio ES/EU mantiene
+la ficha, enlace a instrucciones y navegación de portada operativos.
+El viewport temporal se restableció. Evidencia en qa/.
+
+Soporte público: el layout incluye exclusiones email_off documentadas por
+Cloudflare; no cambia la CSP. Verificación de salida HTML incluida en test.

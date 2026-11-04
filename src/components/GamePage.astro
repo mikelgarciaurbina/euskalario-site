@@ -1,0 +1,106 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { games, gamePath, gameTranslations, type Game } from '../data/games';
+import { routes, type Language } from '../data/navigation';
+interface Props { game: Game; lang: Language }
+const { game, lang } = Astro.props;
+const c = game[lang];
+const index = games.findIndex((entry) => entry.id === game.id);
+const next = games[(index + 1) % games.length];
+const related = game.related.map((id) => games.find((entry) => entry.id === id)!);
+const text = lang === 'es' ? {
+  games: 'Los juegos', back: 'Los once juegos', daily: 'Un nuevo reto cada día', replay: 'Puedes repetir partidas',
+  how: 'Cómo se juega', story: 'La inspiración', example: 'Un ejemplo para entenderlo',
+  reveal: 'Ver la respuesta', learning: 'El euskera que practicas', guide: 'Un consejo del galtzagorri',
+  screenshot: `Captura de ${game.name} en la app Euskalario`, caption: 'Euskalario · captura real de la app',
+  source: 'Para seguir descubriendo', mission: 'Una prueba de tu misión diaria',
+  missionBody: `Termina una partida de ${game.name} y suma su marca en Hamaika proba. Ganar o perder cuenta; salir antes de terminar no. Al completar los once juegos, recibes la txapela del día y sumas una jornada a tu racha de misiones.`,
+  missionNote: 'Tu progreso se guarda en el dispositivo. La misión se renueva a medianoche, según su fecha local.',
+  related: 'Sigue jugando con las palabras.', next: 'La siguiente prueba',
+  availability: 'Ver disponibilidad', where: 'Se juega en la app Euskalario',
+  whereBody: 'Euskalario 2.0 para iOS y Android está en preparación. Sin anuncios ni compras integradas.',
+} : {
+  games: 'Jokoak', back: 'Hamaika jokoak', daily: 'Erronka berria egunero', replay: 'Berriz joka dezakezu',
+  how: 'Nola jokatu', story: 'Inspirazioa', example: 'Ulertzeko adibide bat',
+  reveal: 'Ikusi erantzuna', learning: 'Lantzen duzun euskara', guide: 'Galtzagorriaren aholkua',
+  screenshot: `${game.name} jokoaren pantaila Euskalario appan`, caption: 'Euskalario · apparen benetako pantaila',
+  source: 'Gehiago ezagutzeko', mission: 'Zure eguneko misioaren proba bat',
+  missionBody: `Amaitu ${game.name} jokoaren partida bat eta gehitu haren marka Hamaika proban. Irabazteak zein galtzeak balio dute; amaitu aurretik ateratzeak ez. Hamaika jokoak osatzean, eguneko txapela lortu eta misio-segidan egun bat gehitzen duzu.`,
+  missionNote: 'Aurrerapena gailuan gordetzen da. Misioa gauerdian berritzen da, haren tokiko dataren arabera.',
+  related: 'Jarraitu hitzekin jolasten.', next: 'Hurrengo proba',
+  availability: 'Ikusi eskuragarritasuna', where: 'Euskalario appan jokatzen da',
+  whereBody: 'Euskalario 2.0 iOS eta Androiderako prestatzen ari gara. Iragarkirik eta aplikazio barruko erosketarik gabe.',
+};
+---
+<BaseLayout lang={lang} page="game" translations={gameTranslations(game)}
+  title={`${game.name}: ${lang === 'es' ? 'historia y cómo jugar' : 'istorioa eta nola jokatu'} · Euskalario`}
+  description={c.intro}>
+  <main id="content" class={`game-detail game-${game.id}`}>
+    <nav class="game-breadcrumb wrap" aria-label={lang === 'es' ? 'Ruta de navegación' : 'Nabigazio-bidea'}>
+      <a href={routes.home[lang]}>Euskalario</a><span aria-hidden="true">/</span>
+      <a href={`${routes.home[lang]}#juegos`}>{text.games}</a><span aria-hidden="true">/</span>
+      <span aria-current="page">{game.name}</span>
+    </nav>
+    <section class="game-hero wrap">
+      <div class="game-hero-copy">
+        <div class="game-identity">
+          <span class="game-emblem"><img src={`/assets/games/${game.id}.svg`} width="36" height="36" alt="" /></span>
+          <p class="eyebrow">{String(index + 1).padStart(2, '0')} / 11 · Euskalario</p>
+        </div>
+        <h1>{game.name}</h1>
+        <p class="game-tagline">{c.tagline}</p>
+        <p class="lead">{c.intro}</p>
+        <ul class="game-facts" aria-label={lang === 'es' ? 'El juego de un vistazo' : 'Jokoa begirada batean'}>
+          {c.facts.map((fact) => <li>{fact}</li>)}
+        </ul>
+        <div class="game-hero-actions">
+          <a class="button" href="#como-jugar">{text.how}<span aria-hidden="true">↓</span></a>
+          <a class="game-story-link" href="#historia">{text.story}</a>
+        </div>
+        <p class="game-mode"><span aria-hidden="true">◷</span> {game.daily ? text.daily : text.replay}</p>
+      </div>
+      <figure class="game-capture">
+        <div class="game-capture-backdrop" aria-hidden="true"></div>
+        <div class="phone"><img src={`/assets/games/${game.id}.webp`} width="660" height="1467" alt={text.screenshot} fetchpriority="high" /></div>
+        <img class="game-hero-host" src="/assets/galtzagorri.svg" width="105" height="122" alt="" />
+        <figcaption>{text.caption}</figcaption>
+      </figure>
+    </section>
+    <section id="historia" class="game-story-section">
+      <div class="wrap game-story-grid">
+        <div><p class="eyebrow">{text.story}</p><h2>{c.storyTitle}</h2></div>
+        <div class="game-story-body">
+          {c.story.map((paragraph) => <p>{paragraph}</p>)}
+          {game.source && <a class="game-source" href={game.source.url} rel="noreferrer">{text.source}: {game.source.name} <span aria-hidden="true">↗</span></a>}
+        </div>
+      </div>
+    </section>
+    <section id="como-jugar" class="section wrap game-how">
+      <div class="game-how-intro"><p class="eyebrow">{text.how}</p><h2>{c.summary}</h2></div>
+      <ol class="game-instructions">
+        {c.steps.map(([title, body], i) => <li><span aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}
+      </ol>
+      <aside class="game-example" aria-label={text.example}>
+        <p class="eyebrow">{text.example}</p>
+        <div class="game-example-prompt">{c.example.prompt.map((line) => <p>{line}</p>)}</div>
+        <details class="game-answer"><summary>{text.reveal}<span aria-hidden="true">+</span></summary><div><p class="game-example-answer">{c.example.answer}</p><p>{c.example.explanation}</p></div></details>
+      </aside>
+    </section>
+    <section class="game-learning-section">
+      <div class="wrap game-learning-grid">
+        <div><p class="eyebrow">{text.learning}</p><h2>{c.skills[0]}</h2><p>{c.lesson}</p><ul class="game-skills">{c.skills.map((skill) => <li>{skill}</li>)}</ul></div>
+        <aside class="game-guide"><img src="/assets/galtzagorri.svg" width="133" height="155" alt="Galtzagorri" loading="lazy" /><div><p class="eyebrow">{text.guide}</p><blockquote>{c.tip}</blockquote></div></aside>
+      </div>
+    </section>
+    <section class="section wrap game-mission">
+      <div class="game-mission-mark" aria-hidden="true">11<span>/11</span></div>
+      <div><p class="eyebrow">Hamaika proba</p><h2>{text.mission}</h2><p>{text.missionBody}</p><p class="meta">{text.missionNote}</p><a href={`${routes.home[lang]}#juegos`}>{text.back} <span aria-hidden="true">↗</span></a></div>
+    </section>
+    <section class="game-related-section">
+      <div class="wrap"><h2>{text.related}</h2><div class="game-related">
+        {related.map((entry) => <a class={`game-related-card game-${entry.id}`} href={gamePath(entry, lang)}><span class="game-emblem"><img src={`/assets/games/${entry.id}.svg`} width="28" height="28" alt="" /></span><div><h3>{entry.name}</h3><p>{entry[lang].summary}</p></div><span aria-hidden="true">↗</span></a>)}
+      </div><a class="game-next" href={gamePath(next, lang)}><span>{text.next}</span><strong>{next.name} →</strong></a></div>
+    </section>
+    <section class="game-app-cta wrap"><div><p class="eyebrow">{text.where}</p><p>{text.whereBody}</p></div><a class="button" href={`${routes.home[lang]}#app`}>{text.availability}<span aria-hidden="true">↗</span></a></section>
+  </main>
+</BaseLayout>

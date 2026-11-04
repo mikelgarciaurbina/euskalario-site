@@ -1,13 +1,14 @@
 ---
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
-import { routes, type Language, type Page } from '../data/navigation';
-interface Props { lang: Language; page: Page; title: string; description: string }
-const { lang, page, title, description } = Astro.props;
+import { routes, type Language, type Page, type Translations } from '../data/navigation';
+interface Props { lang: Language; page: Page; title: string; description: string; translations?: Translations }
+const { lang, page, title, description, translations } = Astro.props;
 const notFound = page === 'notFound';
-const translated = notFound ? null : routes[page];
+const translated = translations ?? (page === 'notFound' || page === 'game' ? null : routes[page]);
+if (!notFound && !translated) throw new Error('A translated route is required for each public page.');
 const absolute = (path: string) => new URL(path, Astro.site).href;
-const canonical = absolute(notFound ? '/404.html' : routes[page][lang]);
+const canonical = absolute(notFound ? '/404.html' : translated![lang]);
 ---
 <!doctype html>
 <html lang={lang}>
@@ -33,10 +34,13 @@ const canonical = absolute(notFound ? '/404.html' : routes[page][lang]);
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="stylesheet" href="/assets/site.css" />
+    <link rel="stylesheet" href="/assets/games.css" />
   </head>
   <body>
-    <Header lang={lang} page={page} />
+    <!--email_off-->
+    <Header lang={lang} page={page} translations={translated ?? undefined} />
     <slot />
     <Footer lang={lang} />
+    <!--/email_off-->
   </body>
 </html>

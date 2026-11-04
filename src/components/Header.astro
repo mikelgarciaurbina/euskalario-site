@@ -1,9 +1,9 @@
 ---
-import { navigation, routes, type Language, type Page } from '../data/navigation';
-interface Props { lang: Language; page: Page }
-const { lang, page } = Astro.props;
+import { navigation, routes, type Language, type Page, type Translations } from '../data/navigation';
+interface Props { lang: Language; page: Page; translations?: Translations }
+const { lang, page, translations } = Astro.props;
 const labels = navigation[lang];
-const translated = routes[page === 'notFound' ? 'home' : page];
+const translated = translations ?? routes[page === 'notFound' || page === 'game' ? 'home' : page];
 ---
 <a class="skip" href="#content">{labels.skip}</a>
 <header class="site-header">

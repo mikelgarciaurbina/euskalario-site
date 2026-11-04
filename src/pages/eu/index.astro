@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import GameDirectory from "../../components/GameDirectory.astro";
 ---
 <BaseLayout lang="eu" page="home" title="Euskalario · Zure euskara, egunero." description="Landu euskara 11 jokorekin, eguneroko erronkekin eta hiztegia gogoratzeko errepasoekin. Iragarkirik, aplikazio barruko erosketarik eta konturik gabe.">
 <main id="content">
@@ -27,75 +28,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 <h2>Hamaika jolas.<br>Ikasteko hamaika aukera.</h2>
 <p>Hamaika: zenbaki bat eta aukera asko. Hemen, euskara erabiltzeko eta indartzeko hamaika modu.</p>
 </div>
-<div class="game-list">
-<article class="game"><span class="game-number">01</span>
-<div>
-<h3>Hitza</h3>
-<p>Eguneko hitza asmatzeko sei saiakera.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">02</span>
-<div>
-<h3>Lauburu</h3>
-<p>Hamasei hitz. Lau talde. Aurkitu haien arteko loturak.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">03</span>
-<div>
-<h3>Sarea</h3>
-<p>Bilatu gai bereko hitzak, letraz letra.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">04</span>
-<div>
-<h3>Pilota</h3>
-<p>Zuzena al da itzulpena? Iritsi 22 tantora.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">05</span>
-<div>
-<h3>Txalaparta</h3>
-<p>Lotu hitz bakoitza gaztelaniazko esanahiarekin.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">06</span>
-<div>
-<h3>Azoka</h3>
-<p>Ulertu prezioak eta landu euskarazko zenbakiak.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">07</span>
-<div>
-<h3>Hitzez hitz</h3>
-<p>Gogoratu eta idatzi errepasatzeko hitzak.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">08</span>
-<div>
-<h3>Errota</h3>
-<p>Osatu hitzak letra-gurpil batekin.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">09</span>
-<div>
-<h3>Sutegia</h3>
-<p>Elkartu erroak eta atzizkiak, eta aurkitu hitzak.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">10</span>
-<div>
-<h3>Puntua</h3>
-<p>Osatu bertsoa, errima, neurria eta zentzua zainduz.</p>
-</div>
-</article>
-<article class="game"><span class="game-number">11</span>
-<div>
-<h3>Sokatira</h3>
-<p>Hiztegi-lehia, aplikazioko galtzagorriaren aurka.</p>
-</div>
-</article>
-<div class="game-twelve">Zure txanda! →</div>
-</div>
+<GameDirectory lang="eu" />
 </section>
 <section class="section showcase">
 <div class="wrap">
@@ -145,7 +78,7 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </li>
 </ol>
 </section>
-<section class="coming">
+<section class="coming" id="app">
 <div class="wrap">
 <div>
 <h2>Euskalario 2.0, bidean.</h2>

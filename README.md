@@ -27,10 +27,12 @@ npm run preview   # sirve la compilación terminada en el puerto 8096
 ## Estructura
 
 ```text
-src/pages/             Portadas ES/EU, soporte, privacidad, 404, robots y sitemap
+src/pages/             Portadas ES/EU, 22 fichas de juegos, soporte, privacidad, 404, robots y sitemap
 src/layouts/           HTML y metadatos comunes
 src/components/        Cabecera, navegación de idiomas y pie compartidos
 src/data/navigation.ts Rutas y textos de navegación ES/EU
+src/data/games.json    Contenido editorial de los once juegos, ES/EU
+public/assets/games/   Iconos de la app y capturas reales optimizadas
 public/assets/         CSS, imágenes, fuentes locales y sus licencias
 public/_headers        Cabeceras de Cloudflare
 site.json              Origen público utilizado al compilar
@@ -84,3 +86,28 @@ python3 -c 'from pathlib import Path; from zipfile import ZipFile, ZIP_DEFLATED;
 ```
 
 El ZIP, las vistas previas JPG y `QA.txt` quedan fuera de la carpeta publicada. El ZIP es generado y no se versiona. Para despliegue automático desde Git utiliza la integración Git de Pages.
+
+## Páginas de juegos
+
+Cada juego tiene una ficha ES en `/juegos/<slug>/` y EU en
+`/eu/jokoak/<slug>/`. Las once tarjetas de la portada enlazan con ellas.
+`Hitzez hitz` utiliza el slug `hitzez-hitz`. El selector de idioma conserva
+la ficha, y cada página tiene canonical, hreflang y entrada de sitemap.
+
+Los textos viven en `src/data/games.json`: inspiración, reglas, ejemplo,
+objetivo de aprendizaje y consejo del galtzagorri. La historia cultural se
+distingue de la interpretación del juego y enlaza a fuentes consultadas
+cuando corresponde. Al cambiar reglas en la app, revisar también estos textos.
+
+Las capturas de `public/assets/games/` proceden de las capturas Android
+reales del kit móvil, escaladas a 660 px y convertidas a WebP. Los SVG
+reutilizan el sistema de iconos de la app. Ningún build necesita acceder al
+repositorio móvil: el contenido y los recursos están dentro de este repo.
+
+Los ejemplos se despliegan con HTML nativo, sin JavaScript. La animación
+del galtzagorri respeta `prefers-reduced-motion`. Los comentarios `email_off`
+del layout evitan que Cloudflare transforme los correos públicos en enlaces
+que necesitan JavaScript para descifrarlos; se mantiene la CSP sin scripts.
+
+`npm test` comprueba las 29 páginas y sus enlaces, rutas de idiomas,
+fragmentos, sitemap y recursos. La revisión móvil está en `qa/`.
