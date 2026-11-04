@@ -1,0 +1,23 @@
+---
+import { navigation, routes, type Language, type Page } from '../data/navigation';
+interface Props { lang: Language; page: Page }
+const { lang, page } = Astro.props;
+const labels = navigation[lang];
+const translated = routes[page === 'notFound' ? 'home' : page];
+---
+<a class="skip" href="#content">{labels.skip}</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href={routes.home[lang]} aria-label="Euskalario">
+      <img src="/assets/logo.svg" width="174" height="41" alt="Euskalario" />
+    </a>
+    <nav class="nav" aria-label={labels.label}>
+      <a class="nav-games" href={`${routes.home[lang]}#juegos`}>{labels.games}</a>
+      <a href={routes.support[lang]}>{labels.support}</a>
+      <span class="languages">
+        <a href={translated.es} lang="es" aria-current={lang === 'es' ? 'page' : undefined}>ES</a>
+        <a href={translated.eu} lang="eu" aria-current={lang === 'eu' ? 'page' : undefined}>EU</a>
+      </span>
+    </nav>
+  </div>
+</header>

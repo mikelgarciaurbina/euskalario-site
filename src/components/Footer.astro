@@ -1,0 +1,16 @@
+---
+import { navigation, routes, type Language } from '../data/navigation';
+interface Props { lang: Language }
+const { lang } = Astro.props;
+const labels = navigation[lang];
+---
+<footer class="site-footer">
+  <div class="wrap">
+    <p>{labels.tagline}</p>
+    <nav aria-label={labels.information}>
+      <a href={routes.support[lang]}>{labels.support}</a>
+      <a href={routes.privacy[lang]}>{labels.privacy}</a>
+      <a href="mailto:info@overlayon.com">info@overlayon.com</a>
+    </nav>
+  </div>
+</footer>

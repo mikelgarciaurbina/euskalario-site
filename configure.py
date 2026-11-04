@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Set the public origin in this static site; no upload or network calls."""
+"""Set the Astro public origin. Run npm run build afterwards; nothing is uploaded."""
 import argparse
 import json
 import re
@@ -24,12 +24,6 @@ if (parts.scheme != 'https' or not valid_hostname or len(hostname) > 253
 root = Path(__file__).resolve().parent
 config_file = root / 'site.json'
 config = json.loads(config_file.read_text())
-previous = config['origin']
-for path in (root / 'dist').rglob('*'):
-    if path.is_file() and path.suffix in {'.html', '.xml', '.txt'}:
-        text = path.read_text()
-        if previous in text:
-            path.write_text(text.replace(previous, origin))
 config['origin'] = origin
 config_file.write_text(json.dumps(config, indent=2) + '\n')
-print(f'Public origin set to {origin}. No files have been published.')
+print(f'Public origin set to {origin}. Run npm run build. No files have been published.')

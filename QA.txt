@@ -29,3 +29,18 @@ archivos originales conservaban su SHA-256 al moverlos. Las páginas y
 recursos de dist/ permanecen idénticos; solo cambia la documentación.
 Raíz de Cloudflare: raíz del repositorio; carpeta publicada: dist/.
 La app móvil se mantiene en Euskalario/app y euskalario-app.
+
+MIGRACIÓN ASTRO — 4 de noviembre de 2026
+Astro 7.4.5 con salida estática; Node 24.22.1. Siete páginas Astro nativas
+con layout, cabecera y pie compartidos. Recursos locales en public/assets.
+Robots, sitemap y metadatos se generan desde site.json. Dist es generado
+y deja de versionarse. npm test compila y valida siete páginas, 97 enlaces
+y recursos locales, navegación ES/EU, canonical, sitemap y CSP sin scripts.
+Texto principal de las siete páginas contrastado con la versión anterior,
+sin cambios. Todos los assets y _headers conservan sus bytes originales.
+Revisión en navegador: portada, soporte, apertura de FAQ, cambio ES/EU
+sin perder la sección y privacidad; imágenes completas, sin desbordamiento
+horizontal a 390 y 320 px. Capturas preview-desktop.jpg y preview-mobile.jpg
+actualizadas. El viewport temporal se restableció tras la revisión.
+Cloudflare ahora requiere npm run build, salida dist y dependencias activas;
+se documenta retirar SKIP_DEPENDENCY_INSTALL=1. No hay despliegue ni DNS.

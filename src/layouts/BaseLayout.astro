@@ -1,0 +1,42 @@
+---
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { routes, type Language, type Page } from '../data/navigation';
+interface Props { lang: Language; page: Page; title: string; description: string }
+const { lang, page, title, description } = Astro.props;
+const notFound = page === 'notFound';
+const translated = notFound ? null : routes[page];
+const absolute = (path: string) => new URL(path, Astro.site).href;
+const canonical = absolute(notFound ? '/404.html' : routes[page][lang]);
+---
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#f7f3ec" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    {notFound ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonical} />}
+    {translated && <>
+      <link rel="alternate" hreflang="es" href={absolute(translated.es)} />
+      <link rel="alternate" hreflang="eu" href={absolute(translated.eu)} />
+    </>}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Euskalario" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={absolute('/assets/share.png')} />
+    <meta property="og:image:alt" content="Euskalario — Euskara, jolasean." />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/png" href="/assets/favicon.png" />
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+    <link rel="stylesheet" href="/assets/site.css" />
+  </head>
+  <body>
+    <Header lang={lang} page={page} />
+    <slot />
+    <Footer lang={lang} />
+  </body>
+</html>

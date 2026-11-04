@@ -1,76 +1,86 @@
-# Web de Euskalario
+# Euskalario · sitio web
 
-Web estática de presentación, soporte y privacidad. Su repositorio independiente es `git@github.com:mikelgarciaurbina/euskalario-site.git`, ubicado localmente en `Euskalario/site`. La carpeta publicable es **`dist/`**, relativa a la raíz de este repositorio. Incluye HTML, CSS, imágenes y fuentes locales. No requiere servidor de aplicación, SDK, claves ni compilación. La cuenta de Cloudflare se utiliza únicamente para alojarla.
+Sitio de presentación, soporte y privacidad en español y euskera, construido con **Astro** y salida estática. El diseño, las rutas, las imágenes y las fuentes se conservan de la web original. Las páginas publicadas no necesitan JavaScript, cuentas ni servidor de aplicación.
 
-## Conectar a Cloudflare Pages
+Repositorio: `git@github.com:mikelgarciaurbina/euskalario-site.git`.
+La app móvil vive en el repositorio independiente `euskalario-app`, carpeta hermana `../app`.
 
-En **Workers & Pages → Create application → Pages**, conecta el repositorio **`mikelgarciaurbina/euskalario-site`** de GitHub y utiliza estos valores:
+## Desarrollo
+
+Desde `Euskalario/site`:
+
+```sh
+nvm use
+npm ci
+npm run dev
+```
+
+La vista previa de desarrollo está en `http://127.0.0.1:8096/`.
+La versión de Node validada se fija en `.nvmrc`; Astro se fija en `package.json` y sus dependencias en `package-lock.json`.
+
+```sh
+npm test          # compila y verifica rutas, enlaces, idiomas, SEO y CSP
+npm run build     # genera dist/
+npm run preview   # sirve la compilación terminada en el puerto 8096
+```
+
+## Estructura
+
+```text
+src/pages/             Portadas ES/EU, soporte, privacidad, 404, robots y sitemap
+src/layouts/           HTML y metadatos comunes
+src/components/        Cabecera, navegación de idiomas y pie compartidos
+src/data/navigation.ts Rutas y textos de navegación ES/EU
+public/assets/         CSS, imágenes, fuentes locales y sus licencias
+public/_headers        Cabeceras de Cloudflare
+site.json              Origen público utilizado al compilar
+scripts/check-build.mjs Comprobación de la salida estática
+```
+
+`dist/`, `.astro/` y `node_modules/` son generados y están excluidos de Git. Edita las páginas en `src/` y los recursos estáticos en `public/`.
+
+## Cloudflare Pages
+
+Conecta **`mikelgarciaurbina/euskalario-site`** y usa:
 
 | Campo | Valor |
 | --- | --- |
-| Framework preset | `None` |
+| Framework preset | Astro |
 | Root directory | Vacío (raíz del repositorio) |
-| Build command | `exit 0` |
+| Build command | `npm run build` |
 | Build output directory | `dist` |
-| Variable de build | `SKIP_DEPENDENCY_INSTALL=1` |
 | Production branch | `main` |
+| Variable de build | `NODE_VERSION=24.22.1` |
 
-La variable omite la instalación automática de dependencias; esta web no necesita ninguna. La salida es `dist` porque la web tiene su propio repositorio. No hay que añadir `site/` ni `app/site/` a los campos de Cloudflare. [Configuración oficial](https://developers.cloudflare.com/pages/framework-guides/deploy-anything/) · [Omitir instalación de dependencias](https://developers.cloudflare.com/pages/configuration/build-image/#skip-dependency-install).
+**Retira `SKIP_DEPENDENCY_INSTALL=1`** si habías configurado la web anterior: Astro necesita que Cloudflare instale sus dependencias. Sustituye el antiguo comando `exit 0` por `npm run build`. La salida sigue siendo `dist`.
 
-Conserva `dist/` en este repositorio. Solo esa carpeta se publica: este README, las vistas previas y el informe QA quedan fuera. La app móvil y sus materiales de tiendas están en el repositorio hermano `euskalario-app`.
+El sitio usa `output: 'static'`; no requiere el adaptador de Cloudflare ni un Worker. Las reglas de `public/_headers` se copian a `dist/_headers` y se aplican en Pages. La vista previa local no aplica estas cabeceras.
 
-Como alternativa, puedes crear un proyecto **Direct Upload** y arrastrar `dist` al panel de Pages. Si quieres despliegues automáticos desde Git, elige la integración Git desde el principio: un proyecto Direct Upload no puede convertirse posteriormente a Git. [Direct Upload](https://developers.cloudflare.com/pages/get-started/direct-upload/).
+[Guía oficial de Astro para Cloudflare](https://docs.astro.build/en/guides/deploy/cloudflare/) · [Configuración de builds en Pages](https://developers.cloudflare.com/pages/configuration/build-configuration/).
 
-## Subdominio y URLs para las tiendas
+## Dominio y enlaces de las tiendas
 
-Propuesta: **`euskalario.overlayon.com`**. Todavía no se ha configurado ni publicado.
+Origen propuesto: **`https://euskalario.overlayon.com`**. Asociar el dominio en Cloudflare y configurar DNS es un paso separado del commit o push del código.
 
-En el proyecto Pages, abre **Custom domains → Set up a domain**, añade el subdominio y sigue la configuración DNS indicada. Si debes crear el registro manualmente, será un CNAME al dominio `…pages.dev` que Cloudflare asigne al proyecto. Primero asocia el dominio en Pages. [Dominios personalizados](https://developers.cloudflare.com/pages/configuration/custom-domains/).
+- Web: `/` y `/eu/`
+- Soporte: `/support/` y `/support/eu/`
+- Privacidad: `/privacy/` y `/privacy/eu/`
 
-Una vez que respondan públicamente por HTTPS:
-
-- Web: `https://euskalario.overlayon.com/`
-- Soporte: `https://euskalario.overlayon.com/support/`
-- Privacidad: `https://euskalario.overlayon.com/privacy/`
-- Euskera: `/eu/`, `/support/eu/` y `/privacy/eu/` en ese mismo dominio.
-
-Si eliges otro dominio, actualiza los metadatos, `robots.txt` y `sitemap.xml` desde `Euskalario/site/`:
+Los enlaces canónicos, Open Graph, robots y sitemap se generan con el origen de `site.json`. Para cambiarlo:
 
 ```sh
 python3 configure.py --origin https://tu-subdominio.example.com
+npm run build
 ```
 
-El script utiliza solo Python estándar y no publica nada. Los enlaces internos y los recursos siguen funcionando en el nuevo dominio. Añade los enlaces reales de App Store y Google Play cuando estén disponibles; por ahora la portada indica «Próximamente».
+El script valida el origen y actualiza la configuración; no publica archivos ni modifica DNS. Revisa las páginas y las URLs HTTPS después del despliegue. Contacto: `info@overlayon.com`. Los enlaces de App Store y Google Play se añadirán cuando estén disponibles.
 
-## Comprobar y mantener
+## Direct Upload
 
-Desde `Euskalario/site/`, puedes ver la web localmente:
+Tras `npm run build`, puedes arrastrar `dist/` a un proyecto Direct Upload. Para preparar un ZIP nuevo con los archivos en la raíz:
 
 ```sh
-python3 -m http.server 8096 --bind 127.0.0.1 --directory dist
+python3 -c 'from pathlib import Path; from zipfile import ZipFile, ZIP_DEFLATED; root=Path("dist"); archive=ZipFile("cloudflare-upload.zip", "w", ZIP_DEFLATED); [archive.write(p, p.relative_to(root)) for p in root.rglob("*") if p.is_file()]; archive.close()'
 ```
 
-Abre `http://127.0.0.1:8096/`. Este servidor permite revisar páginas y recursos, pero no aplica las reglas específicas de Cloudflare de `_headers`.
-
-Las reglas de `_headers` se aplican en Pages; el archivo de configuración no se sirve como una página. Al cambiar imágenes con nombres estables, conserva una caché moderada o cambia el nombre del archivo. [Cabeceras en Pages](https://developers.cloudflare.com/pages/configuration/headers/).
-
-Antes de usar la URL de privacidad en las tiendas, revisa que el nombre del responsable y la descripción del buzón de soporte coincidan con tu operativa. El correo confirmado es `info@overlayon.com`. Comprueba las rutas, idiomas y enlaces tras el primer despliegue. La publicación del repositorio en GitHub no configura Cloudflare ni modifica DNS.
-
-Workers Static Assets también admite esta carpeta; para esta web sin lógica de servidor, Pages permite conectar el repositorio sin añadir un Worker. [Alternativa oficial](https://developers.cloudflare.com/workers/static-assets/get-started/).
-
-## Paquete listo para arrastrar
-
-`cloudflare-upload.zip` contiene únicamente los archivos de `dist`, con
-`index.html` en la raíz. Sirve para Direct Upload. Si eliges conexión Git,
-usa la configuración de arriba y conserva `dist` en el repositorio. El ZIP es
-un archivo generado local y está excluido de Git. Para regenerarlo después
-de cambiar la web, desde este repositorio:
-
-```sh
-(cd dist && zip -r ../cloudflare-upload.zip .)
-```
-
-Para Direct Upload, también puedes arrastrar directamente la carpeta `dist/`.
-
-`preview-desktop.jpg`, `preview-mobile.jpg` y `QA.txt` son material local de
-revisión y no se publican, porque están fuera de `dist`.
+El ZIP, las vistas previas JPG y `QA.txt` quedan fuera de la carpeta publicada. El ZIP es generado y no se versiona. Para despliegue automático desde Git utiliza la integración Git de Pages.

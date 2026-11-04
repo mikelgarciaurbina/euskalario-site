@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://euskalario.overlayon.com/sitemap.xml

@@ -9,6 +9,10 @@ __pycache__/
 .dev.vars
 .dev.vars.*
 *.log
+node_modules/
+.astro/
+dist/
+.sites-runtime/
 
-# Generated Direct Upload archive; dist/ is the versioned publishable source.
+# Generated Direct Upload archive; source lives in src/ and public/.
 /cloudflare-upload.zip
