@@ -75,7 +75,14 @@ python3 configure.py --origin https://tu-subdominio.example.com
 npm run build
 ```
 
-El script valida el origen y actualiza la configuración; no publica archivos ni modifica DNS. Revisa las páginas y las URLs HTTPS después del despliegue. Contacto: `info@overlayon.com`. Los enlaces de App Store y Google Play se añadirán cuando estén disponibles.
+El script valida el origen y actualiza la configuración; no publica archivos ni modifica DNS. Revisa las páginas y las URLs HTTPS después del despliegue. Contacto: `info@overlayon.com`.
+
+Los enlaces de descarga están centralizados en `src/data/stores.ts` y se muestran mediante `StoreLinks.astro` en ambas portadas y en las 22 fichas de juegos:
+
+- App Store: https://apps.apple.com/us/app/euskalario/id6749779035
+- Google Play: https://play.google.com/store/apps/details?id=com.overlayon.euskalario
+
+Los botones enlazan directamente a las tiendas, sin JavaScript ni seguimiento. La disponibilidad de una actualización depende de su publicación en cada tienda.
 
 ## Direct Upload
 

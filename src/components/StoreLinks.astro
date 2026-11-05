@@ -1,0 +1,15 @@
+---
+import { stores } from '../data/stores';
+import type { Language } from '../data/navigation';
+interface Props { lang: Language }
+const { lang } = Astro.props;
+const label = lang === 'es' ? 'Descargar Euskalario' : 'Deskargatu Euskalario';
+---
+<div class="store-links" role="group" aria-label={label}>
+  {stores.map((store) => (
+    <a class="store-link" href={store.url} aria-label={`${label} · ${store.name}`}>
+      <span><small>{lang === 'es' ? 'Descargar en' : 'Deskargatu'}</small><strong>{store.name}</strong></span>
+      <span class="store-link-arrow" aria-hidden="true">↗</span>
+    </a>
+  ))}
+</div>

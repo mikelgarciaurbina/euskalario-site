@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import GameDirectory from "../components/GameDirectory.astro";
+import StoreLinks from "../components/StoreLinks.astro";
 ---
 <BaseLayout lang="es" page="home" title="Euskalario · Tu euskera, cada día." description="Refuerza tu euskera con 11 juegos, retos diarios y repaso de vocabulario. Sin anuncios, compras integradas ni cuenta. Euskara, jolasean.">
 <main id="content">
@@ -9,7 +10,9 @@ import GameDirectory from "../components/GameDirectory.astro";
 <p class="eyebrow">Euskara, jolasean.</p>
 <h1>El euskera que sabes,<br><span>contigo cada día.</span>
 </h1>
-<p class="lead">Recupera palabras, descubre conexiones y sigue aprendiendo. Unos minutos de juego para mantener vivo tu euskera.</p><a class="button" href="#juegos">Encuentra tu juego <span aria-hidden="true">↗</span></a>
+<p class="lead">Recupera palabras, descubre conexiones y sigue aprendiendo. Unos minutos de juego para mantener vivo tu euskera.</p>
+<StoreLinks lang="es" />
+<a class="hero-games-link" href="#juegos">Encuentra tu juego <span aria-hidden="true">↓</span></a>
 <p class="hero-note">Euskalario 2.0 · Para iOS y Android</p>
 </div>
 <div class="hero-art">
@@ -81,11 +84,10 @@ import GameDirectory from "../components/GameDirectory.astro";
 <section class="coming" id="app">
 <div class="wrap">
 <div>
-<h2>Euskalario 2.0, en camino.</h2>
-<p>Estamos preparando la nueva versión para las tiendas. Mientras tanto, aquí tienes toda la información y la ayuda de la app.</p>
+<h2>Tu euskera, en tu bolsillo.</h2>
+<p>Descarga Euskalario para iPhone, iPad o Android y encuentra tu momento para practicar. Consulta en tu tienda la versión disponible.</p>
 </div>
-<div class="platforms"><span class="platform">iOS<small>Próximamente</small></span><span class="platform">Android<small>Próximamente</small></span>
-</div>
+<StoreLinks lang="es" />
 </div>
 </section>
 </main>

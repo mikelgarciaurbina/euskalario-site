@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import StoreLinks from './StoreLinks.astro';
 import { games, gamePath, gameTranslations, type Game } from '../data/games';
 import { routes, type Language } from '../data/navigation';
 interface Props { game: Game; lang: Language }
@@ -17,8 +18,8 @@ const text = lang === 'es' ? {
   missionBody: `Termina una partida de ${game.name} y suma su marca en Hamaika proba. Ganar o perder cuenta; salir antes de terminar no. Al completar los once juegos, recibes la txapela del día y sumas una jornada a tu racha de misiones.`,
   missionNote: 'Tu progreso se guarda en el dispositivo. La misión se renueva a medianoche, según su fecha local.',
   related: 'Sigue jugando con las palabras.', next: 'La siguiente prueba',
-  availability: 'Ver disponibilidad', where: 'Se juega en la app Euskalario',
-  whereBody: 'Euskalario 2.0 para iOS y Android está en preparación. Sin anuncios ni compras integradas.',
+  where: 'Se juega en la app Euskalario',
+  whereBody: 'Descarga Euskalario para iOS o Android. Consulta en tu tienda la versión disponible.',
 } : {
   games: 'Jokoak', back: 'Hamaika jokoak', daily: 'Erronka berria egunero', replay: 'Berriz joka dezakezu',
   how: 'Nola jokatu', story: 'Inspirazioa', example: 'Ulertzeko adibide bat',
@@ -28,8 +29,8 @@ const text = lang === 'es' ? {
   missionBody: `Amaitu ${game.name} jokoaren partida bat eta gehitu haren marka Hamaika proban. Irabazteak zein galtzeak balio dute; amaitu aurretik ateratzeak ez. Hamaika jokoak osatzean, eguneko txapela lortu eta misio-segidan egun bat gehitzen duzu.`,
   missionNote: 'Aurrerapena gailuan gordetzen da. Misioa gauerdian berritzen da, haren tokiko dataren arabera.',
   related: 'Jarraitu hitzekin jolasten.', next: 'Hurrengo proba',
-  availability: 'Ikusi eskuragarritasuna', where: 'Euskalario appan jokatzen da',
-  whereBody: 'Euskalario 2.0 iOS eta Androiderako prestatzen ari gara. Iragarkirik eta aplikazio barruko erosketarik gabe.',
+  where: 'Euskalario appan jokatzen da',
+  whereBody: 'Deskargatu Euskalario iOS edo Androiderako. Begiratu dendan zein bertsio dagoen eskuragarri.',
 };
 ---
 <BaseLayout lang={lang} page="game" translations={gameTranslations(game)}
@@ -101,6 +102,6 @@ const text = lang === 'es' ? {
         {related.map((entry) => <a class={`game-related-card game-${entry.id}`} href={gamePath(entry, lang)}><span class="game-emblem"><img src={`/assets/games/${entry.id}.svg`} width="28" height="28" alt="" /></span><div><h3>{entry.name}</h3><p>{entry[lang].summary}</p></div><span aria-hidden="true">↗</span></a>)}
       </div><a class="game-next" href={gamePath(next, lang)}><span>{text.next}</span><strong>{next.name} →</strong></a></div>
     </section>
-    <section class="game-app-cta wrap"><div><p class="eyebrow">{text.where}</p><p>{text.whereBody}</p></div><a class="button" href={`${routes.home[lang]}#app`}>{text.availability}<span aria-hidden="true">↗</span></a></section>
+    <section class="game-app-cta wrap"><div><p class="eyebrow">{text.where}</p><p>{text.whereBody}</p></div><StoreLinks lang={lang} /></section>
   </main>
 </BaseLayout>
