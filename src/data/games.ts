@@ -2,6 +2,8 @@ import content from './games.json';
 import type { Language } from './navigation';
 
 export interface GameCopy {
+  /** Search-oriented description for the page title: «<name>: <title> · Euskalario». */
+  title: string;
   tagline: string;
   summary: string;
   intro: string;
@@ -12,7 +14,8 @@ export interface GameCopy {
   skills: string[];
   lesson: string;
   tip: string;
-  example: { prompt: string[]; answer: string; explanation: string };
+  /** promptLang/answerLang mark Basque examples inside the Spanish copy. */
+  example: { prompt: string[]; answer: string; explanation: string; promptLang?: 'eu'; answerLang?: 'eu' };
 }
 
 export interface Game {

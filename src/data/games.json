@@ -9,6 +9,7 @@
       "hitzezhitz"
     ],
     "es": {
+      "title": "adivina la palabra del día en euskera",
       "tagline": "Una palabra. Un pequeño encuentro cada día.",
       "summary": "La palabra del día en seis intentos.",
       "intro": "Cinco letras y seis oportunidades para recuperar una palabra que quizá ya estaba en tu memoria.",
@@ -48,10 +49,12 @@
           "E · T · X · E · A"
         ],
         "answer": "ETXEA · la casa",
-        "explanation": "Una palabra de cinco letras. En una partida real, los colores de cada intento te ayudarían a encontrarla."
+        "explanation": "Una palabra de cinco letras. En una partida real, los colores de cada intento te ayudarían a encontrarla.",
+        "promptLang": "eu"
       }
     },
     "eu": {
+      "title": "asmatu eguneko hitza",
       "tagline": "Hitz bat. Egunero elkartzeko aitzakia.",
       "summary": "Eguneko hitza, sei saiakeratan.",
       "intro": "Bost letra eta sei aukera, agian zure oroimenean zegoen hitz bat berriz aurkitzeko.",
@@ -109,6 +112,7 @@
       "sutegia"
     ],
     "es": {
+      "title": "cuatro grupos de palabras en euskera",
       "tagline": "Cuatro brazos. Cuatro maneras de encontrar una conexión.",
       "summary": "Dieciséis palabras y cuatro grupos ocultos.",
       "intro": "Mira más allá de una palabra suelta. La pista está en lo que comparte con las demás.",
@@ -149,10 +153,12 @@
           "berde · hori"
         ],
         "answer": "Colores: rojo, azul, verde y amarillo.",
-        "explanation": "Es un grupo ilustrativo. Las palabras y las conexiones del reto diario pueden ser diferentes."
+        "explanation": "Es un grupo ilustrativo. Las palabras y las conexiones del reto diario pueden ser diferentes.",
+        "promptLang": "eu"
       }
     },
     "eu": {
+      "title": "aurkitu ezkutuko lau taldeak",
       "tagline": "Lau beso. Loturak aurkitzeko lau bide.",
       "summary": "Hamasei hitz eta ezkutuko lau talde.",
       "intro": "Hitz bakarretik harago begiratu. Gakoa beste hitzekin partekatzen duenean dago.",
@@ -208,12 +214,13 @@
       "errota"
     ],
     "es": {
+      "title": "sopa de letras temática en euskera",
       "tagline": "Echa la red. Hay palabras por descubrir.",
       "summary": "Una red de letras con palabras del mismo tema.",
       "intro": "Sigue caminos entre letras vecinas y encuentra las palabras que se esconden en el tema del día.",
       "facts": [
         "6 × 8 letras",
-        "Caminos con diagonales",
+        "Caminos en horizontal y vertical",
         "Un tema cada día"
       ],
       "storyTitle": "Una red que recoge palabras.",
@@ -228,7 +235,7 @@
         ],
         [
           "Une letras vecinas",
-          "Arrastra o toca letras contiguas, también en diagonal. El camino puede girar, sin repetir una casilla dentro de la misma palabra."
+          "Arrastra o toca letras contiguas. Las palabras escondidas avanzan en horizontal y en vertical, y el camino puede girar, sin repetir una casilla dentro de la misma palabra."
         ],
         [
           "Completa la red",
@@ -247,16 +254,18 @@
           "M → E → N → D → I"
         ],
         "answer": "MENDI · monte",
-        "explanation": "Un camino ilustrativo: en el tablero real cada paso debe ir a una casilla vecina."
+        "explanation": "Un camino ilustrativo: en el tablero real cada paso debe ir a una casilla vecina.",
+        "promptLang": "eu"
       }
     },
     "eu": {
+      "title": "gai bereko hitzak letra-sarean",
       "tagline": "Bota sarea. Hitzak dituzu zain.",
       "summary": "Gai bereko hitzak letra-sarean.",
       "intro": "Lotu alboko letrak eta aurkitu eguneko gaiaren inguruan ezkutatzen diren hitzak.",
       "facts": [
         "6 × 8 letra",
-        "Diagonalak ere bai",
+        "Bide horizontal eta bertikalak",
         "Gai bat egunero"
       ],
       "storyTitle": "Hitzak biltzen dituen sare bat.",
@@ -271,7 +280,7 @@
         ],
         [
           "Lotu alboko letrak",
-          "Arrastatu edo ukitu elkarren ondoko letrak, diagonalean ere bai. Bideak bira egin dezake, hitz berean laukitxo bat errepikatu gabe."
+          "Arrastatu edo ukitu elkarren ondoko letrak. Ezkutuko hitzak horizontalean eta bertikalean doaz, eta bideak bira egin dezake, hitz berean laukitxo bat errepikatu gabe."
         ],
         [
           "Osatu sarea",
@@ -308,6 +317,7 @@
       "sokatira"
     ],
     "es": {
+      "title": "verdadero o falso en euskera",
       "tagline": "El siguiente tanto se juega con una palabra.",
       "summary": "Bai ala ez: decide si la traducción es correcta.",
       "intro": "Entra al frontón del galtzagorri: reconoce la traducción, responde a tiempo y trata de llegar a 22 tantos.",
@@ -351,6 +361,7 @@
       }
     },
     "eu": {
+      "title": "zuzena al da itzulpena?",
       "tagline": "Hurrengo tantoa hitz batekin jokatzen da.",
       "summary": "Bai ala ez: zuzena al da itzulpena?",
       "intro": "Sartu galtzagorriaren frontoian: ezagutu itzulpena, erantzun garaiz eta saiatu 22 tantora iristen.",
@@ -408,6 +419,7 @@
       "hitzezhitz"
     ],
     "es": {
+      "title": "une parejas de palabras en euskera",
       "tagline": "Una palabra responde a la otra.",
       "summary": "Une parejas en euskera y castellano durante un minuto.",
       "intro": "Encuentra las parejas y encadena aciertos. La memoria pone el ritmo.",
@@ -452,6 +464,7 @@
       }
     },
     "eu": {
+      "title": "lotu hitz-bikoteak minutu batean",
       "tagline": "Hitz batek besteari erantzuten dio.",
       "summary": "Lotu euskarazko eta gaztelaniazko bikoteak minutu batean.",
       "intro": "Aurkitu bikoteak eta asmatu segidan. Oroimenak jartzen du erritmoa.",
@@ -510,6 +523,7 @@
       "sokatira"
     ],
     "es": {
+      "title": "practica los números en euskera",
       "tagline": "En esta plaza, los números también hablan euskera.",
       "summary": "Lee el precio en euskera y escríbelo con cifras.",
       "intro": "El galtzagorri atiende el puesto. Tu reto es entender cuánto cuesta cada producto.",
@@ -549,10 +563,12 @@
           "berrogeita hamazazpi euro"
         ],
         "answer": "57 € · 40 + 17",
-        "explanation": "Berrogei aporta 40 y hamazazpi aporta 17. La unión da 57."
+        "explanation": "Berrogei aporta 40 y hamazazpi aporta 17. La unión da 57.",
+        "promptLang": "eu"
       }
     },
     "eu": {
+      "title": "landu zenbakiak euskaraz",
       "tagline": "Plaza honetan, zenbakiek ere euskaraz egiten dute.",
       "summary": "Irakurri prezioa euskaraz eta idatzi zifraz.",
       "intro": "Galtzagorria saltokian dago. Zure erronka produktu bakoitzaren prezioa ulertzea da.",
@@ -610,6 +626,7 @@
       "sutegia"
     ],
     "es": {
+      "title": "repasa vocabulario en euskera",
       "tagline": "Las palabras vuelven. Tú las haces tuyas.",
       "summary": "Recupera y escribe el vocabulario que toca repasar.",
       "intro": "Palabra a palabra, el repaso sigue tus respuestas y vuelve a traer lo que necesita un poco más de práctica.",
@@ -649,10 +666,12 @@
           "comer → ?"
         ],
         "answer": "jan",
-        "explanation": "Primero recuperas la palabra; después compruebas la respuesta. El reto consiste en escribir, no solo en reconocer."
+        "explanation": "Primero recuperas la palabra; después compruebas la respuesta. El reto consiste en escribir, no solo en reconocer.",
+        "answerLang": "eu"
       }
     },
     "eu": {
+      "title": "errepasatu zure hiztegia",
       "tagline": "Hitzak itzuli egiten dira. Zuk zeure egiten dituzu.",
       "summary": "Gogoratu eta idatzi errepasatzeko hiztegia.",
       "intro": "Hitzez hitz, errepasoak zure erantzunak kontuan hartzen ditu, gehiago landu beharrekoa berriz ekartzeko.",
@@ -707,6 +726,7 @@
       "sarea"
     ],
     "es": {
+      "title": "crucigrama de letras en euskera",
       "tagline": "Haz girar las letras. Encuentra lo que ya sabes.",
       "summary": "Forma palabras con una rueda de letras y llena el crucigrama.",
       "intro": "Una misma rueda puede guardar varias palabras. Ve descubriéndolas a tu ritmo.",
@@ -746,10 +766,13 @@
           "E · T · X · E · A"
         ],
         "answer": "ETXEA",
-        "explanation": "La rueda tiene dos E y permite formar ETXEA. Es un ejemplo de construcción, no la solución de todos los niveles."
+        "explanation": "La rueda tiene dos E y permite formar ETXEA. Es un ejemplo de construcción, no la solución de todos los niveles.",
+        "promptLang": "eu",
+        "answerLang": "eu"
       }
     },
     "eu": {
+      "title": "letra-gurpila eta gurutzegrama",
       "tagline": "Biratu letrak. Aurkitu dakizuna.",
       "summary": "Osatu hitzak letra-gurpilarekin eta bete gurutzegrama.",
       "intro": "Gurpil berean hainbat hitz ezkuta daitezke. Aurkitu zure erritmoan.",
@@ -807,6 +830,7 @@
       "hitzezhitz"
     ],
     "es": {
+      "title": "forma palabras con sufijos en euskera",
       "tagline": "Las palabras también se forjan.",
       "summary": "Combina raíces y sufijos para crear palabras.",
       "intro": "Elige las piezas adecuadas y descubre cómo cambia el significado al unirlas.",
@@ -850,6 +874,7 @@
       }
     },
     "eu": {
+      "title": "sortu hitzak atzizkiekin",
       "tagline": "Hitzak ere forjatu egiten dira.",
       "summary": "Elkartu erroak eta atzizkiak hitzak sortzeko.",
       "intro": "Aukeratu pieza egokiak eta ikusi esanahia nola aldatzen den elkartzean.",
@@ -907,6 +932,7 @@
       "lauburu"
     ],
     "es": {
+      "title": "completa bertsos en euskera",
       "tagline": "La última palabra tiene mucho que decir.",
       "summary": "Completa el bertso con rima, medida y sentido.",
       "intro": "Lee los versos y encuentra la palabra que hace encajar el final. No basta con que suene parecida.",
@@ -948,10 +974,13 @@
           "egun ______."
         ],
         "answer": "guztietan → egun guztietan",
-        "explanation": "La palabra encaja con bihotzetan, completa seis sílabas con egun y da sentido al bertso sobre mantener vivo el euskera."
+        "explanation": "La palabra encaja con bihotzetan, completa seis sílabas con egun y da sentido al bertso sobre mantener vivo el euskera.",
+        "promptLang": "eu",
+        "answerLang": "eu"
       }
     },
     "eu": {
+      "title": "osatu bertsoak",
       "tagline": "Azken hitzak badu zer esana.",
       "summary": "Osatu bertsoa errima, neurria eta zentzua zainduz.",
       "intro": "Irakurri bertso-lerroak eta aurkitu amaieran egokitzen den hitza. Antzeko soinua izatea ez da nahikoa.",
@@ -1011,6 +1040,7 @@
       "azoka"
     ],
     "es": {
+      "title": "duelo de vocabulario en euskera",
       "tagline": "Tira de la cuerda con lo que sabes.",
       "summary": "Un duelo de vocabulario contra el galtzagorri.",
       "intro": "Tu compañero de plaza cambia de lado por un momento. El galtzagorri también quiere ganar esta prueba.",
@@ -1050,10 +1080,12 @@
           "casa → etxe / mendi / ogi / ur"
         ],
         "answer": "etxe",
-        "explanation": "Mendi es monte, ogi es pan y ur es agua. Solo etxe responde a esta pregunta."
+        "explanation": "Mendi es monte, ogi es pan y ur es agua. Solo etxe responde a esta pregunta.",
+        "answerLang": "eu"
       }
     },
     "eu": {
+      "title": "hiztegi-lehia galtzagorriaren aurka",
       "tagline": "Tira sokari dakizunarekin.",
       "summary": "Hiztegi-lehia galtzagorriaren aurka.",
       "intro": "Plazako laguna beste aldera pasatu da une batez. Galtzagorriak ere proba hau irabazi nahi du.",

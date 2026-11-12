@@ -3,17 +3,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import GameDirectory from "../components/GameDirectory.astro";
 import StoreLinks from "../components/StoreLinks.astro";
 ---
-<BaseLayout lang="es" page="home" title="Euskalario · Tu euskera, cada día." description="Refuerza tu euskera con 11 juegos, retos diarios y repaso de vocabulario. Sin anuncios, compras integradas ni cuenta. Euskara, jolasean.">
+<BaseLayout lang="es" page="home" title="Euskalario · 11 juegos para practicar euskera cada día" description="App gratis para iPhone y Android: 11 juegos de tres minutos para practicar euskera, con retos diarios y repaso de vocabulario. Sin anuncios, compras ni cuenta.">
 <main id="content">
 <section class="hero wrap">
 <div>
-<p class="eyebrow">Euskara, jolasean.</p>
-<h1>El euskera que sabes,<br><span>contigo cada día.</span>
+<p class="eyebrow">App de juegos en euskera · iPhone y Android</p>
+<h1>Once juegos de tres minutos<br><span>para no perder tu euskera.</span>
 </h1>
-<p class="lead">Recupera palabras, descubre conexiones y sigue aprendiendo. Unos minutos de juego para mantener vivo tu euskera.</p>
+<p class="lead">Para quien lo aprendió en la ikastola, en casa o en el euskaltegi y lo usa menos de lo que querría. Un reto nuevo cada día y las palabras que se te escapan, de vuelta cuando toca. Gratis, sin anuncios y sin cuenta.</p>
 <StoreLinks lang="es" />
-<a class="hero-games-link" href="#juegos">Encuentra tu juego <span aria-hidden="true">↓</span></a>
-<p class="hero-note">Euskalario 2.0 · Para iOS y Android</p>
+<a class="hero-games-link" href="#juegos">Ver los once juegos <span aria-hidden="true">↓</span></a>
+<p class="hero-note">Gratis · iPhone, iPad y Android</p>
 </div>
 <div class="hero-art">
 <div class="phone"><img src="/assets/hitza.webp" width="660" height="1434" alt="Partida real de Hitza: seis intentos y un teclado en euskera." fetchpriority="high">
@@ -28,15 +28,15 @@ import StoreLinks from "../components/StoreLinks.astro";
 </div>
 <section id="juegos" class="section wrap">
 <div class="intro">
-<h2>Hamaika jolas.<br>Mucho que aprender.</h2>
-<p>En euskera, hamaika es once. Y también significa muchísimos. Aquí tienes once formas de ponerlo en práctica.</p>
+<h2><span lang="eu">Hamaika jolas.</span><br>Mucho que aprender.</h2>
+<p>En euskera, <span lang="eu">hamaika</span> es once. Y también significa muchísimos. Aquí tienes once formas de ponerlo en práctica.</p>
 </div>
 <GameDirectory lang="es" />
 </section>
 <section class="section showcase">
 <div class="wrap">
 <div class="intro">
-<h2>Aprender tiene<br>muchas formas.</h2>
+<h2>Tres minutos al día,<br>y las palabras vuelven.</h2>
 </div>
 <div class="screens">
 <figure class="screen-item">
@@ -69,7 +69,7 @@ import StoreLinks from "../components/StoreLinks.astro";
 <ol class="steps">
 <li>
 <h3>Elige tu momento.</h3>
-<p>Ponte un objetivo diario de 3, 5 o 10 minutos.</p>
+<p>Ponte un objetivo diario de 3, 5 o 10 minutos: son 2, 4 o 6 juegos.</p>
 </li>
 <li>
 <h3>Practica con la ayuda que necesitas.</h3>
@@ -81,11 +81,32 @@ import StoreLinks from "../components/StoreLinks.astro";
 </li>
 </ol>
 </section>
+<section class="section wrap faq" id="preguntas">
+<div>
+<p class="eyebrow">Antes de descargar</p>
+<h2>Preguntas frecuentes.</h2>
+<p><a href="/support/">Más respuestas en Soporte</a></p>
+</div>
+<div class="faq-list">
+<details>
+<summary>¿Qué nivel de euskera necesito?</summary>
+<p>Al empezar eliges tu nivel y tu objetivo diario. La interfaz está en euskera, con ayudas en castellano que puedes mostrar u ocultar en <span lang="eu">Ezarpenak</span>. Es una herramienta de práctica: no expide certificados de nivel.</p>
+</details>
+<details>
+<summary>¿Cuánto cuesta?</summary>
+<p>Nada. Euskalario es gratis: no incluye anuncios ni compras dentro de la app, y los juegos no se desbloquean mediante pagos.</p>
+</details>
+<details>
+<summary>¿Qué pasa con mis datos?</summary>
+<p>Tu progreso se guarda en tu dispositivo. No necesitas una cuenta, no enviamos tu progreso a un servidor de Euskalario y la app no integra publicidad ni analítica propia de uso. Más detalles en la <a href="/privacy/">política de privacidad</a>.</p>
+</details>
+</div>
+</section>
 <section class="coming" id="app">
 <div class="wrap">
 <div>
-<h2>Tu euskera, en tu bolsillo.</h2>
-<p>Descarga Euskalario para iPhone, iPad o Android y encuentra tu momento para practicar. Consulta en tu tienda la versión disponible.</p>
+<h2>Empieza hoy. Son tres minutos.</h2>
+<p>Descarga Euskalario para iPhone, iPad o Android y encuentra tu momento para practicar.</p>
 </div>
 <StoreLinks lang="es" />
 </div>

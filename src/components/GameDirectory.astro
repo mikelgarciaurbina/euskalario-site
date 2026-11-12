@@ -1,6 +1,7 @@
 ---
 import { games, gamePath } from '../data/games';
 import type { Language } from '../data/navigation';
+import '../styles/games.css';
 interface Props { lang: Language }
 const { lang } = Astro.props;
 ---
@@ -15,5 +16,5 @@ const { lang } = Astro.props;
       </div>
     </a>
   ))}
-  <div class="game-twelve">Zure txanda! →</div>
+  <div class="game-twelve" lang="eu">Zure txanda! →</div>
 </div>

@@ -12,11 +12,11 @@ export const navigation = {
   es: {
     skip: 'Ir al contenido', label: 'Principal', games: 'Los juegos',
     support: 'Soporte', privacy: 'Privacidad', information: 'Información',
-    tagline: 'Euskara, jolasean. · Desarrollo independiente',
+    tagline: 'Desarrollo independiente',
   },
   eu: {
     skip: 'Edukira joan', label: 'Nabigazioa', games: 'Jokoak',
     support: 'Laguntza', privacy: 'Pribatutasuna', information: 'Informazioa',
-    tagline: 'Euskara, jolasean. · Garapen independentea',
+    tagline: 'Garapen independentea',
   },
 } as const;

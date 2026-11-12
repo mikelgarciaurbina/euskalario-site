@@ -3,38 +3,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import StoreLinks from './StoreLinks.astro';
 import { games, gamePath, gameTranslations, type Game } from '../data/games';
 import { routes, type Language } from '../data/navigation';
+import '../styles/games.css';
 interface Props { game: Game; lang: Language }
 const { game, lang } = Astro.props;
 const c = game[lang];
 const index = games.findIndex((entry) => entry.id === game.id);
 const next = games[(index + 1) % games.length];
 const related = game.related.map((id) => games.find((entry) => entry.id === id)!);
+// Basque phrases inside Spanish pages are marked for screen readers (WCAG 3.1.2).
+const basque = lang === 'es' ? 'eu' : undefined;
 const text = lang === 'es' ? {
   games: 'Los juegos', back: 'Los once juegos', daily: 'Un nuevo reto cada día', replay: 'Puedes repetir partidas',
   how: 'Cómo se juega', story: 'La inspiración', example: 'Un ejemplo para entenderlo',
   reveal: 'Ver la respuesta', learning: 'El euskera que practicas', guide: 'Un consejo del galtzagorri',
   screenshot: `Captura de ${game.name} en la app Euskalario`, caption: 'Euskalario · captura real de la app',
   source: 'Para seguir descubriendo', mission: 'Una prueba de tu misión diaria',
-  missionBody: `Termina una partida de ${game.name} y suma su marca en Hamaika proba. Ganar o perder cuenta; salir antes de terminar no. Al completar los once juegos, recibes la txapela del día y sumas una jornada a tu racha de misiones.`,
+  missionBefore: `Termina una partida de ${game.name} y suma su marca en `, missionName: 'Hamaika proba',
+  missionAfter: '. Ganar o perder cuenta; salir antes de terminar no. Al completar tantos juegos como pide tu objetivo diario (2 con 3 minutos, 4 con 5 y 6 con 10), sumas una jornada a tu racha de misiones. Si completas los once, recibes la txapela del día.',
   missionNote: 'Tu progreso se guarda en el dispositivo. La misión se renueva a medianoche, según su fecha local.',
   related: 'Sigue jugando con las palabras.', next: 'La siguiente prueba',
   where: 'Se juega en la app Euskalario',
-  whereBody: 'Descarga Euskalario para iOS o Android. Consulta en tu tienda la versión disponible.',
+  whereBody: 'Descarga Euskalario gratis para iPhone, iPad o Android.',
 } : {
   games: 'Jokoak', back: 'Hamaika jokoak', daily: 'Erronka berria egunero', replay: 'Berriz joka dezakezu',
   how: 'Nola jokatu', story: 'Inspirazioa', example: 'Ulertzeko adibide bat',
   reveal: 'Ikusi erantzuna', learning: 'Lantzen duzun euskara', guide: 'Galtzagorriaren aholkua',
   screenshot: `${game.name} jokoaren pantaila Euskalario appan`, caption: 'Euskalario · apparen benetako pantaila',
   source: 'Gehiago ezagutzeko', mission: 'Zure eguneko misioaren proba bat',
-  missionBody: `Amaitu ${game.name} jokoaren partida bat eta gehitu haren marka Hamaika proban. Irabazteak zein galtzeak balio dute; amaitu aurretik ateratzeak ez. Hamaika jokoak osatzean, eguneko txapela lortu eta misio-segidan egun bat gehitzen duzu.`,
+  missionBefore: `Amaitu ${game.name} jokoaren partida bat eta gehitu haren marka `, missionName: 'Hamaika proban',
+  missionAfter: '. Irabazteak zein galtzeak balio dute; amaitu aurretik ateratzeak ez. Eguneko helburuak eskatzen dituen adina joko osatzean (3 minutu: 2 joko; 5 minutu: 4; 10 minutu: 6), misio-segidan egun bat gehitzen duzu. Hamaika jokoak osatuz gero, eguneko txapela lortzen duzu.',
   missionNote: 'Aurrerapena gailuan gordetzen da. Misioa gauerdian berritzen da, haren tokiko dataren arabera.',
   related: 'Jarraitu hitzekin jolasten.', next: 'Hurrengo proba',
   where: 'Euskalario appan jokatzen da',
-  whereBody: 'Deskargatu Euskalario iOS edo Androiderako. Begiratu dendan zein bertsio dagoen eskuragarri.',
+  whereBody: 'Deskargatu Euskalario doan iPhone, iPad edo Androiderako.',
 };
 ---
 <BaseLayout lang={lang} page="game" translations={gameTranslations(game)}
-  title={`${game.name}: ${lang === 'es' ? 'historia y cómo jugar' : 'istorioa eta nola jokatu'} · Euskalario`}
+  title={`${game.name}: ${c.title} · Euskalario`}
   description={c.intro}>
   <main id="content" class={`game-detail game-${game.id}`}>
     <nav class="game-breadcrumb wrap" aria-label={lang === 'es' ? 'Ruta de navegación' : 'Nabigazio-bidea'}>
@@ -83,8 +88,8 @@ const text = lang === 'es' ? {
       </ol>
       <aside class="game-example" aria-label={text.example}>
         <p class="eyebrow">{text.example}</p>
-        <div class="game-example-prompt">{c.example.prompt.map((line) => <p>{line}</p>)}</div>
-        <details class="game-answer"><summary>{text.reveal}<span aria-hidden="true">+</span></summary><div><p class="game-example-answer">{c.example.answer}</p><p>{c.example.explanation}</p></div></details>
+        <div class="game-example-prompt" lang={c.example.promptLang}>{c.example.prompt.map((line) => <p>{line}</p>)}</div>
+        <details class="game-answer"><summary>{text.reveal}<span aria-hidden="true">+</span></summary><div><p class="game-example-answer" lang={c.example.answerLang}>{c.example.answer}</p><p>{c.example.explanation}</p></div></details>
       </aside>
     </section>
     <section class="game-learning-section">
@@ -95,7 +100,7 @@ const text = lang === 'es' ? {
     </section>
     <section class="section wrap game-mission">
       <div class="game-mission-mark" aria-hidden="true">11<span>/11</span></div>
-      <div><p class="eyebrow">Hamaika proba</p><h2>{text.mission}</h2><p>{text.missionBody}</p><p class="meta">{text.missionNote}</p><a href={`${routes.home[lang]}#juegos`}>{text.back} <span aria-hidden="true">↗</span></a></div>
+      <div><p class="eyebrow" lang={basque}>Hamaika proba</p><h2>{text.mission}</h2><p>{text.missionBefore}<span lang={basque}>{text.missionName}</span>{text.missionAfter}</p><p class="meta">{text.missionNote}</p><a href={`${routes.home[lang]}#juegos`}>{text.back} <span aria-hidden="true">↗</span></a></div>
     </section>
     <section class="game-related-section">
       <div class="wrap"><h2>{text.related}</h2><div class="game-related">

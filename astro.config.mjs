@@ -5,5 +5,6 @@ export default defineConfig({
   site: config.origin,
   output: 'static',
   trailingSlash: 'always',
-  build: { format: 'directory' },
+  // External, hashed stylesheets only: the CSP forbids inline <style>.
+  build: { format: 'directory', inlineStylesheets: 'never' },
 });

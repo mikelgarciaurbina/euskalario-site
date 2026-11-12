@@ -3,17 +3,17 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import GameDirectory from "../../components/GameDirectory.astro";
 import StoreLinks from "../../components/StoreLinks.astro";
 ---
-<BaseLayout lang="eu" page="home" title="Euskalario · Zure euskara, egunero." description="Landu euskara 11 jokorekin, eguneroko erronkekin eta hiztegia gogoratzeko errepasoekin. Iragarkirik, aplikazio barruko erosketarik eta konturik gabe.">
+<BaseLayout lang="eu" page="home" title="Euskalario · Euskara lantzeko 11 joko, egunero" description="iPhone eta Androiderako doako appa: euskara lantzeko hiru minutuko 11 joko, eguneroko erronkak eta hiztegi-errepasoa. Iragarkirik, erosketarik eta konturik gabe.">
 <main id="content">
 <section class="hero wrap">
 <div>
-<p class="eyebrow">Euskara, jolasean.</p>
-<h1>Dakizun euskara,<br><span>zurekin egunero.</span>
+<p class="eyebrow">Euskarazko jokoen appa · iPhone eta Android</p>
+<h1>Zure euskara ez galtzeko,<br><span>hiru minutuko hamaika joko.</span>
 </h1>
-<p class="lead">Gogoratu hitzak, aurkitu loturak eta jarraitu ikasten. Jolas minutu batzuk zure euskara bizirik mantentzeko.</p>
+<p class="lead">Ikastolan, etxean edo euskaltegian ikasi eta nahi baino gutxiago erabiltzen duzunontzat. Egunero erronka berri bat, eta ahazten ari zaizkizun hitzak, behar denean bueltan. Doan, iragarkirik eta konturik gabe.</p>
 <StoreLinks lang="eu" />
-<a class="hero-games-link" href="#juegos">Aurkitu zure jokoa <span aria-hidden="true">↓</span></a>
-<p class="hero-note">Euskalario 2.0 · iOS eta Android</p>
+<a class="hero-games-link" href="#juegos">Ikusi hamaika jokoak <span aria-hidden="true">↓</span></a>
+<p class="hero-note">Doan · iPhone, iPad eta Android</p>
 </div>
 <div class="hero-art">
 <div class="phone"><img src="/assets/hitza.webp" width="660" height="1434" alt="Hitzaren benetako partida: sei saiakera eta euskarazko teklatua." fetchpriority="high">
@@ -36,7 +36,7 @@ import StoreLinks from "../../components/StoreLinks.astro";
 <section class="section showcase">
 <div class="wrap">
 <div class="intro">
-<h2>Ikasteko,<br>hamaika bide.</h2>
+<h2>Egunean hiru minutu,<br>eta hitzak bueltan.</h2>
 </div>
 <div class="screens">
 <figure class="screen-item">
@@ -69,7 +69,7 @@ import StoreLinks from "../../components/StoreLinks.astro";
 <ol class="steps">
 <li>
 <h3>Aukeratu zure unea.</h3>
-<p>Jarri egunean 3, 5 edo 10 minutuko helburua.</p>
+<p>Jarri egunean 3, 5 edo 10 minutuko helburua: 2, 4 edo 6 joko.</p>
 </li>
 <li>
 <h3>Landu euskara laguntzarekin.</h3>
@@ -81,11 +81,32 @@ import StoreLinks from "../../components/StoreLinks.astro";
 </li>
 </ol>
 </section>
+<section class="section wrap faq" id="galderak">
+<div>
+<p class="eyebrow">Deskargatu aurretik</p>
+<h2>Ohiko galderak.</h2>
+<p><a href="/support/eu/">Galdera gehiago Laguntza atalean</a></p>
+</div>
+<div class="faq-list">
+<details>
+<summary>Zer euskara-maila behar dut?</summary>
+<p>Hasieran zure maila eta eguneko helburua aukeratzen dituzu. Interfazea euskaraz dago, eta gaztelaniazko laguntzak Ezarpenak atalean erakutsi edo ezkutatu ditzakezu. Praktikatzeko tresna da; ez du maila-ziurtagiririk ematen.</p>
+</details>
+<details>
+<summary>Zenbat balio du?</summary>
+<p>Ezer ez. Euskalario doan da: ez du iragarkirik edo aplikazio barruko erosketarik, eta jokoak erabiltzeko ez da ordainketarik behar.</p>
+</details>
+<details>
+<summary>Zer gertatzen da nire datuekin?</summary>
+<p>Aurrerapena zure gailuan gordetzen da. Ez duzu konturik behar, ez dugu aurrerapena Euskalarioko zerbitzari batera bidaltzen, eta appak ez du publizitaterik edo berezko erabilera-analitikarik. Xehetasun gehiago <a href="/privacy/eu/">pribatutasun-politikan</a>.</p>
+</details>
+</div>
+</section>
 <section class="coming" id="app">
 <div class="wrap">
 <div>
-<h2>Zure euskara, poltsikoan.</h2>
-<p>Deskargatu Euskalario iPhone, iPad edo Androiderako, eta aurkitu euskara praktikatzeko zure unea. Begiratu dendan zein bertsio dagoen eskuragarri.</p>
+<h2>Hasi gaur. Hiru minutu besterik ez.</h2>
+<p>Deskargatu Euskalario iPhone, iPad edo Androiderako, eta aurkitu euskara praktikatzeko zure unea.</p>
 </div>
 <StoreLinks lang="eu" />
 </div>
