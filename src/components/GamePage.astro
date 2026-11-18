@@ -50,7 +50,7 @@ const crumbs = [
       '@type': 'ListItem', position: i + 1, name: crumb.name, item: new URL(crumb.path, Astro.site).href,
     })),
   })} />
-  <main id="content" tabindex="-1" class={`game-detail game-${game.id}`}>
+  <main class={`game-detail game-${game.id}`}>
     <nav class="game-breadcrumb wrap" aria-label={lang === 'es' ? 'Ruta de navegación' : 'Nabigazio-bidea'}>
       <ol role="list">
         <li><a href={crumbs[0].path}>{crumbs[0].name}</a></li>
@@ -63,7 +63,7 @@ const crumbs = [
           <span class="game-emblem"><img src={`/assets/games/${game.id}.svg`} width="36" height="36" alt="" /></span>
           <p class="eyebrow">{game.daily ? text.daily : text.replay}</p>
         </div>
-        <h1><span lang="eu">{game.name}</span><span class="visually-hidden">. </span> <span class="game-tagline">{c.title}</span></h1>
+        <h1 id="content" tabindex="-1"><span lang="eu">{game.name}</span><span class="visually-hidden">. </span> <span class="game-tagline">{c.title}</span></h1>
         <p class="lead">{c.intro}</p>
         <ul class="game-facts" role="list" aria-label={lang === 'es' ? 'El juego de un vistazo' : 'Jokoa begirada batean'}>
           {c.facts.map((fact) => <li>{fact}</li>)}

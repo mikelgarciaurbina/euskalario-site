@@ -69,7 +69,9 @@ for (const [file, route, lang, translation] of pages) {
   assert(html.includes('<!--email_off-->') && html.includes('<!--/email_off-->'), `${route}: public support email must not need a decode script`);
   assert.equal((html.match(/<h1[\s>]/g) || []).length, 1, `${route}: single main heading`);
   assert.equal((html.match(/<main[\s>]/g) || []).length, 1, `${route}: single main landmark`);
-  assert(html.includes('href="#content"') && /<main\b[^>]*id="content"[^>]*tabindex="-1"/.test(html), `${route}: skip link can move keyboard focus to main`);
+  // Focusing the entire main makes TalkBack group unrelated sections into one utterance.
+  assert(!/<main\b[^>]*tabindex=/.test(html), `${route}: main is not a focus stop`);
+  assert(html.includes('href="#content"') && /<h1\b[^>]*id="content"[^>]*tabindex="-1"/.test(html), `${route}: skip link can move keyboard focus to the main heading`);
   assert(!/<img\b(?![^>]*\balt=")[^>]*>/i.test(html), `${route}: every image has an alt attribute`);
   const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
   assert.equal(ids.length, new Set(ids).size, `${route}: unique element IDs`);
