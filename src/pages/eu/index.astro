@@ -3,22 +3,22 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 import GameDirectory from "../../components/GameDirectory.astro";
 import StoreLinks from "../../components/StoreLinks.astro";
 ---
-<BaseLayout lang="eu" page="home" title="Euskalario · Euskara lantzeko 11 joko, egunero" description="iPhone eta Androiderako doako appa: euskara lantzeko hiru minutuko 11 joko, eguneroko erronkak eta hiztegi-errepasoa. Iragarkirik, erosketarik eta konturik gabe.">
-<main id="content">
+<BaseLayout lang="eu" page="home" title="Euskara egunero lantzeko 11 joko · Euskalario" description="Landu euskara doako 11 jokorekin iPhonean, iPadean edo Android gailuan. Asmatu hitzak, osatu bertsoak eta errepasatu ikasitakoa Internetik gabe.">
+<main id="content" tabindex="-1">
 <section class="hero wrap">
 <div>
-<p class="eyebrow">Euskarazko jokoen appa · iPhone eta Android</p>
-<h1>Zure euskara ez galtzeko,<br><span>hiru minutuko hamaika joko.</span>
+<p class="eyebrow">Euskalario · Doako aplikazioa</p>
+<h1>Hamaika joko <span>euskara lantzeko</span>
 </h1>
-<p class="lead">Ikastolan, etxean edo euskaltegian ikasi eta nahi baino gutxiago erabiltzen duzunontzat. Egunero erronka berri bat, eta ahazten ari zaizkizun hitzak, behar denean bueltan. Doan, iragarkirik eta konturik gabe.</p>
+<p class="lead">Etxean, ikastolan edo euskaltegian ikasitako euskara maizago erabili nahi duzu? Hasi eguneko hitza asmatzen. Gero, osatu bertso bat edo errepasatu gogoratzea gehien kostatzen zaizkizun hitzak.</p>
 <StoreLinks lang="eu" />
-<a class="hero-games-link" href="#juegos">Ikusi hamaika jokoak <span aria-hidden="true">↓</span></a>
-<p class="hero-note">Doan · iPhone, iPad eta Android</p>
+<a class="hero-games-link" href="#juegos">Ikusi hamaika jokoak</a>
+<p class="hero-note">iPhone, iPad eta Android gailuetarako</p>
 </div>
 <div class="hero-art">
-<div class="phone"><img src="/assets/hitza.webp" width="660" height="1434" alt="Hitzaren benetako partida: sei saiakera eta euskarazko teklatua." fetchpriority="high">
+<div class="phone"><img src="/assets/hitza.webp" width="660" height="1434" alt="Hitza jokoan, lehen saiakerak bigarren hitza asmatzeko pistak ematen ditu." fetchpriority="high">
 </div>
-<div class="stamp" aria-label="11 joko"><strong>11</strong><span>joko</span>
+<div class="stamp" aria-hidden="true"><strong>11</strong><span>joko</span>
 </div><img class="mascot" src="/assets/galtzagorri.svg" width="133" height="155" alt="">
 </div>
 </section>
@@ -28,33 +28,33 @@ import StoreLinks from "../../components/StoreLinks.astro";
 </div>
 <section id="juegos" class="section wrap">
 <div class="intro">
-<h2>Hamaika jolas.<br>Ikasteko hamaika aukera.</h2>
-<p>Hamaika: zenbaki bat eta aukera asko. Hemen, euskara erabiltzeko eta indartzeko hamaika modu.</p>
+<h2>Euskalarioko jokoak</h2>
+<p>Hamaika hitzak «asko» ere esan nahi du. Aukeratu joko bat, irakurri arauak eta probatu adibidea.</p>
 </div>
 <GameDirectory lang="eu" />
 </section>
 <section class="section showcase">
 <div class="wrap">
 <div class="intro">
-<h2>Egunean hiru minutu,<br>eta hitzak bueltan.</h2>
+<h2>Horrela jokatzen da</h2>
 </div>
 <div class="screens">
 <figure class="screen-item">
 <div class="phone"><img src="/assets/04-sarea.webp" width="660" height="1434" loading="lazy" alt="Sarea: maleta hitza aurkituta letra-sarean.">
 </div>
-<figcaption><strong>Aurkitu loturak.</strong><span>Gai baten inguruko hitzak.</span>
+<figcaption><strong>Bilatu hitzak Sarean</strong><span>Gai baten inguruko hitzak.</span>
 </figcaption>
 </figure>
 <figure class="screen-item">
 <div class="phone"><img src="/assets/05-sutegia.webp" width="660" height="1434" loading="lazy" alt="Sutegia: eder eta -tasun elkartuta, edertasun.">
 </div>
-<figcaption><strong>Eman forma.</strong><span>Esanahia eraikitzen duten erroak eta atzizkiak.</span>
+<figcaption><strong>Lotu atzizkiak Sutegian</strong><span>Esanahia eraikitzen duten erroak eta atzizkiak.</span>
 </figcaption>
 </figure>
 <figure class="screen-item">
 <div class="phone"><img src="/assets/06-hiztegia.webp" width="660" height="1434" loading="lazy" alt="Hiztegia: landutako hitzak eta ikasketa-mailak.">
 </div>
-<figcaption><strong>Egin zure.</strong><span>Zure hitzak eta hurrengo errepasoak.</span>
+<figcaption><strong>Begiratu zure hiztegian</strong><span>Zure hitzak eta hurrengo errepasoak.</span>
 </figcaption>
 </figure>
 </div>
@@ -63,20 +63,20 @@ import StoreLinks from "../../components/StoreLinks.astro";
 <section class="section wrap practice">
 <div>
 <p class="eyebrow">Zure erritmoan, egunero</p>
-<h2>Ikasitakoa,<br>zurekin berriro.</h2>
-<p>Ez duzu aldiro hutsetik hasi behar. Errepasoak zure erantzunak kontuan hartzen ditu, gehiago landu behar dituzun hitzak berriz ekartzeko. Aurrerapena zure gailuan gordetzen da.</p>
+<h2>Nola errepasatzen dira hitzak?</h2>
+<p>Euskalariok zure erantzunak gailuan gordetzen ditu. Gogoratzeko zailak zaizkizun hitzak lehenago agertzen dira berriz, eta ondo dakizkizunak geroago.</p>
 </div>
 <ol class="steps">
 <li>
-<h3>Aukeratu zure unea.</h3>
-<p>Jarri egunean 3, 5 edo 10 minutuko helburua: 2, 4 edo 6 joko.</p>
+<h3>Aukeratu eguneko helburua</h3>
+<p>3 minutuko misioan 2 joko dituzu, 5 minutukoan 4 eta 10 minutukoan 6.</p>
 </li>
 <li>
-<h3>Landu euskara laguntzarekin.</h3>
-<p>Interfazea euskaraz dago; gaztelaniazko laguntzak ezkuta ditzakezu.</p>
+<h3>Aktibatu gaztelaniazko laguntzak</h3>
+<p>Interfazea euskaraz dago. Gaztelaniazko laguntzak nahi duzunean ezkuta ditzakezu.</p>
 </li>
 <li>
-<h3>Itzuli zure hitzetara.</h3>
+<h3>Bilatu hitz bat</h3>
 <p>Kontsultatu 1.057 sarrera, itzulpenak eta adibideak, eta ikusi zure aurrerapena hiztegian.</p>
 </li>
 </ol>
@@ -84,17 +84,17 @@ import StoreLinks from "../../components/StoreLinks.astro";
 <section class="section wrap faq" id="galderak">
 <div>
 <p class="eyebrow">Deskargatu aurretik</p>
-<h2>Ohiko galderak.</h2>
+<h2>Ohiko galderak</h2>
 <p><a href="/support/eu/">Galdera gehiago Laguntza atalean</a></p>
 </div>
 <div class="faq-list">
 <details>
 <summary>Zer euskara-maila behar dut?</summary>
-<p>Hasieran zure maila eta eguneko helburua aukeratzen dituzu. Interfazea euskaraz dago, eta gaztelaniazko laguntzak Ezarpenak atalean erakutsi edo ezkutatu ditzakezu. Praktikatzeko tresna da; ez du maila-ziurtagiririk ematen.</p>
+<p>Oinarrizko mailan, erdi-mailan edo maila aurreratuan has zaitezke. Hasierako maila egokitzeko, aplikazioak zenbat euskara dakizun eta zer hitz ezagutzen dituzun galdetuko dizu. Gaztelaniazko laguntzak Ezarpenak atalean aktiba ditzakezu.</p>
 </details>
 <details>
 <summary>Zenbat balio du?</summary>
-<p>Ezer ez. Euskalario doan da: ez du iragarkirik edo aplikazio barruko erosketarik, eta jokoak erabiltzeko ez da ordainketarik behar.</p>
+<p>Hamaika jokoak doakoak dira, eta hasieratik joka dezakezu guztietan.</p>
 </details>
 <details>
 <summary>Zer gertatzen da nire datuekin?</summary>
@@ -105,8 +105,8 @@ import StoreLinks from "../../components/StoreLinks.astro";
 <section class="coming" id="app">
 <div class="wrap">
 <div>
-<h2>Hasi gaur. Hiru minutu besterik ez.</h2>
-<p>Deskargatu Euskalario iPhone, iPad edo Androiderako, eta aurkitu euskara praktikatzeko zure unea.</p>
+<h2>Deskargatu Euskalario</h2>
+<p>Instalatu aplikazioa doan eta jokatu lehen partida konturik sortu gabe.</p>
 </div>
 <StoreLinks lang="eu" />
 </div>

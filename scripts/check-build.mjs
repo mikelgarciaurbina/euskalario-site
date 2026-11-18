@@ -41,6 +41,8 @@ assert(!/diagonal/i.test(JSON.stringify([sarea.es.facts, sarea.eu.facts])), 'Sar
 
 const documents = new Map(await Promise.all(pages.map(async ([file]) => [resolve(root, file), await readFile(resolve(root, file), 'utf8')])));
 const sitemap = await readFile(resolve(root, 'sitemap.xml'), 'utf8');
+const indexableUrls = pages.filter(([file]) => file !== '404.html').map(([, path]) => new URL(path, config.origin).href);
+assert.deepEqual([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]).sort(), indexableUrls.sort(), 'Sitemap lists each indexable page exactly once');
 const headers = await readFile(resolve(root, '_headers'), 'utf8');
 assert(headers.includes("script-src 'none'"), 'Keep the script-free CSP');
 assert(/Strict-Transport-Security: max-age=(\d+); includeSubDomains/.test(headers) && Number(headers.match(/max-age=(\d+); includeSubDomains/)[1]) >= 31536000, 'HSTS for at least a year');
@@ -56,6 +58,8 @@ const attr = (html, selector) => html.match(selector)?.[1];
 const meta = (html, key) => attr(html, new RegExp(`<meta (?:property|name)="${key.replace(/[.:]/g, '\\$&')}" content="([^"]*)"`));
 const jsonLdPattern = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
 const stylesheets = new Map();
+const titles = new Set();
+const descriptions = new Set();
 let checkedLinks = 0;
 for (const [file, route, lang, translation] of pages) {
   const html = documents.get(resolve(root, file));
@@ -64,11 +68,16 @@ for (const [file, route, lang, translation] of pages) {
   assert(html.includes('<!--email_off-->') && html.includes('<!--/email_off-->'), `${route}: public support email must not need a decode script`);
   assert.equal((html.match(/<h1[\s>]/g) || []).length, 1, `${route}: single main heading`);
   assert.equal((html.match(/<main[\s>]/g) || []).length, 1, `${route}: single main landmark`);
+  assert(html.includes('href="#content"') && /<main\b[^>]*id="content"[^>]*tabindex="-1"/.test(html), `${route}: skip link can move keyboard focus to main`);
+  assert(!/<img\b(?![^>]*\balt=")[^>]*>/i.test(html), `${route}: every image has an alt attribute`);
+  const ids = [...html.matchAll(/\sid="([^"]+)"/g)].map((match) => match[1]);
+  assert.equal(ids.length, new Set(ids).size, `${route}: unique element IDs`);
   // A JSON-LD data block is never executed, so it is the only <script> the CSP allows.
   const dataBlocks = [...html.matchAll(jsonLdPattern)].map((match) => JSON.parse(match[1]));
   const executable = html.replace(jsonLdPattern, '');
   assert(!/<script[\s>]|<style[\s>]|\sstyle=|\son\w+=/i.test(executable), `${route}: no JS or inline styles, compatible with CSP`);
-  assert(html.includes(`href="${translation}" lang=`), `${route}: translated page link`);
+  const other = lang === 'es' ? 'eu' : 'es';
+  assert(html.includes(`href="${translation}" lang="${other}" hreflang="${other}"`), `${route}: translated page link`);
   assert(!html.includes('apps.apple.com/us/'), `${route}: App Store link without a fixed storefront`);
   assert(!/Consulta en tu tienda la versión|bertsio dagoen eskuragarri/.test(html), `${route}: no "check your store" version caveat`);
 
@@ -77,6 +86,9 @@ for (const [file, route, lang, translation] of pages) {
   const description = meta(html, 'description');
   assert(title && title.includes('Euskalario') && title.length <= 65, `${route}: title "${title}" mentions Euskalario in ≤ 65 characters`);
   assert(description && description.length >= 50 && description.length <= 170, `${route}: description length`);
+  assert(!titles.has(title) && !descriptions.has(description), `${route}: unique title and description`);
+  titles.add(title);
+  descriptions.add(description);
   assert.equal(meta(html, 'og:title'), title, `${route}: og:title`);
   assert.equal(meta(html, 'og:locale'), locales[lang], `${route}: og:locale`);
   assert.equal(meta(html, 'og:image'), new URL(shareImage.path, config.origin).href, `${route}: og:image`);
@@ -90,15 +102,23 @@ for (const [file, route, lang, translation] of pages) {
     assert(/<p[^>]* lang="eu">[^<]+<a href="\/eu\/">/.test(html), '404: Basque line with a link to /eu/');
   } else {
     const spanish = lang === 'es' ? route : translation;
+    assert(!html.includes('content="noindex"'), `${route}: indexable`);
+    for (const [code, path] of [[lang, route], [other, translation]]) {
+      assert(html.includes(`rel="alternate" hreflang="${code}" href="${new URL(path, config.origin).href}"`), `${route}: hreflang ${code}`);
+    }
     assert(html.includes(`rel="canonical" href="${url}"`), `${route}: canonical`);
     assert(sitemap.includes(`<loc>${url}</loc>`), `${route}: sitemap`);
     assert(html.includes(`<link rel="alternate" hreflang="x-default" href="${new URL(spanish, config.origin).href}">`), `${route}: x-default points to Spanish`);
     assert.equal(meta(html, 'og:locale:alternate'), locales[lang === 'es' ? 'eu' : 'es'], `${route}: og:locale:alternate`);
   }
 
-  // Structured data only on the home pages.
+  // Structured data must describe the same site and breadcrumbs visitors see.
   if (homeRoutes.has(route)) {
-    assert.equal(dataBlocks.length, 1, `${route}: one JSON-LD block`);
+    assert.equal(dataBlocks.length, route === '/' ? 2 : 1, `${route}: home JSON-LD`);
+    if (route === '/') {
+      const site = dataBlocks.find((data) => data['@type'] === 'WebSite');
+      assert(site?.name === 'Euskalario' && site.url === url, 'Site name and home URL');
+    }
     const [app] = dataBlocks;
     assert.equal(app['@context'], 'https://schema.org');
     assert.equal(app['@type'], 'MobileApplication', `${route}: MobileApplication`);
@@ -115,17 +135,24 @@ for (const [file, route, lang, translation] of pages) {
     }
     assert((html.match(/<details>/g) || []).length >= 2, `${route}: home FAQ`);
     assert(!/Euskalario 2\.0/.test(html), `${route}: no stale version number in the hero`);
+  } else if (gameByRoute.has(route)) {
+    assert.equal(dataBlocks.length, 1);
+    const [trail] = dataBlocks;
+    assert.equal(trail['@type'], 'BreadcrumbList');
+    assert.deepEqual(trail.itemListElement.map(({ name, position, item }) => [name, position, item]), [
+      ['Euskalario', 1, new URL(lang === 'es' ? '/' : '/eu/', config.origin).href],
+      [gameByRoute.get(route).name, 2, url],
+    ], `${route}: localized breadcrumbs`);
   } else {
-    assert.equal(dataBlocks.length, 0, `${route}: JSON-LD is only for the home pages`);
+    assert.equal(dataBlocks.length, 0, `${route}: no unrelated structured data`);
   }
 
   // Basque phrases inside Spanish pages are marked (WCAG 3.1.2).
   if (lang === 'es') {
     assert(html.includes('<span lang="eu">Euskara, jolasean.</span>'), `${route}: Basque tagline marked`);
     if (route === '/') {
-      assert(html.includes('<span lang="eu">Hamaika jolas.</span>') && html.includes('lang="eu">Zure txanda!'), `${route}: Basque headings marked`);
+      assert(html.includes('<span lang="eu">hamaika</span>'), `${route}: Basque vocabulary marked`);
     }
-    if (file === '404.html') assert(html.includes('<span lang="eu">Hemen ez dago</span>'), '404: Basque eyebrow marked');
   }
 
   if (gameByRoute.has(route)) {
@@ -133,11 +160,12 @@ for (const [file, route, lang, translation] of pages) {
     assert.equal(title, `${game.name}: ${game[lang].title} · Euskalario`, `${route}: search title`);
     assert(html.includes('id="como-jugar"') && html.includes('id="historia"'), `${route}: story and instructions`);
     assert(html.includes('class="game-answer"'), `${route}: native answer reveal`);
+    assert(html.includes(`alt="${game[lang].screenshotAlt}"`), `${route}: localized game screenshot description`);
     assert(html.includes('Hamaika proba') && html.includes('galtzagorri'), `${route}: mission and mascot`);
     // Daily mission: the streak follows the daily goal; all eleven games earn the txapela.
     assert(lang === 'es'
       ? html.includes('objetivo diario (2 con 3 minutos, 4 con 5 y 6 con 10)') && html.includes('lang="eu">Hamaika proba')
-      : html.includes('(3 minutu: 2 joko; 5 minutu: 4; 10 minutu: 6)'), `${route}: mission follows the daily goal`);
+      : html.includes('2 joko 3 minutuko helburuan, 4 joko 5 minutukoan eta 6 joko 10 minutukoan'), `${route}: mission follows the daily goal`);
   }
 
   const pageStyles = [...html.matchAll(/<link rel="stylesheet" href="([^"]+)">/g)].map((match) => match[1]);

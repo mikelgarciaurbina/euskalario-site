@@ -10,12 +10,14 @@ export const routes = {
 
 export const navigation = {
   es: {
-    skip: 'Ir al contenido', label: 'Principal', games: 'Los juegos',
+    skip: 'Saltar al contenido principal', label: 'Principal', games: 'Juegos',
+    home: 'Euskalario, inicio', languages: 'Idioma',
     support: 'Soporte', privacy: 'Privacidad', information: 'Información',
     tagline: 'Desarrollo independiente',
   },
   eu: {
-    skip: 'Edukira joan', label: 'Nabigazioa', games: 'Jokoak',
+    skip: 'Joan eduki nagusira', label: 'Nabigazio nagusia', games: 'Jokoak',
+    home: 'Euskalario, hasiera', languages: 'Hizkuntza',
     support: 'Laguntza', privacy: 'Pribatutasuna', information: 'Informazioa',
     tagline: 'Garapen independentea',
   },

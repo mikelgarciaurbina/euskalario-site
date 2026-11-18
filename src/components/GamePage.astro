@@ -3,6 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import StoreLinks from './StoreLinks.astro';
 import { games, gamePath, gameTranslations, type Game } from '../data/games';
 import { routes, type Language } from '../data/navigation';
+import { jsonForScript } from '../data/structuredData';
 import '../styles/games.css';
 interface Props { game: Game; lang: Language }
 const { game, lang } = Astro.props;
@@ -13,89 +14,97 @@ const related = game.related.map((id) => games.find((entry) => entry.id === id)!
 // Basque phrases inside Spanish pages are marked for screen readers (WCAG 3.1.2).
 const basque = lang === 'es' ? 'eu' : undefined;
 const text = lang === 'es' ? {
-  games: 'Los juegos', back: 'Los once juegos', daily: 'Un nuevo reto cada día', replay: 'Puedes repetir partidas',
-  how: 'Cómo se juega', story: 'La inspiración', example: 'Un ejemplo para entenderlo',
+  back: 'Los once juegos', daily: 'Un nuevo reto cada día', replay: 'Puedes repetir partidas',
+  how: 'Cómo jugar', story: 'Origen del juego', example: 'Prueba un ejemplo',
   reveal: 'Ver la respuesta', learning: 'El euskera que practicas', guide: 'Un consejo del galtzagorri',
-  screenshot: `Captura de ${game.name} en la app Euskalario`, caption: 'Euskalario · captura real de la app',
-  source: 'Para seguir descubriendo', mission: 'Una prueba de tu misión diaria',
+  mission: 'Una prueba de tu misión diaria',
   missionBefore: `Termina una partida de ${game.name} y suma su marca en `, missionName: 'Hamaika proba',
-  missionAfter: '. Ganar o perder cuenta; salir antes de terminar no. Al completar tantos juegos como pide tu objetivo diario (2 con 3 minutos, 4 con 5 y 6 con 10), sumas una jornada a tu racha de misiones. Si completas los once, recibes la txapela del día.',
-  missionNote: 'Tu progreso se guarda en el dispositivo. La misión se renueva a medianoche, según su fecha local.',
-  related: 'Sigue jugando con las palabras.', next: 'La siguiente prueba',
+  missionAfter: '. La partida cuenta tanto si ganas como si pierdes. Para sumar un día a tu racha, completa los juegos de tu objetivo diario (2 con 3 minutos, 4 con 5 y 6 con 10). Si terminas los once, ganas la txapela del día.',
+  missionNote: 'Tu progreso se guarda en el dispositivo. La misión cambia a medianoche según la hora local.',
+  related: 'Otros juegos de vocabulario', next: 'Siguiente juego',
   where: 'Se juega en la app Euskalario',
   whereBody: 'Descarga Euskalario gratis para iPhone, iPad o Android.',
 } : {
-  games: 'Jokoak', back: 'Hamaika jokoak', daily: 'Erronka berria egunero', replay: 'Berriz joka dezakezu',
-  how: 'Nola jokatu', story: 'Inspirazioa', example: 'Ulertzeko adibide bat',
+  back: 'Hamaika jokoak', daily: 'Erronka berria egunero', replay: 'Berriz joka dezakezu',
+  how: 'Nola jokatu', story: 'Jokoaren jatorria', example: 'Probatu adibide bat',
   reveal: 'Ikusi erantzuna', learning: 'Lantzen duzun euskara', guide: 'Galtzagorriaren aholkua',
-  screenshot: `${game.name} jokoaren pantaila Euskalario appan`, caption: 'Euskalario · apparen benetako pantaila',
-  source: 'Gehiago ezagutzeko', mission: 'Zure eguneko misioaren proba bat',
+  mission: 'Zure eguneko misioaren proba bat',
   missionBefore: `Amaitu ${game.name} jokoaren partida bat eta gehitu haren marka `, missionName: 'Hamaika proban',
-  missionAfter: '. Irabazteak zein galtzeak balio dute; amaitu aurretik ateratzeak ez. Eguneko helburuak eskatzen dituen adina joko osatzean (3 minutu: 2 joko; 5 minutu: 4; 10 minutu: 6), misio-segidan egun bat gehitzen duzu. Hamaika jokoak osatuz gero, eguneko txapela lortzen duzu.',
-  missionNote: 'Aurrerapena gailuan gordetzen da. Misioa gauerdian berritzen da, haren tokiko dataren arabera.',
-  related: 'Jarraitu hitzekin jolasten.', next: 'Hurrengo proba',
-  where: 'Euskalario appan jokatzen da',
+  missionAfter: '. Irabazi zein galdu, partida amaitzeak balio du. Egun bat gehituko diozu segidari zure helburuko jokoak osatzen dituzunean (2 joko 3 minutuko helburuan, 4 joko 5 minutukoan eta 6 joko 10 minutukoan). Hamaikak amaituz gero, eguneko txapela irabaziko duzu.',
+  missionNote: 'Aurrerapena gailuan gordetzen da. Misioa gauerdian berritzen da, gailuko orduaren arabera.',
+  related: 'Hiztegia lantzeko beste joko batzuk', next: 'Hurrengo jokoa',
+  where: 'Jokatu Euskalario aplikazioan',
   whereBody: 'Deskargatu Euskalario doan iPhone, iPad edo Androiderako.',
 };
+const crumbs = [
+  { name: 'Euskalario', path: routes.home[lang] },
+  { name: game.name, path: gamePath(game, lang) },
+];
 ---
 <BaseLayout lang={lang} page="game" translations={gameTranslations(game)}
   title={`${game.name}: ${c.title} · Euskalario`}
   description={c.intro}>
-  <main id="content" class={`game-detail game-${game.id}`}>
+  <script slot="head" is:inline type="application/ld+json" set:html={jsonForScript({
+    '@context': 'https://schema.org', '@type': 'BreadcrumbList',
+    itemListElement: crumbs.map((crumb, i) => ({
+      '@type': 'ListItem', position: i + 1, name: crumb.name, item: new URL(crumb.path, Astro.site).href,
+    })),
+  })} />
+  <main id="content" tabindex="-1" class={`game-detail game-${game.id}`}>
     <nav class="game-breadcrumb wrap" aria-label={lang === 'es' ? 'Ruta de navegación' : 'Nabigazio-bidea'}>
-      <a href={routes.home[lang]}>Euskalario</a><span aria-hidden="true">/</span>
-      <a href={`${routes.home[lang]}#juegos`}>{text.games}</a><span aria-hidden="true">/</span>
-      <span aria-current="page">{game.name}</span>
+      <ol role="list">
+        <li><a href={crumbs[0].path}>{crumbs[0].name}</a></li>
+        <li><span aria-hidden="true">/</span> <span aria-current="page" lang="eu">{game.name}</span></li>
+      </ol>
     </nav>
     <section class="game-hero wrap">
       <div class="game-hero-copy">
         <div class="game-identity">
           <span class="game-emblem"><img src={`/assets/games/${game.id}.svg`} width="36" height="36" alt="" /></span>
-          <p class="eyebrow">{String(index + 1).padStart(2, '0')} / 11 · Euskalario</p>
+          <p class="eyebrow">{game.daily ? text.daily : text.replay}</p>
         </div>
-        <h1>{game.name}</h1>
-        <p class="game-tagline">{c.tagline}</p>
+        <h1><span lang="eu">{game.name}</span><span class="visually-hidden">. </span> <span class="game-tagline">{c.title}</span></h1>
         <p class="lead">{c.intro}</p>
-        <ul class="game-facts" aria-label={lang === 'es' ? 'El juego de un vistazo' : 'Jokoa begirada batean'}>
+        <ul class="game-facts" role="list" aria-label={lang === 'es' ? 'El juego de un vistazo' : 'Jokoa begirada batean'}>
           {c.facts.map((fact) => <li>{fact}</li>)}
         </ul>
         <div class="game-hero-actions">
-          <a class="button" href="#como-jugar">{text.how}<span aria-hidden="true">↓</span></a>
+          <a class="button" href="#como-jugar">{text.how}</a>
           <a class="game-story-link" href="#historia">{text.story}</a>
         </div>
-        <p class="game-mode"><span aria-hidden="true">◷</span> {game.daily ? text.daily : text.replay}</p>
       </div>
       <figure class="game-capture">
         <div class="game-capture-backdrop" aria-hidden="true"></div>
-        <div class="phone"><img src={`/assets/games/${game.id}.webp`} width="660" height="1467" alt={text.screenshot} fetchpriority="high" /></div>
+        <div class="phone"><img src={`/assets/games/${game.id}.webp`} width="660" height="1467" alt={c.screenshotAlt} fetchpriority="high" /></div>
         <img class="game-hero-host" src="/assets/galtzagorri.svg" width="105" height="122" alt="" />
-        <figcaption>{text.caption}</figcaption>
       </figure>
+    </section>
+    <section id="como-jugar" class="section wrap game-how">
+      <div class="game-how-intro"><h2>{text.how}</h2></div>
+      <ol class="game-instructions" role="list">
+        {c.steps.map(([title, body], i) => <li><span aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}
+      </ol>
+      <aside class="game-example" aria-label={text.example}>
+        <p class="eyebrow">{text.example}</p>
+        <div class="game-example-prompt" lang={c.example.promptLang}>{c.example.prompt.map((line) =>
+          typeof line === 'string' ? <p>{line}</p> : <p lang={line.lang}>{line.text}</p>
+        )}</div>
+        <details class="game-answer"><summary>{text.reveal}<span aria-hidden="true">+</span></summary><div><p class="game-example-answer" lang={c.example.answerLang}>{c.example.answer}</p><p>{c.example.explanation}</p></div></details>
+      </aside>
     </section>
     <section id="historia" class="game-story-section">
       <div class="wrap game-story-grid">
         <div><p class="eyebrow">{text.story}</p><h2>{c.storyTitle}</h2></div>
         <div class="game-story-body">
           {c.story.map((paragraph) => <p>{paragraph}</p>)}
-          {game.source && <a class="game-source" href={game.source.url} rel="noreferrer">{text.source}: {game.source.name} <span aria-hidden="true">↗</span></a>}
+          {c.source && <a class="game-source" href={c.source.url} rel="noreferrer">{c.source.name} <span aria-hidden="true">↗</span></a>}
         </div>
       </div>
     </section>
-    <section id="como-jugar" class="section wrap game-how">
-      <div class="game-how-intro"><p class="eyebrow">{text.how}</p><h2>{c.summary}</h2></div>
-      <ol class="game-instructions">
-        {c.steps.map(([title, body], i) => <li><span aria-hidden="true">{String(i + 1).padStart(2, '0')}</span><div><h3>{title}</h3><p>{body}</p></div></li>)}
-      </ol>
-      <aside class="game-example" aria-label={text.example}>
-        <p class="eyebrow">{text.example}</p>
-        <div class="game-example-prompt" lang={c.example.promptLang}>{c.example.prompt.map((line) => <p>{line}</p>)}</div>
-        <details class="game-answer"><summary>{text.reveal}<span aria-hidden="true">+</span></summary><div><p class="game-example-answer" lang={c.example.answerLang}>{c.example.answer}</p><p>{c.example.explanation}</p></div></details>
-      </aside>
-    </section>
     <section class="game-learning-section">
       <div class="wrap game-learning-grid">
-        <div><p class="eyebrow">{text.learning}</p><h2>{c.skills[0]}</h2><p>{c.lesson}</p><ul class="game-skills">{c.skills.map((skill) => <li>{skill}</li>)}</ul></div>
-        <aside class="game-guide"><img src="/assets/galtzagorri.svg" width="133" height="155" alt="Galtzagorri" loading="lazy" /><div><p class="eyebrow">{text.guide}</p><blockquote>{c.tip}</blockquote></div></aside>
+        <div><h2>{text.learning}</h2><p>{c.lesson}</p><ul class="game-skills" role="list">{c.skills.map((skill) => <li>{skill}</li>)}</ul></div>
+        <aside class="game-guide" aria-label={text.guide}><img src="/assets/galtzagorri.svg" width="133" height="155" alt="" loading="lazy" /><div><p class="eyebrow">{text.guide}</p><blockquote>{c.tip}</blockquote></div></aside>
       </div>
     </section>
     <section class="section wrap game-mission">
@@ -104,8 +113,8 @@ const text = lang === 'es' ? {
     </section>
     <section class="game-related-section">
       <div class="wrap"><h2>{text.related}</h2><div class="game-related">
-        {related.map((entry) => <a class={`game-related-card game-${entry.id}`} href={gamePath(entry, lang)}><span class="game-emblem"><img src={`/assets/games/${entry.id}.svg`} width="28" height="28" alt="" /></span><div><h3>{entry.name}</h3><p>{entry[lang].summary}</p></div><span aria-hidden="true">↗</span></a>)}
-      </div><a class="game-next" href={gamePath(next, lang)}><span>{text.next}</span><strong>{next.name} →</strong></a></div>
+        {related.map((entry) => <a class={`game-related-card game-${entry.id}`} href={gamePath(entry, lang)}><span class="game-emblem"><img src={`/assets/games/${entry.id}.svg`} width="28" height="28" alt="" /></span><div><h3 lang="eu">{entry.name}</h3><p>{entry[lang].summary}</p></div><span aria-hidden="true">↗</span></a>)}
+      </div><a class="game-next" href={gamePath(next, lang)}><span>{text.next}</span><strong lang="eu">{next.name}</strong></a></div>
     </section>
     <section class="game-app-cta wrap"><div><p class="eyebrow">{text.where}</p><p>{text.whereBody}</p></div><StoreLinks lang={lang} /></section>
   </main>

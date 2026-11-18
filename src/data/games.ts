@@ -4,9 +4,10 @@ import type { Language } from './navigation';
 export interface GameCopy {
   /** Search-oriented description for the page title: «<name>: <title> · Euskalario». */
   title: string;
-  tagline: string;
   summary: string;
   intro: string;
+  screenshotAlt: string;
+  source?: { name: string; url: string };
   facts: string[];
   storyTitle: string;
   story: string[];
@@ -14,8 +15,13 @@ export interface GameCopy {
   skills: string[];
   lesson: string;
   tip: string;
-  /** promptLang/answerLang mark Basque examples inside the Spanish copy. */
-  example: { prompt: string[]; answer: string; explanation: string; promptLang?: 'eu'; answerLang?: 'eu' };
+  example: {
+    prompt: (string | { lang: Language; text: string })[];
+    answer: string;
+    explanation: string;
+    promptLang?: Language;
+    answerLang?: Language;
+  };
 }
 
 export interface Game {
@@ -26,7 +32,6 @@ export interface Game {
   related: string[];
   es: GameCopy;
   eu: GameCopy;
-  source: { name: string; url: string } | null;
 }
 
 export const games = content as Game[];

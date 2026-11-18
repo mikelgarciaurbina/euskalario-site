@@ -3,22 +3,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import GameDirectory from "../components/GameDirectory.astro";
 import StoreLinks from "../components/StoreLinks.astro";
 ---
-<BaseLayout lang="es" page="home" title="Euskalario · 11 juegos para practicar euskera cada día" description="App gratis para iPhone y Android: 11 juegos de tres minutos para practicar euskera, con retos diarios y repaso de vocabulario. Sin anuncios, compras ni cuenta.">
-<main id="content">
+<BaseLayout lang="es" page="home" title="Euskalario · 11 juegos para practicar euskera cada día" description="Practica euskera con 11 juegos gratis para iPhone, iPad y Android. Adivina palabras, completa bertsos y repasa tu vocabulario sin conexión.">
+<main id="content" tabindex="-1">
 <section class="hero wrap">
 <div>
-<p class="eyebrow">App de juegos en euskera · iPhone y Android</p>
-<h1>Once juegos de tres minutos<br><span>para no perder tu euskera.</span>
+<p class="eyebrow">Euskalario · App gratuita</p>
+<h1>Once juegos para <span>practicar euskera</span>
 </h1>
-<p class="lead">Para quien lo aprendió en la ikastola, en casa o en el euskaltegi y lo usa menos de lo que querría. Un reto nuevo cada día y las palabras que se te escapan, de vuelta cuando toca. Gratis, sin anuncios y sin cuenta.</p>
+<p class="lead">Si aprendiste euskera en casa, en la ikastola o en el euskaltegi y echas de menos usarlo, empieza por la palabra del día. Después puedes completar un bertso o repasar las palabras que más te cuestan.</p>
 <StoreLinks lang="es" />
-<a class="hero-games-link" href="#juegos">Ver los once juegos <span aria-hidden="true">↓</span></a>
-<p class="hero-note">Gratis · iPhone, iPad y Android</p>
+<a class="hero-games-link" href="#juegos">Ver los once juegos</a>
+<p class="hero-note">Disponible para iPhone, iPad y Android</p>
 </div>
 <div class="hero-art">
-<div class="phone"><img src="/assets/hitza.webp" width="660" height="1434" alt="Partida real de Hitza: seis intentos y un teclado en euskera." fetchpriority="high">
+<div class="phone"><img src="/assets/hitza.webp" width="660" height="1434" alt="En el tablero de Hitza, el primer intento da pistas para la segunda palabra." fetchpriority="high">
 </div>
-<div class="stamp" aria-label="11 juegos"><strong>11</strong><span>juegos</span>
+<div class="stamp" aria-hidden="true"><strong>11</strong><span>juegos</span>
 </div><img class="mascot" src="/assets/galtzagorri.svg" width="133" height="155" alt="">
 </div>
 </section>
@@ -28,33 +28,33 @@ import StoreLinks from "../components/StoreLinks.astro";
 </div>
 <section id="juegos" class="section wrap">
 <div class="intro">
-<h2><span lang="eu">Hamaika jolas.</span><br>Mucho que aprender.</h2>
-<p>En euskera, <span lang="eu">hamaika</span> es once. Y también significa muchísimos. Aquí tienes once formas de ponerlo en práctica.</p>
+<h2>Los juegos de Euskalario</h2>
+<p>En euskera, <span lang="eu">hamaika</span> significa «once» y también «muchísimos». Elige un juego para ver las reglas y probar un ejemplo.</p>
 </div>
 <GameDirectory lang="es" />
 </section>
 <section class="section showcase">
 <div class="wrap">
 <div class="intro">
-<h2>Tres minutos al día,<br>y las palabras vuelven.</h2>
+<h2>Así se practica en la app</h2>
 </div>
 <div class="screens">
 <figure class="screen-item">
 <div class="phone"><img src="/assets/04-sarea.webp" width="660" height="1434" loading="lazy" alt="Sarea: palabra maleta encontrada en una cuadrícula de letras.">
 </div>
-<figcaption><strong>Busca conexiones.</strong><span>Vocabulario que comparte un tema.</span>
+<figcaption><strong>Encuentra palabras en Sarea</strong><span>Vocabulario que comparte un tema.</span>
 </figcaption>
 </figure>
 <figure class="screen-item">
 <div class="phone"><img src="/assets/05-sutegia.webp" width="660" height="1434" loading="lazy" alt="Sutegia: eder y -tasun forman edertasun, belleza.">
 </div>
-<figcaption><strong>Dale forma.</strong><span>Raíces y sufijos que construyen significado.</span>
+<figcaption><strong>Combina sufijos en Sutegia</strong><span>Raíces y sufijos que construyen significado.</span>
 </figcaption>
 </figure>
 <figure class="screen-item">
 <div class="phone"><img src="/assets/06-hiztegia.webp" width="660" height="1434" loading="lazy" alt="Hiztegia: diccionario personal con palabras practicadas y niveles de recuerdo.">
 </div>
-<figcaption><strong>Hazlo tuyo.</strong><span>Tus palabras y tus próximos repasos.</span>
+<figcaption><strong>Consulta tu diccionario</strong><span>Tus palabras y tus próximos repasos.</span>
 </figcaption>
 </figure>
 </div>
@@ -63,20 +63,20 @@ import StoreLinks from "../components/StoreLinks.astro";
 <section class="section wrap practice">
 <div>
 <p class="eyebrow">A tu ritmo, cada día</p>
-<h2>Lo que aprendes,<br>vuelve contigo.</h2>
-<p>No se trata de empezar de cero cada vez. El repaso tiene en cuenta tus respuestas y vuelve a traer las palabras que conviene reforzar. Tu progreso se guarda en tu dispositivo.</p>
+<h2>Cómo funciona el repaso</h2>
+<p>Euskalario guarda tus respuestas en el dispositivo. Las palabras que te cuestan vuelven antes y las que ya recuerdas se repasan más adelante.</p>
 </div>
 <ol class="steps">
 <li>
-<h3>Elige tu momento.</h3>
-<p>Ponte un objetivo diario de 3, 5 o 10 minutos: son 2, 4 o 6 juegos.</p>
+<h3>Elige un objetivo diario</h3>
+<p>La misión de 3 minutos incluye 2 juegos. La de 5 incluye 4 y la de 10 incluye 6.</p>
 </li>
 <li>
-<h3>Practica con la ayuda que necesitas.</h3>
+<h3>Activa las ayudas en castellano</h3>
 <p>Interfaz en euskera, con ayudas en castellano que puedes ocultar.</p>
 </li>
 <li>
-<h3>Vuelve a tus palabras.</h3>
+<h3>Busca una palabra</h3>
 <p>Consulta 1.057 entradas, traducciones y ejemplos, y sigue tu progreso en el diccionario.</p>
 </li>
 </ol>
@@ -84,17 +84,17 @@ import StoreLinks from "../components/StoreLinks.astro";
 <section class="section wrap faq" id="preguntas">
 <div>
 <p class="eyebrow">Antes de descargar</p>
-<h2>Preguntas frecuentes.</h2>
+<h2>Preguntas frecuentes</h2>
 <p><a href="/support/">Más respuestas en Soporte</a></p>
 </div>
 <div class="faq-list">
 <details>
 <summary>¿Qué nivel de euskera necesito?</summary>
-<p>Al empezar eliges tu nivel y tu objetivo diario. La interfaz está en euskera, con ayudas en castellano que puedes mostrar u ocultar en <span lang="eu">Ezarpenak</span>. Es una herramienta de práctica: no expide certificados de nivel.</p>
+<p>Puedes empezar con un nivel básico, intermedio o avanzado. La app te pregunta cuánto euskera sabes y qué palabras reconoces para ajustar el punto de partida. Puedes activar las ayudas en castellano en <span lang="eu">Ezarpenak</span> (Ajustes).</p>
 </details>
 <details>
 <summary>¿Cuánto cuesta?</summary>
-<p>Nada. Euskalario es gratis: no incluye anuncios ni compras dentro de la app, y los juegos no se desbloquean mediante pagos.</p>
+<p>Los once juegos son gratuitos y puedes jugarlos todos desde el principio.</p>
 </details>
 <details>
 <summary>¿Qué pasa con mis datos?</summary>
@@ -105,8 +105,8 @@ import StoreLinks from "../components/StoreLinks.astro";
 <section class="coming" id="app">
 <div class="wrap">
 <div>
-<h2>Empieza hoy. Son tres minutos.</h2>
-<p>Descarga Euskalario para iPhone, iPad o Android y encuentra tu momento para practicar.</p>
+<h2>Descarga Euskalario</h2>
+<p>Instala la app gratis y juega tu primera partida sin crear una cuenta.</p>
 </div>
 <StoreLinks lang="es" />
 </div>

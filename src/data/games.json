@@ -10,9 +10,8 @@
     ],
     "es": {
       "title": "adivina la palabra del día en euskera",
-      "tagline": "Una palabra. Un pequeño encuentro cada día.",
       "summary": "La palabra del día en seis intentos.",
-      "intro": "Cinco letras y seis oportunidades para recuperar una palabra que quizá ya estaba en tu memoria.",
+      "intro": "Adivina una palabra en euskera de cinco letras en seis intentos. Cada fila te dice qué letras has acertado y cuáles debes cambiar de sitio.",
       "facts": [
         "5 letras",
         "6 intentos",
@@ -29,8 +28,8 @@
           "Introduce tu propuesta con el teclado y confírmala."
         ],
         [
-          "Lee las pistas de color",
-          "Verde: letra en su sitio. Amarillo: está en otra posición. Gris: esa letra no está en la respuesta, o ya has marcado todas sus copias. Ten en cuenta las letras repetidas."
+          "Interpreta las pistas",
+          "Una casilla verde con un punto marca una letra en su sitio. El amarillo indica que está en otra posición. El gris indica que falta o que ya has encontrado todas sus copias."
         ],
         [
           "Vuelve a intentarlo",
@@ -46,18 +45,22 @@
       "tip": "Antes de escribir otra palabra, mira qué sabes ya de cada letra.",
       "example": {
         "prompt": [
-          "E · T · X · E · A"
+          "¿Qué palabra de cinco letras significa «la casa»?"
         ],
-        "answer": "ETXEA · la casa",
-        "explanation": "Una palabra de cinco letras. En una partida real, los colores de cada intento te ayudarían a encontrarla.",
-        "promptLang": "eu"
+        "answer": "ETXEA",
+        "explanation": "La última letra es el artículo. Si una fila marca la A en su sitio, consérvala en el siguiente intento.",
+        "answerLang": "eu"
+      },
+      "screenshotAlt": "Tablero vacío de seis filas y cinco casillas por fila. Debajo aparecen la pista del galtzagorri y el teclado.",
+      "source": {
+        "name": "Elhuyar · hitz",
+        "url": "https://hiztegiak.elhuyar.eus/eu_es/hitz"
       }
     },
     "eu": {
       "title": "asmatu eguneko hitza",
-      "tagline": "Hitz bat. Egunero elkartzeko aitzakia.",
       "summary": "Eguneko hitza, sei saiakeratan.",
-      "intro": "Bost letra eta sei aukera, agian zure oroimenean zegoen hitz bat berriz aurkitzeko.",
+      "intro": "Asmatu bost letrako euskarazko hitza sei saiakeratan. Lerro bakoitzeko pistek esango dizute zer letra asmatu dituzun eta zein mugitu behar dituzun.",
       "facts": [
         "5 letra",
         "6 saiakera",
@@ -74,8 +77,8 @@
           "Sartu zure proposamena teklatuarekin eta baieztatu."
         ],
         [
-          "Begiratu koloreei",
-          "Berdea: letra bere tokian dago. Horia: beste toki batean dago. Grisa: letra hori ez da erantzunean sartzen, edo haren kopiak agortu dira. Kontuan hartu errepikatutako letrak."
+          "Irakurri pistak",
+          "Puntua duen lauki berdeak letra bere tokian dagoela adierazten du. Horiak beste toki batean dagoela esan nahi du. Grisak letra hori ez dagoela edo haren ale guztiak aurkitu dituzula adierazten du."
         ],
         [
           "Saiatu berriro",
@@ -91,15 +94,16 @@
       "tip": "Beste hitz bat idatzi aurretik, begiratu letra bakoitzari buruz dakizunari.",
       "example": {
         "prompt": [
-          "E · T · X · E · A"
+          "Zein bost letrako hitzek adierazten du bizitzeko eraikina, artikulua gehituta?"
         ],
         "answer": "ETXEA",
-        "explanation": "Bost letrako hitza. Benetako partidan, saiakeren koloreek aurkitzen lagunduko lizukete."
+        "explanation": "Azken letra artikulua da. A bere tokian dagoela adierazten badu taulak, utzi hor hurrengo saiakeran."
+      },
+      "screenshotAlt": "Sei lerroko taula hutsa, lerro bakoitzean bost lauki. Azpian galtzagorriaren pista eta teklatua daude.",
+      "source": {
+        "name": "Elhuyar · hitz",
+        "url": "https://hiztegiak.elhuyar.eus/eu_es/hitz"
       }
-    },
-    "source": {
-      "name": "Elhuyar · hitz",
-      "url": "https://hiztegiak.elhuyar.eus/eu_es/hitz"
     }
   },
   {
@@ -113,9 +117,8 @@
     ],
     "es": {
       "title": "cuatro grupos de palabras en euskera",
-      "tagline": "Cuatro brazos. Cuatro maneras de encontrar una conexión.",
       "summary": "Dieciséis palabras y cuatro grupos ocultos.",
-      "intro": "Mira más allá de una palabra suelta. La pista está en lo que comparte con las demás.",
+      "intro": "Agrupa dieciséis palabras en euskera en cuatro conjuntos de cuatro. Busca qué tienen en común antes de agotar los cuatro intentos fallidos.",
       "facts": [
         "16 palabras",
         "4 grupos",
@@ -155,13 +158,13 @@
         "answer": "Colores: rojo, azul, verde y amarillo.",
         "explanation": "Es un grupo ilustrativo. Las palabras y las conexiones del reto diario pueden ser diferentes.",
         "promptLang": "eu"
-      }
+      },
+      "screenshotAlt": "Dieciséis palabras en cuatro filas. El marcador indica que todavía quedan cuatro grupos por encontrar."
     },
     "eu": {
       "title": "aurkitu ezkutuko lau taldeak",
-      "tagline": "Lau beso. Loturak aurkitzeko lau bide.",
       "summary": "Hamasei hitz eta ezkutuko lau talde.",
-      "intro": "Hitz bakarretik harago begiratu. Gakoa beste hitzekin partekatzen duenean dago.",
+      "intro": "Banatu euskarazko hamasei hitzak lauko lau taldetan. Bilatu hitzen arteko loturak lau akats egin aurretik.",
       "facts": [
         "16 hitz",
         "4 talde",
@@ -200,9 +203,9 @@
         ],
         "answer": "Koloreak.",
         "explanation": "Adibide argigarria da. Eguneko erronkaren hitzak eta loturak bestelakoak izan daitezke."
-      }
-    },
-    "source": null
+      },
+      "screenshotAlt": "Hamasei hitz lau lerrotan. Markagailuak lau taldeak aurkitzeko daudela erakusten du."
+    }
   },
   {
     "id": "sarea",
@@ -215,9 +218,8 @@
     ],
     "es": {
       "title": "sopa de letras temática en euskera",
-      "tagline": "Echa la red. Hay palabras por descubrir.",
       "summary": "Una red de letras con palabras del mismo tema.",
-      "intro": "Sigue caminos entre letras vecinas y encuentra las palabras que se esconden en el tema del día.",
+      "intro": "Encuentra las palabras del tema del día en una sopa de letras en euskera. Une casillas vecinas en horizontal o en vertical y cambia de dirección cuando lo necesites.",
       "facts": [
         "6 × 8 letras",
         "Caminos en horizontal y vertical",
@@ -253,16 +255,21 @@
         "prompt": [
           "M → E → N → D → I"
         ],
-        "answer": "MENDI · monte",
-        "explanation": "Un camino ilustrativo: en el tablero real cada paso debe ir a una casilla vecina.",
-        "promptLang": "eu"
+        "answer": "MENDI",
+        "explanation": "Significa «monte». Puedes girar en el tablero siempre que la siguiente letra esté justo encima, debajo o a un lado.",
+        "promptLang": "eu",
+        "answerLang": "eu"
+      },
+      "screenshotAlt": "Cuadrícula de letras del tema «De viaje». El contador indica que faltan las siete palabras.",
+      "source": {
+        "name": "Actividades de pesca en Itsasmuseum",
+        "url": "https://www.itsasmuseum.eus/aprende/centros-escolares/educacion-primaria/"
       }
     },
     "eu": {
       "title": "gai bereko hitzak letra-sarean",
-      "tagline": "Bota sarea. Hitzak dituzu zain.",
       "summary": "Gai bereko hitzak letra-sarean.",
-      "intro": "Lotu alboko letrak eta aurkitu eguneko gaiaren inguruan ezkutatzen diren hitzak.",
+      "intro": "Bilatu eguneko gaiari lotutako hitzak euskarazko letra-sopan. Lotu ondoko laukiak ezker-eskuin edo gora eta behera, eta aldatu norabidea behar denean.",
       "facts": [
         "6 × 8 letra",
         "Bide horizontal eta bertikalak",
@@ -300,11 +307,12 @@
         ],
         "answer": "MENDI",
         "explanation": "Adibideko bidea da: benetako taulan urrats bakoitzak alboko laukitxo batera joan behar du."
+      },
+      "screenshotAlt": "Letra-sarearen gaia «Bidaian» da. Kontagailuak zazpi hitzak aurkitzeko daudela erakusten du.",
+      "source": {
+        "name": "Arrantzari buruzko jarduerak Itsasmuseumen",
+        "url": "https://www.itsasmuseum.eus/eu/ikasi/ikastetxeak/lehen-hezkuntza/"
       }
-    },
-    "source": {
-      "name": "Itsasmuseum · Un día de pesca",
-      "url": "https://www.itsasmuseum.eus/aprende/centros-escolares/educacion-primaria/"
     }
   },
   {
@@ -318,13 +326,12 @@
     ],
     "es": {
       "title": "verdadero o falso en euskera",
-      "tagline": "El siguiente tanto se juega con una palabra.",
-      "summary": "Bai ala ez: decide si la traducción es correcta.",
-      "intro": "Entra al frontón del galtzagorri: reconoce la traducción, responde a tiempo y trata de llegar a 22 tantos.",
+      "summary": "Decide si la traducción es correcta antes de que se acabe el tiempo.",
+      "intro": "Lee una palabra en euskera y decide si su traducción al castellano es correcta. Cada acierto suma un tanto en el frontón. El objetivo es llegar a 22.",
       "facts": [
         "22 tantos",
         "3 pelotas",
-        "Bai / Ez"
+        "Dos opciones"
       ],
       "storyTitle": "El frontón se llena de euskera.",
       "story": [
@@ -337,8 +344,8 @@
           "Aparecen una palabra en euskera y una posible traducción."
         ],
         [
-          "Responde Bai o Ez",
-          "Bai si es correcta; Ez si no lo es. Responde antes de que termine el tiempo."
+          "Responde sí o no",
+          "Elige la respuesta antes de que se agote el tiempo."
         ],
         [
           "Suma tantos",
@@ -354,17 +361,29 @@
       "tip": "No pulses por inercia. Una respuesta rápida también necesita una lectura atenta.",
       "example": {
         "prompt": [
-          "etxe = casa?"
+          {
+            "lang": "eu",
+            "text": "etxe"
+          },
+          {
+            "lang": "es",
+            "text": "casa"
+          },
+          "¿Es correcta la traducción?"
         ],
-        "answer": "Bai · Sí",
-        "explanation": "Etxe significa casa. Es una pareja correcta; en la partida también aparecen parejas equivocadas."
+        "answer": "Sí.",
+        "explanation": "Las dos palabras nombran lo mismo. En la partida también aparecen traducciones equivocadas."
+      },
+      "screenshotAlt": "Frontón con el marcador a cero, tres pelotas disponibles y el botón para empezar la partida.",
+      "source": {
+        "name": "Frontón Beotibar de Tolosa",
+        "url": "https://turismo.euskadi.eus/es/instalaciones-deportivas/fronton-beotibar-pilotalekua/webtur00-content/es/"
       }
     },
     "eu": {
       "title": "zuzena al da itzulpena?",
-      "tagline": "Hurrengo tantoa hitz batekin jokatzen da.",
       "summary": "Bai ala ez: zuzena al da itzulpena?",
-      "intro": "Sartu galtzagorriaren frontoian: ezagutu itzulpena, erantzun garaiz eta saiatu 22 tantora iristen.",
+      "intro": "Irakurri euskarazko hitza eta erabaki gaztelaniazko itzulpena zuzena den. Asmatzen duzun bakoitzean tanto bat lortuko duzu. Helburua 22ra iristea da.",
       "facts": [
         "22 tanto",
         "3 pilota",
@@ -398,15 +417,24 @@
       "tip": "Ez sakatu inertziaz. Azkar erantzuteko ere arretaz irakurri behar da.",
       "example": {
         "prompt": [
-          "etxe = casa?"
+          {
+            "lang": "eu",
+            "text": "etxe"
+          },
+          {
+            "lang": "es",
+            "text": "casa"
+          },
+          "Zuzena al da itzulpena?"
         ],
-        "answer": "Bai",
-        "explanation": "Etxe hitzaren gaztelaniazko ordaina casa da. Partidan bikote okerrak ere agertzen dira."
+        "answer": "Bai.",
+        "explanation": "Bi hitzek esanahi bera dute. Partidan itzulpen okerrak ere agertzen dira."
+      },
+      "screenshotAlt": "Frontoian markagailua hutsean dago. Hiru pilota eta partida hasteko botoia ageri dira.",
+      "source": {
+        "name": "Tolosako Beotibar pilotalekua",
+        "url": "https://turismo.euskadi.eus/eu/kirol-instalazioak/beotibar-pilotalekua/webtur00-content/eu/"
       }
-    },
-    "source": {
-      "name": "Turismo Euskadi · Beotibar",
-      "url": "https://tourism.euskadi.eus/en/sport-facilities/beotibar-pelota-court/webtur00-content/en/"
     }
   },
   {
@@ -420,9 +448,8 @@
     ],
     "es": {
       "title": "une parejas de palabras en euskera",
-      "tagline": "Una palabra responde a la otra.",
       "summary": "Une parejas en euskera y castellano durante un minuto.",
-      "intro": "Encuentra las parejas y encadena aciertos. La memoria pone el ritmo.",
+      "intro": "Empareja palabras en euskera con su traducción al castellano. Tienes un minuto para unir tantas parejas como puedas y sumar puntos con aciertos seguidos.",
       "facts": [
         "60 segundos",
         "6 parejas por tanda",
@@ -456,18 +483,28 @@
       "tip": "Busca la pareja por su significado, no por el lugar que ocupaba antes.",
       "example": {
         "prompt": [
-          "ur ↔ agua",
-          "ogi ↔ pan"
+          {
+            "lang": "eu",
+            "text": "ur · ogi"
+          },
+          {
+            "lang": "es",
+            "text": "pan · agua"
+          }
         ],
-        "answer": "Dos parejas correctas.",
+        "answer": "Agua es la primera pareja y pan, la segunda.",
         "explanation": "Las columnas cambian de orden. Reconocer el significado resulta más útil que memorizar una posición."
+      },
+      "screenshotAlt": "Dos columnas de seis palabras, en euskera y castellano, con un minuto en el reloj.",
+      "source": {
+        "name": "La txalaparta en la enciclopedia de Soinuenea",
+        "url": "https://www.soinuenea.eus/es/enciclopedia/txalaparta/er-10/"
       }
     },
     "eu": {
       "title": "lotu hitz-bikoteak minutu batean",
-      "tagline": "Hitz batek besteari erantzuten dio.",
       "summary": "Lotu euskarazko eta gaztelaniazko bikoteak minutu batean.",
-      "intro": "Aurkitu bikoteak eta asmatu segidan. Oroimenak jartzen du erritmoa.",
+      "intro": "Lotu euskarazko hitz bakoitza gaztelaniazko itzulpenarekin. Minutu bat duzu ahalik eta bikote gehien osatzeko eta segidan asmatuz puntuak irabazteko.",
       "facts": [
         "60 segundo",
         "6 bikote txandako",
@@ -501,16 +538,23 @@
       "tip": "Bilatu bikotea esanahiagatik, ez lehen zegoen tokiagatik.",
       "example": {
         "prompt": [
-          "ur ↔ agua",
-          "ogi ↔ pan"
+          {
+            "lang": "eu",
+            "text": "ur · ogi"
+          },
+          {
+            "lang": "es",
+            "text": "pan · agua"
+          }
         ],
-        "answer": "Bi bikote zuzen.",
+        "answer": "Lehen hitza bigarren zutabeko azkenarekin doa, eta bigarrena lehenarekin.",
         "explanation": "Zutabeen ordena aldatzen da. Esanahia ezagutzea erabilgarriagoa da tokia buruz ikastea baino."
+      },
+      "screenshotAlt": "Sei hitzeko bi zutabe, bata euskaraz eta bestea gaztelaniaz. Erlojuan minutu bat dago.",
+      "source": {
+        "name": "Txalaparta Soinuenearen entziklopedian",
+        "url": "https://www.soinuenea.eus/eu/entziklopedia/txalaparta/er-10/"
       }
-    },
-    "source": {
-      "name": "Soinuenea · Txalaparta",
-      "url": "https://www.soinuenea.eus/es/enciclopedia/txalaparta/er-10/"
     }
   },
   {
@@ -524,9 +568,8 @@
     ],
     "es": {
       "title": "practica los números en euskera",
-      "tagline": "En esta plaza, los números también hablan euskera.",
       "summary": "Lee el precio en euskera y escríbelo con cifras.",
-      "intro": "El galtzagorri atiende el puesto. Tu reto es entender cuánto cuesta cada producto.",
+      "intro": "Practica los números en euskera con los precios del mercado. Lee cada importe, escríbelo en cifras y descubre cómo se forma el número.",
       "facts": [
         "10 precios",
         "Números escritos",
@@ -563,15 +606,19 @@
           "berrogeita hamazazpi euro"
         ],
         "answer": "57 € · 40 + 17",
-        "explanation": "Berrogei aporta 40 y hamazazpi aporta 17. La unión da 57.",
+        "explanation": "El precio se construye sumando cuarenta y diecisiete.",
         "promptLang": "eu"
+      },
+      "screenshotAlt": "El puesto de pimientos de Gernika pide ocho euros. Debajo hay un teclado numérico para introducir el precio.",
+      "source": {
+        "name": "Historia de la feria de Ordizia",
+        "url": "https://www.ordiziakoazoka.eus/es/ferias-especiales/fiestas-vascas/historia"
       }
     },
     "eu": {
       "title": "landu zenbakiak euskaraz",
-      "tagline": "Plaza honetan, zenbakiek ere euskaraz egiten dute.",
       "summary": "Irakurri prezioa euskaraz eta idatzi zifraz.",
-      "intro": "Galtzagorria saltokian dago. Zure erronka produktu bakoitzaren prezioa ulertzea da.",
+      "intro": "Landu euskarazko zenbakiak azokako prezioekin. Irakurri zenbatekoa, idatzi zifraz eta ikusi zenbakia nola osatzen den.",
       "facts": [
         "10 prezio",
         "Zenbaki idatziak",
@@ -609,11 +656,12 @@
         ],
         "answer": "57 € · 40 + 17",
         "explanation": "Berrogei: 40. Hamazazpi: 17. Biak elkartuta, 57."
+      },
+      "screenshotAlt": "Gernikako piperren postuan zortzi euro eskatu dituzte. Beheko zenbakizko teklatuan sartu behar da prezioa.",
+      "source": {
+        "name": "Ordiziako azokaren historia",
+        "url": "https://www.ordiziakoazoka.eus/azoka-bereziak/euskal-jaiak/historia"
       }
-    },
-    "source": {
-      "name": "Ordiziako Azoka · Historia",
-      "url": "https://www.ordiziakoazoka.eus/es/ferias-especiales/fiestas-vascas/historia"
     }
   },
   {
@@ -627,9 +675,8 @@
     ],
     "es": {
       "title": "repasa vocabulario en euskera",
-      "tagline": "Las palabras vuelven. Tú las haces tuyas.",
       "summary": "Recupera y escribe el vocabulario que toca repasar.",
-      "intro": "Palabra a palabra, el repaso sigue tus respuestas y vuelve a traer lo que necesita un poco más de práctica.",
+      "intro": "Repasa tu vocabulario en euskera a partir de palabras en castellano. Escribe la traducción con las fichas o el teclado y comprueba qué palabras recuerdas.",
       "facts": [
         "Hasta 10 palabras",
         "Fichas o teclado",
@@ -663,18 +710,19 @@
       "tip": "Intenta recordar la palabra antes de mirar las fichas. Ese pequeño esfuerzo forma parte del repaso.",
       "example": {
         "prompt": [
-          "comer → ?"
+          "comer"
         ],
         "answer": "jan",
         "explanation": "Primero recuperas la palabra; después compruebas la respuesta. El reto consiste en escribir, no solo en reconocer.",
-        "answerLang": "eu"
-      }
+        "answerLang": "eu",
+        "promptLang": "es"
+      },
+      "screenshotAlt": "La pantalla pide traducir «comer» al euskera. Hay tres casillas para la respuesta y seis letras para elegir."
     },
     "eu": {
       "title": "errepasatu zure hiztegia",
-      "tagline": "Hitzak itzuli egiten dira. Zuk zeure egiten dituzu.",
       "summary": "Gogoratu eta idatzi errepasatzeko hiztegia.",
-      "intro": "Hitzez hitz, errepasoak zure erantzunak kontuan hartzen ditu, gehiago landu beharrekoa berriz ekartzeko.",
+      "intro": "Errepasatu euskarazko hitzak gaztelaniazko esanahitik abiatuta. Idatzi itzulpena letra-fitxekin edo teklatuarekin eta ikusi zer hitz gogoratzen dituzun.",
       "facts": [
         "Gehienez 10 hitz",
         "Fitxak edo teklatua",
@@ -708,13 +756,14 @@
       "tip": "Saiatu hitza gogoratzen fitxei begiratu aurretik. Ahalegin txiki hori errepasoaren parte da.",
       "example": {
         "prompt": [
-          "comer → ?"
+          "comer"
         ],
         "answer": "jan",
-        "explanation": "Lehenik hitza gogoratu, eta gero erantzuna egiaztatu. Idaztea da erronka, ez soilik ezagutzea."
-      }
-    },
-    "source": null
+        "explanation": "Lehenik hitza gogoratu, eta gero erantzuna egiaztatu. Idaztea da erronka, ez soilik ezagutzea.",
+        "promptLang": "es"
+      },
+      "screenshotAlt": "Gaztelaniazko aditz baten euskarazko ordaina idazteko hiru lauki eta sei letra-fitxa ageri dira."
+    }
   },
   {
     "id": "errota",
@@ -727,9 +776,8 @@
     ],
     "es": {
       "title": "crucigrama de letras en euskera",
-      "tagline": "Haz girar las letras. Encuentra lo que ya sabes.",
       "summary": "Forma palabras con una rueda de letras y llena el crucigrama.",
-      "intro": "Una misma rueda puede guardar varias palabras. Ve descubriéndolas a tu ritmo.",
+      "intro": "Resuelve un crucigrama en euskera con las letras de una rueda. Une las letras en distinto orden para llenar el tablero y encontrar palabras extra.",
       "facts": [
         "Rueda de letras",
         "Un crucigrama",
@@ -769,13 +817,17 @@
         "explanation": "La rueda tiene dos E y permite formar ETXEA. Es un ejemplo de construcción, no la solución de todos los niveles.",
         "promptLang": "eu",
         "answerLang": "eu"
+      },
+      "screenshotAlt": "Crucigrama vacío con cuatro palabras por descubrir y una rueda con las letras A, A, T, S y E.",
+      "source": {
+        "name": "Conjunto monumental de Igartza",
+        "url": "https://turismo.euskadi.eus/es/patrimonio-cultural/conjunto-monumental-de-igartza/webtur00-content/es/"
       }
     },
     "eu": {
       "title": "letra-gurpila eta gurutzegrama",
-      "tagline": "Biratu letrak. Aurkitu dakizuna.",
       "summary": "Osatu hitzak letra-gurpilarekin eta bete gurutzegrama.",
-      "intro": "Gurpil berean hainbat hitz ezkuta daitezke. Aurkitu zure erritmoan.",
+      "intro": "Bete euskarazko gurutzegrama gurpileko letrekin. Lotu letrak hainbat ordenatan taula osatzeko eta hitz gehigarriak aurkitzeko.",
       "facts": [
         "Letra-gurpila",
         "Gurutzegrama bat",
@@ -813,11 +865,12 @@
         ],
         "answer": "ETXEA",
         "explanation": "Gurpilak bi E ditu eta ETXEA osatzeko aukera ematen du. Eraikuntza-adibidea da, ez maila guztien erantzuna."
+      },
+      "screenshotAlt": "Gurutzegrama hutsa, lau hitz aurkitzeko. Gurpilean A, A, T, S eta E letrak daude.",
+      "source": {
+        "name": "Igartzako monumentu multzoa",
+        "url": "https://turismo.euskadi.eus/eu/kultur-ondarea/igartzako-monumentu-multzoa/webtur00-content/eu/"
       }
-    },
-    "source": {
-      "name": "Turismo Euskadi · Igartza",
-      "url": "https://turismo.euskadi.eus/es/patrimonio-cultural/conjunto-monumental-de-igartza/webtur00-content/es/"
     }
   },
   {
@@ -831,9 +884,8 @@
     ],
     "es": {
       "title": "forma palabras con sufijos en euskera",
-      "tagline": "Las palabras también se forjan.",
       "summary": "Combina raíces y sufijos para crear palabras.",
-      "intro": "Elige las piezas adecuadas y descubre cómo cambia el significado al unirlas.",
+      "intro": "Forma palabras en euskera uniendo una raíz y un sufijo. Cada ronda propone un significado para que descubras qué combinación lo expresa.",
       "facts": [
         "8 objetivos",
         "Raíces y sufijos",
@@ -869,15 +921,21 @@
         "prompt": [
           "eder + -tasun"
         ],
-        "answer": "edertasun · belleza",
-        "explanation": "Eder aporta la idea de bonito; -tasun permite formar el nombre de esa cualidad."
+        "answer": "edertasun",
+        "explanation": "La raíz significa «bonito». Al añadir el sufijo se forma el sustantivo «belleza».",
+        "promptLang": "eu",
+        "answerLang": "eu"
+      },
+      "screenshotAlt": "El objetivo es formar la palabra que significa «lector». Bajo el yunque se pueden elegir raíces y sufijos.",
+      "source": {
+        "name": "Ferrería de Mirandaola",
+        "url": "https://turismo.euskadi.eus/es/patrimonio-cultural/ferreria-de-mirandaola/webtur00-content/es/"
       }
     },
     "eu": {
       "title": "sortu hitzak atzizkiekin",
-      "tagline": "Hitzak ere forjatu egiten dira.",
       "summary": "Elkartu erroak eta atzizkiak hitzak sortzeko.",
-      "intro": "Aukeratu pieza egokiak eta ikusi esanahia nola aldatzen den elkartzean.",
+      "intro": "Sortu euskarazko hitzak erroak eta atzizkiak elkartuz. Txanda bakoitzean esanahi bat duzu abiapuntu, eta hari dagokion hitza osatu behar duzu.",
       "facts": [
         "8 helburu",
         "Erroak eta atzizkiak",
@@ -915,11 +973,12 @@
         ],
         "answer": "edertasun",
         "explanation": "Eder oinarriari -tasun erantsita, nolakotasuna adierazten duen izena sortzen da."
+      },
+      "screenshotAlt": "Irakurtzen duen pertsona izendatzeko hitza osatu behar da. Ingudearen azpian erroak eta atzizkiak daude aukeran.",
+      "source": {
+        "name": "Mirandaolako burdinola",
+        "url": "https://turismo.euskadi.eus/eu/kultur-ondarea/mirandaolako-burdinola/webtur00-content/eu/"
       }
-    },
-    "source": {
-      "name": "Turismo Euskadi · Mirandaola",
-      "url": "https://turismo.euskadi.eus/es/patrimonio-cultural/ferreria-de-mirandaola/webtur00-content/es/"
     }
   },
   {
@@ -933,9 +992,8 @@
     ],
     "es": {
       "title": "completa bertsos en euskera",
-      "tagline": "La última palabra tiene mucho que decir.",
       "summary": "Completa el bertso con rima, medida y sentido.",
-      "intro": "Lee los versos y encuentra la palabra que hace encajar el final. No basta con que suene parecida.",
+      "intro": "Completa bertsos en euskera. Lee la estrofa y elige entre cuatro finales el que conserva la rima, encaja en el verso y da sentido al conjunto.",
       "facts": [
         "3 bertsos",
         "Cuatro opciones",
@@ -974,16 +1032,20 @@
           "egun ______."
         ],
         "answer": "guztietan → egun guztietan",
-        "explanation": "La palabra encaja con bihotzetan, completa seis sílabas con egun y da sentido al bertso sobre mantener vivo el euskera.",
+        "explanation": "La palabra rima con el segundo verso y completa las seis sílabas del último. El final significa «todos los días».",
         "promptLang": "eu",
         "answerLang": "eu"
+      },
+      "screenshotAlt": "Bertso sobre el euskera con un hueco en el último verso, la medida de cada línea y cuatro finales para elegir.",
+      "source": {
+        "name": "¿Qué es un bertso? · Euskadi.eus",
+        "url": "https://www.euskadi.eus/web01-a2kulsus/es/contenidos/informacion/bertsoa/es_1338/bertso01_c.html"
       }
     },
     "eu": {
       "title": "osatu bertsoak",
-      "tagline": "Azken hitzak badu zer esana.",
       "summary": "Osatu bertsoa errima, neurria eta zentzua zainduz.",
-      "intro": "Irakurri bertso-lerroak eta aurkitu amaieran egokitzen den hitza. Antzeko soinua izatea ez da nahikoa.",
+      "intro": "Osatu euskarazko bertsoak. Irakurri ahapaldia eta aukeratu lau aukeren artean errimari, neurriari eta esanahiari ondoen egokitzen zaion hitza.",
       "facts": [
         "3 bertso",
         "Lau aukera",
@@ -1023,11 +1085,12 @@
         ],
         "answer": "guztietan → egun guztietan",
         "explanation": "Bihotzetan hitzarekin errimatzen du, egun hitzarekin sei silaba osatzen ditu eta euskarari bizirik eusteko bertsoari zentzua ematen dio."
+      },
+      "screenshotAlt": "Euskarari buruzko bertsoan azken hitza falta da. Lerroen neurriak eta amaierako lau aukerak ageri dira.",
+      "source": {
+        "name": "Zer da bertsoa? · Euskadi.eus",
+        "url": "https://www.euskadi.eus/web01-a2kulsus/eu/contenidos/informacion/bertsoa/eu_1338/bertso01_e.html"
       }
-    },
-    "source": {
-      "name": "Bertsozale Elkartea · Zer da bertsoa?",
-      "url": "https://www.bertsozale.eus/eu/bertsolaritza/sarrera-zer-da-bertsoa"
     }
   },
   {
@@ -1041,9 +1104,8 @@
     ],
     "es": {
       "title": "duelo de vocabulario en euskera",
-      "tagline": "Tira de la cuerda con lo que sabes.",
       "summary": "Un duelo de vocabulario contra el galtzagorri.",
-      "intro": "Tu compañero de plaza cambia de lado por un momento. El galtzagorri también quiere ganar esta prueba.",
+      "intro": "Mide tu vocabulario en euskera en una partida de sokatira contra el galtzagorri. Elige la traducción correcta a tiempo para tirar de la cuerda hacia tu lado.",
       "facts": [
         "Hasta 10 preguntas",
         "4 respuestas",
@@ -1077,18 +1139,29 @@
       "tip": "Mira primero las cuatro opciones. La más familiar no siempre es la traducción que buscas.",
       "example": {
         "prompt": [
-          "casa → etxe / mendi / ogi / ur"
+          {
+            "lang": "es",
+            "text": "casa"
+          },
+          {
+            "lang": "eu",
+            "text": "etxe · mendi · ogi · ur"
+          }
         ],
         "answer": "etxe",
-        "explanation": "Mendi es monte, ogi es pan y ur es agua. Solo etxe responde a esta pregunta.",
+        "explanation": "La primera opción significa «casa». Las otras tres significan «monte», «pan» y «agua».",
         "answerLang": "eu"
+      },
+      "screenshotAlt": "Una cuerda separa al jugador y al galtzagorri. El marcador está empatado a cero antes de empezar el duelo.",
+      "source": {
+        "name": "Deporte rural vasco en Turismo Euskadi",
+        "url": "https://turismo.euskadi.eus/deportevasco/"
       }
     },
     "eu": {
       "title": "hiztegi-lehia galtzagorriaren aurka",
-      "tagline": "Tira sokari dakizunarekin.",
       "summary": "Hiztegi-lehia galtzagorriaren aurka.",
-      "intro": "Plazako laguna beste aldera pasatu da une batez. Galtzagorriak ere proba hau irabazi nahi du.",
+      "intro": "Neurtu zure hiztegia galtzagorriaren aurkako sokatira-partidan. Aukeratu garaiz itzulpen zuzena soka zure aldera ekartzeko.",
       "facts": [
         "Gehienez 10 galdera",
         "4 erantzun",
@@ -1122,15 +1195,23 @@
       "tip": "Begiratu lehenik lau aukerei. Ezagunena ez da beti bilatzen duzun itzulpena.",
       "example": {
         "prompt": [
-          "casa → etxe / mendi / ogi / ur"
+          {
+            "lang": "es",
+            "text": "casa"
+          },
+          {
+            "lang": "eu",
+            "text": "etxe · mendi · ogi · ur"
+          }
         ],
         "answer": "etxe",
         "explanation": "Mendi, ogi eta ur beste esanahi batzuk dira. Galdera honetan etxe da erantzun zuzena."
+      },
+      "screenshotAlt": "Soka bat dago jokalariaren eta galtzagorriaren artean. Partida hasi aurretik, bi aldeek zero puntu dituzte.",
+      "source": {
+        "name": "Herri kirolak Euskadiko Turismoaren webgunean",
+        "url": "https://turismo.euskadi.eus/herrikirolak/"
       }
-    },
-    "source": {
-      "name": "Turismo Euskadi · Herri kirolak",
-      "url": "https://turismo.euskadi.eus/deportevasco/"
     }
   }
 ]

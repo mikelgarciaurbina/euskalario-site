@@ -124,15 +124,14 @@ reales del kit móvil, escaladas a 660 px y convertidas a WebP. Los SVG
 reutilizan el sistema de iconos de la app. Ningún build necesita acceder al
 repositorio móvil: el contenido y los recursos están dentro de este repo.
 
-Los ejemplos se despliegan con HTML nativo, sin JavaScript. La animación
-del galtzagorri respeta `prefers-reduced-motion`. Los comentarios `email_off`
+Los ejemplos se despliegan con HTML nativo y se pueden abrir con el teclado. Las transiciones respetan `prefers-reduced-motion`. Los comentarios `email_off`
 del layout evitan que Cloudflare transforme los correos públicos en enlaces
 que necesitan JavaScript para descifrarlos; se mantiene la CSP sin scripts.
 
 `npm test` comprueba las 29 páginas y sus enlaces, rutas de idiomas,
 fragmentos, sitemap y recursos; además, títulos y descripciones, `og:locale`,
 `x-default`, la imagen social de 1200 × 630, el banner de Safari, el JSON-LD de
-las portadas, las frases en euskera marcadas con `lang="eu"` en las páginas en
+las portadas, el nombre del sitio (`WebSite`), las rutas de las fichas (`BreadcrumbList`), las frases en euskera marcadas con `lang="eu"` en las páginas en
 castellano, la regla de la misión diaria, HSTS y la caché de `/_astro/`, que las
 hojas de estilo tengan huella y que `games.css` solo cargue donde se usa.
 La revisión móvil está en `qa/`.

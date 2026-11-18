@@ -8,16 +8,16 @@ const translated = translations ?? routes[page === 'notFound' || page === 'game'
 <a class="skip" href="#content">{labels.skip}</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href={routes.home[lang]} aria-label="Euskalario">
-      <img src="/assets/logo.svg" width="174" height="41" alt="Euskalario" />
+    <a class="brand" href={routes.home[lang]}>
+      <img src="/assets/logo.svg" width="174" height="41" alt={labels.home} />
     </a>
     <nav class="nav" aria-label={labels.label}>
       <a class="nav-games" href={`${routes.home[lang]}#juegos`}>{labels.games}</a>
-      <a href={routes.support[lang]}>{labels.support}</a>
-      <span class="languages">
-        <a href={translated.es} lang="es" aria-current={lang === 'es' ? 'page' : undefined}>ES</a>
-        <a href={translated.eu} lang="eu" aria-current={lang === 'eu' ? 'page' : undefined}>EU</a>
-      </span>
+      <a href={routes.support[lang]} aria-current={page === 'support' ? 'page' : undefined}>{labels.support}</a>
+    </nav>
+    <nav class="languages" aria-label={labels.languages}>
+      <a href={translated.es} lang="es" hreflang="es" aria-current={page !== 'notFound' && lang === 'es' ? 'page' : undefined}>Español</a>
+      <a href={translated.eu} lang="eu" hreflang="eu" aria-current={page !== 'notFound' && lang === 'eu' ? 'page' : undefined}>Euskara</a>
     </nav>
   </div>
 </header>

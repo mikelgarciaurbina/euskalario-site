@@ -49,18 +49,22 @@ const structuredData = page === 'home'
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content={String(shareImage.width)} />
     <meta property="og:image:height" content={String(shareImage.height)} />
-    <meta property="og:image:alt" content="Euskalario — Euskara, jolasean." />
+    <meta property="og:image:alt" content={lang === 'es' ? 'Euskalario y su mascota con el lema «Euskara, jolasean».' : 'Euskalarioren izena eta maskota, «Euskara, jolasean» leloarekin.'} />
     <meta name="twitter:card" content="summary_large_image" />
     <link rel="icon" type="image/png" href="/assets/favicon.png" />
     <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
     <link rel="preload" href={bricolage} as="font" type="font/woff2" crossorigin />
     {structuredData && <script is:inline type="application/ld+json" set:html={structuredData} />}
+    {page === 'home' && lang === 'es' && <script is:inline type="application/ld+json" set:html={jsonForScript({
+      '@context': 'https://schema.org', '@type': 'WebSite', name: 'Euskalario', url: absolute('/'),
+    })} />}
+    <slot name="head" />
   </head>
   <body>
     <!--email_off-->
     <Header lang={lang} page={page} translations={translated ?? undefined} />
     <slot />
-    <Footer lang={lang} />
+    <Footer lang={lang} page={page} />
     <!--/email_off-->
   </body>
 </html>

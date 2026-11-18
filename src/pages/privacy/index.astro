@@ -1,17 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 ---
-<BaseLayout lang="es" page="privacy" title="Política de privacidad · Euskalario" description="Qué guarda Euskalario, para qué se utiliza y cómo puedes borrarlo.">
-<main id="content" class="legal-main">
+<BaseLayout lang="es" page="privacy" title="Política de privacidad y borrado de datos · Euskalario" description="Consulta qué datos guarda Euskalario en tu dispositivo, cómo borrar tu progreso y qué información compartes al escribir a soporte.">
+<main id="content" tabindex="-1" class="legal-main">
 <div class="wrap">
-<p class="eyebrow">Política de privacidad</p>
-<h1>Tu progreso se queda contigo.</h1>
-<p class="lead">Qué guarda Euskalario, para qué se utiliza y cómo puedes borrarlo.</p><span class="pill">Sin cuenta · Sin anuncios · Progreso local</span>
+<h1>Política de privacidad de Euskalario</h1>
+<p class="lead">Tu progreso se guarda en tu dispositivo. Aquí puedes consultar para qué se usa cada dato y qué información recibimos cuando escribes a soporte.</p>
+<a href="#borrar-datos">Cómo borrar mis datos</a>
 <div class="grid">
 <article class="card">
 <section>
 <h2>Responsable y contacto</h2>
-<p>Euskalario es una app de práctica de euskera desarrollada de forma independiente. Desarrollo: Mikel García. Para consultas sobre privacidad o soporte, escribe a info@overlayon.com. Esta política describe Euskalario 2.0.</p>
+<p>Euskalario es una app de práctica de euskera desarrollada de forma independiente. Desarrollo: Mikel García. Para consultas sobre privacidad o soporte, escribe a <a href="mailto:info@overlayon.com">info@overlayon.com</a>. Esta política describe Euskalario 2.0.</p>
 </section>
 <section>
 <h2>Datos que permanecen en tu dispositivo</h2>
@@ -27,12 +27,20 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </section>
 <section>
 <h2>Compartir y contactar con soporte</h2>
-<p>La app abre el menú del sistema para compartir un resultado solo cuando tú lo solicitas. Eliges el destino y se aplican las condiciones del servicio elegido. Si envías un correo a soporte, recibimos tu dirección y el contenido que incluyas para atender tu consulta. Ese correo no da acceso automático a tu progreso local. Puedes solicitar la eliminación de tus mensajes de soporte en info@overlayon.com.</p>
+<p>La app abre el menú del sistema para compartir un resultado solo cuando tú lo solicitas. Eliges el destino y se aplican las condiciones del servicio elegido. Si envías un correo a soporte, recibimos tu dirección y el contenido que incluyas para atender tu consulta. Ese correo no da acceso automático a tu progreso local. Puedes solicitar la eliminación de tus mensajes de soporte en <a href="mailto:info@overlayon.com">info@overlayon.com</a>.</p>
 </section>
 <section>
-<h2>Conservación y borrado</h2>
+<h2 id="borrar-datos">Conservación y borrado</h2>
 <p>La transición desde 1.x a la nueva experiencia 2.0 empieza el historial desde cero al completar la bienvenida. Se reinician las palabras aprendidas, estadísticas, rachas y premios anteriores. Las actualizaciones posteriores de un perfil 2.0 ya iniciado conservan su progreso local.</p>
-<p>El progreso y las preferencias permanecen en el dispositivo hasta que los restableces o eliminas los datos de la app. Parte del historial detallado se recorta con el tiempo para limitar el almacenamiento. Para borrar el progreso, ve a <span lang="eu">Ni → Ezarpenak → Aurrerapena → Aurrerapena berrezarri</span> y confirma. Se cancela también el recordatorio. No existe una cuenta de Euskalario que debas eliminar. Desinstalar quita los datos locales, aunque una copia del sistema puede conservarlos o restaurarlos según tus ajustes. Gestiona las copias desde el sistema. Los correos de soporte se usan para atender la consulta y se conservan mientras resulte necesario para gestionarla y atender las obligaciones aplicables.</p>
+<p>El progreso y las preferencias permanecen en el dispositivo hasta que los restableces o eliminas los datos de la app. Parte del historial detallado se recorta con el tiempo para limitar el almacenamiento.</p>
+<h3>Borrar el progreso en la app</h3>
+<ol>
+<li>Abre <span lang="eu">Ni</span> y entra en <span lang="eu">Ezarpenak</span> (Ajustes).</li>
+<li>En <span lang="eu">Aurrerapena</span> (Progreso), pulsa <span lang="eu">Aurrerapena berrezarri</span> (Restablecer progreso).</li>
+<li>Confirma el borrado. Se elimina el progreso local y se cancela el recordatorio.</li>
+</ol>
+<p>Desinstalar la app elimina los datos locales. Según tus ajustes, una copia de seguridad del sistema puede conservarlos o restaurarlos. Puedes gestionar esas copias en los ajustes del dispositivo.</p>
+<p>Conservamos los correos de soporte el tiempo necesario para atender tu consulta y cumplir las obligaciones aplicables.</p>
 </section>
 <section>
 <h2>Seguridad y servicios del sistema</h2>
@@ -44,16 +52,16 @@ import BaseLayout from "../../layouts/BaseLayout.astro";
 </section>
 <section>
 <h2>Consultas y cambios</h2>
-<p>Para preguntar por el tratamiento de datos o ejercer los derechos que correspondan, contacta con info@overlayon.com. Los datos locales se gestionan desde tu propio dispositivo: no podemos recuperarlos, consultarlos ni borrarlos a distancia. Si cambia el funcionamiento de la app, actualizaremos esta información.</p>
+<p>Para preguntar por el tratamiento de datos o ejercer los derechos que correspondan, escribe a <a href="mailto:info@overlayon.com">info@overlayon.com</a>. Los datos locales se gestionan desde tu propio dispositivo: no podemos recuperarlos, consultarlos ni borrarlos a distancia. Si cambia el funcionamiento de la app, actualizaremos esta información.</p>
 </section>
 </article>
 <aside class="card contact">
-<h2>¿Necesitas ayuda?</h2>
-<p>Cuéntanos qué ocurre o qué palabra te gustaría revisar.</p><a class="button" href="mailto:info@overlayon.com">Escribir a soporte</a>
+<h2>Consultas de privacidad</h2>
+<p>Escríbenos si tienes dudas sobre tus datos o quieres solicitar el borrado de un correo enviado a soporte.</p><a class="button" href="mailto:info@overlayon.com">Escribir a soporte</a>
 <p class="meta contact-email">info@overlayon.com</p>
 </aside>
 </div>
-<p class="meta date">Versión 2.0 · Actualizado el 4 de noviembre de 2026</p>
+<p class="meta date">Versión 2.0 · Actualizado el 18 de noviembre de 2026</p>
 </div>
 </main>
 </BaseLayout>

@@ -1,15 +1,15 @@
 ---
-import { navigation, routes, type Language } from '../data/navigation';
-interface Props { lang: Language }
-const { lang } = Astro.props;
+import { navigation, routes, type Language, type Page } from '../data/navigation';
+interface Props { lang: Language; page: Page }
+const { lang, page } = Astro.props;
 const labels = navigation[lang];
 ---
 <footer class="site-footer">
   <div class="wrap">
     <p><span lang="eu">Euskara, jolasean.</span> · {labels.tagline}</p>
     <nav aria-label={labels.information}>
-      <a href={routes.support[lang]}>{labels.support}</a>
-      <a href={routes.privacy[lang]}>{labels.privacy}</a>
+      <a href={routes.support[lang]} aria-current={page === 'support' ? 'page' : undefined}>{labels.support}</a>
+      <a href={routes.privacy[lang]} aria-current={page === 'privacy' ? 'page' : undefined}>{labels.privacy}</a>
       <a href="mailto:info@overlayon.com">info@overlayon.com</a>
     </nav>
   </div>
