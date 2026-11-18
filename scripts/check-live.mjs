@@ -12,13 +12,17 @@ for (const path of paths) {
   const url = new URL(path, origin).href;
   let response;
   try {
-    response = await fetch(url, { redirect: 'follow' });
+    // Cloudflare negotiates HTML transformations using the navigation Accept header.
+    response = await fetch(url, { headers: { Accept: 'text/html' }, redirect: 'follow' });
   } catch (error) {
     failures.push(`${url}: request failed (${error.cause?.code ?? error.message})`);
     continue;
   }
   const html = await response.text();
   if (!response.ok) failures.push(`${url}: HTTP ${response.status}`);
+  if (!/(?:^|,)\s*no-transform\s*(?:,|$)/i.test(response.headers.get('cache-control') ?? '')) {
+    failures.push(`${url}: missing Cache-Control no-transform`);
+  }
 
   const hsts = response.headers.get('strict-transport-security') ?? '';
   if (Number(hsts.match(/max-age=(\d+)/i)?.[1] ?? 0) < oneYear) {

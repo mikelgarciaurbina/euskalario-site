@@ -46,7 +46,8 @@ assert.deepEqual([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => ma
 const headers = await readFile(resolve(root, '_headers'), 'utf8');
 assert(headers.includes("script-src 'none'"), 'Keep the script-free CSP');
 assert(/Strict-Transport-Security: max-age=(\d+); includeSubDomains/.test(headers) && Number(headers.match(/max-age=(\d+); includeSubDomains/)[1]) >= 31536000, 'HSTS for at least a year');
-assert(/\/_astro\/\*\n\s+Cache-Control: public, max-age=31536000, immutable/.test(headers), 'Hashed /_astro/ assets are cached as immutable');
+assert(/^\/\*\n\s+Cache-Control: public, no-transform$/m.test(headers), 'Cloudflare must serve the content as built');
+assert(/\/_astro\/\*\n\s+Cache-Control: max-age=31536000, immutable/.test(headers), 'Hashed /_astro/ assets are cached as immutable');
 assert((await readFile(resolve(root, 'robots.txt'), 'utf8')).includes(`${config.origin}/sitemap.xml`));
 
 // Social image: real PNG at the declared size (IHDR width/height at bytes 16-23).
