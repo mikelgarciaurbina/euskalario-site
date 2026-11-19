@@ -58,6 +58,13 @@ assert.equal(png.readUInt32BE(20), shareImage.height, 'Share image height');
 const attr = (html, selector) => html.match(selector)?.[1];
 const meta = (html, key) => attr(html, new RegExp(`<meta (?:property|name)="${key.replace(/[.:]/g, '\\$&')}" content="([^"]*)"`));
 const jsonLdPattern = /<script type="application\/ld\+json">([\s\S]*?)<\/script>/g;
+// The build is complete. Links shared by many pages can reuse the same file metadata.
+const fileStats = new Map();
+async function statOutput(path) {
+  if (!fileStats.has(path)) fileStats.set(path, await stat(path));
+  return fileStats.get(path);
+}
+
 const stylesheets = new Map();
 const titles = new Set();
 const descriptions = new Set();
@@ -187,9 +194,8 @@ for (const [file, route, lang, translation] of pages) {
     const local = new URL(href, `https://local.test${route}`);
     let path = resolve(root, `.${decodeURIComponent(local.pathname)}`);
     assert(path === root || path.startsWith(`${root}/`), `${route}: path within output`);
-    const info = await stat(path);
-    if (info.isDirectory()) path = resolve(path, 'index.html');
-    assert((await stat(path)).isFile(), `${route}: missing ${href}`);
+    if ((await statOutput(path)).isDirectory()) path = resolve(path, 'index.html');
+    assert((await statOutput(path)).isFile(), `${route}: missing ${href}`);
     if (local.hash && extname(path) === '.html') {
       const target = documents.get(path) || await readFile(path, 'utf8');
       assert(target.includes(`id="${decodeURIComponent(local.hash.slice(1))}"`), `${route}: missing fragment ${href}`);
@@ -211,7 +217,7 @@ for (const name of (await readdir(astroDir)).filter((entry) => entry.endsWith('.
   for (const match of css.matchAll(/url\(["']?([^)"']+)/g)) {
     if (match[1].startsWith('data:')) continue;
     const target = match[1].startsWith('/') ? resolve(root, `.${match[1]}`) : resolve(dirname(cssFile), match[1]);
-    assert((await stat(target)).isFile(), `Missing CSS asset ${match[1]}`);
+    assert((await statOutput(target)).isFile(), `Missing CSS asset ${match[1]}`);
   }
   assert(!/font-weight:\s*bold/.test(css), `${name}: use the shipped Bricolage 700 face instead of a synthetic bold`);
   assert(!/font-family:\s*Figtree[^}]*font-weight:\s*(bold|[6-9]00)/.test(css), `${name}: Figtree ships only in 400`);
